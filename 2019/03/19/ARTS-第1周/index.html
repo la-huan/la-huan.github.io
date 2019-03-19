@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第1周）ARTS 高效学习是左耳听风发起的一个高效学习方法，一个需要持续坚持的方法。ARTS 包含四块的内容（作者原话）：  Algorithm。主要是为了编程训练和学习。每周至少做一个 leetcode 的算法题（先从Easy开始，然后再Medium，最后才Hard）。进行编程训练，如果不训练你看再多的算法书，你依然不会做算法题，看完书后，你需要训练。关于做Leetcode的的优势，">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS 第1周">
+<meta property="og:url" content="http://yoursite.com/2019/03/19/ARTS-第1周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第1周）ARTS 高效学习是左耳听风发起的一个高效学习方法，一个需要持续坚持的方法。ARTS 包含四块的内容（作者原话）：  Algorithm。主要是为了编程训练和学习。每周至少做一个 leetcode 的算法题（先从Easy开始，然后再Medium，最后才Hard）。进行编程训练，如果不训练你看再多的算法书，你依然不会做算法题，看完书后，你需要训练。关于做Leetcode的的优势，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-19T10:30:33.064Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS 第1周">
+<meta name="twitter:description" content="ARTS （第1周）ARTS 高效学习是左耳听风发起的一个高效学习方法，一个需要持续坚持的方法。ARTS 包含四块的内容（作者原话）：  Algorithm。主要是为了编程训练和学习。每周至少做一个 leetcode 的算法题（先从Easy开始，然后再Medium，最后才Hard）。进行编程训练，如果不训练你看再多的算法书，你依然不会做算法题，看完书后，你需要训练。关于做Leetcode的的优势，">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/19/ARTS-第1周/">
+
+
+
+
+
+  <title>ARTS 第1周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/19/ARTS-第1周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS 第1周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T19:39:15+08:00">
+                2019-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第1周）"><a href="#ARTS-（第1周）" class="headerlink" title="ARTS （第1周）"></a>ARTS （第1周）</h1><p>ARTS 高效学习是左耳听风发起的一个高效学习方法，一个需要持续坚持的方法。ARTS 包含四块的内容（作者原话）：</p>
+<ul>
+<li>Algorithm。主要是为了编程训练和学习。每周至少做一个 leetcode 的算法题（先从Easy开始，然后再Medium，最后才Hard）。进行编程训练，如果不训练你看再多的算法书，你依然不会做算法题，看完书后，你需要训练。关于做Leetcode的的优势，你可以看一下我在coolshell上的文章 Leetcode 编程训练 - 酷 壳 - CoolShell（一个小时以内）；</li>
+<li>Review：主要是为了学习英文，如果你的英文不行，你基本上无缘技术高手。所以，需要你阅读并点评至少一篇英文技术文章，我个人最喜欢去的地方是 <a href="http://Medium.com" target="_blank" rel="noopener">Medium</a>（需要梯子，其他的可以社区的官方文档以及论文学习）以及各个公司的技术blog，如Netflix的（30min）；</li>
+<li>Tip：主要是为了总结和归纳你在是常工作中所遇到的知识点。学习至少一个技术技巧。你在工作中遇到的问题，踩过的坑，学习的点滴知识（也可以学习【极客时间】上的实用课程）；</li>
+<li>Share：主要是为了建立你的影响力，能够输出价值观。分享一篇有观点和思考的技术文章，也可以是技术总结的文章。<a id="more"></a>
+<h5 id="时间-2019-03-19"><a href="#时间-2019-03-19" class="headerlink" title="时间:2019/03/19"></a>时间:2019/03/19</h5></li>
+</ul>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><p>LeetCode 三数之和</p>
+<p> <a href="https://leetcode-cn.com/problems/3sum/submissions/" target="_blank" rel="noopener"><a href="https://leetcode-cn.com/problems/3sum/submissions/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/3sum/submissions/</a></a> </p>
+<p><strong>题目描述</strong></p>
+<p>给定一个包含 <em>n</em> 个整数的数组 <code>nums</code>，判断 <code>nums</code> 中是否存在三个元素 <em>a，b，c ，</em>使得 <em>a + b + c =</em> 0 ？找出所有满足条件且不重复的三元组。</p>
+<p><strong>注意：</strong>答案中不可以包含重复的三元组。</p>
+<p>例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，</p>
+<p>满足要求的三元组集合为：<br>[<br>[-1, 0, 1],<br>[-1, -1, 2]<br>]</p>
+<p>思路：</p>
+<p>关于这题，我最首先的做法是最繁杂的做法，先找出所有符合的数组，然后在添加到结果集合的时候判断是否重复（使用集合的container方法），进行去重。结果做成了四重循环的模式（因为container方法里就是一个循环，加上外层的三重循环，合起来四重），效率极低，上传到LeetCode，就直接返回说答案超时。</p>
+<p>随后进行了修改，先排序，然后每个循环开始的时候，进行判断，判断当前是否和前一个数字相同。相同的话就跳过，在判断的同时进行排序，大大减少了去重的开销。但结果依然是超时，如下图。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum3(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">		Arrays.sort(nums);</span><br><span class="line">		List&lt;List&lt;Integer&gt;&gt; lists = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length - <span class="number">2</span>; i++) &#123;</span><br><span class="line">          	<span class="keyword">if</span>(nums[i] &gt; <span class="number">0</span>)<span class="comment">//去除不必要的计算</span></span><br><span class="line">            	<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">if</span> (i == <span class="number">0</span> || nums[i] != nums[i - <span class="number">1</span>]) <span class="comment">// 去除重复</span></span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (j == i + <span class="number">1</span> || nums[j] != nums[j - <span class="number">1</span>]) <span class="comment">// 去除重复</span></span><br><span class="line">						<span class="keyword">for</span> (<span class="keyword">int</span> k = j + <span class="number">1</span>; k &lt; nums.length; k++) &#123;</span><br><span class="line">							<span class="keyword">if</span> (nums[i] + nums[j] + nums[k] == <span class="number">0</span>) &#123;</span><br><span class="line">								ArrayList&lt;Integer&gt; integers = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">								integers.add(nums[i]);</span><br><span class="line">								integers.add(nums[j]);</span><br><span class="line">								integers.add(nums[k]);</span><br><span class="line">								lists.add(integers);</span><br><span class="line">								<span class="keyword">break</span>;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> lists;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>在这个时候，我隐隐感觉到了这个题目，如果循环还是这么多重，多半答案都是超时。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;List&lt;Integer&gt;&gt; threeSum5(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    Arrays.sort(nums);</span><br><span class="line">    <span class="keyword">int</span> target = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(i &gt; <span class="number">0</span> &amp;&amp; (nums[i-<span class="number">1</span>] == nums[i]))&#123; <span class="comment">//当前数据和前一个相同，则跳过</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] &gt; target)&#123; <span class="comment">//当前大于目标数，直接返回</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i+<span class="number">1</span>,k=nums.length-<span class="number">1</span>; j&lt;k;)&#123;</span><br><span class="line">          	<span class="comment">//去重</span></span><br><span class="line">            <span class="keyword">if</span>(j &gt; i+<span class="number">1</span> &amp;&amp; nums[j-<span class="number">1</span>]==nums[j])&#123;</span><br><span class="line">                j++;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">          	<span class="comment">//去重</span></span><br><span class="line">            <span class="keyword">if</span>(k &lt; nums.length-<span class="number">1</span> &amp;&amp; nums[k] == nums[k+<span class="number">1</span>])&#123;</span><br><span class="line">                k--;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">          	</span><br><span class="line">            <span class="keyword">int</span> sum = nums[i] + nums[j] + nums[k];</span><br><span class="line">            <span class="keyword">if</span>(sum &gt; target)&#123;</span><br><span class="line">                k--;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(sum &lt; target)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                List&lt;Integer&gt; item = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">                item.add(nums[i]);</span><br><span class="line">                item.add(nums[j]);</span><br><span class="line">                item.add(nums[k]);</span><br><span class="line">                list.add(item);</span><br><span class="line">                j++;k--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这边的思路就是先排序，从小到大，并且这题的要求是3数之和是0 因此要么三个数值都是0，要么必定有一个数字小于0， 因此，在从小到大排序的时候，如果第一个数字大于0，就可以结束了。</p>
+<p>至于内层循环的判断，首先也是重复数字的跳过判断，然后则是从数组的最左端（最小数）和最右段（最大数）的坐标开始进行双端同时进行查找，将剩余数组里的最大数和最小数与外层循环的数字进行相加，若结果大于0，则集合的最大数字的坐标进行减一位的操作（减小），若大于0，则进行最左边左边的扩大一位的操作。等于0，则符合条件。</p>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p>nginx 1.8.0 的文档</p>
+<p><a href="https://www.nginx.com/blog/nginx-unit-1-8-0-now-available/" target="_blank" rel="noopener">https://www.nginx.com/blog/nginx-unit-1-8-0-now-available/</a></p>
+<p>该文档讲述了nginx 1.8.0的各类配置的使用</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="1、本周学会了hexo-GitHub搭建博客的技巧-也就是当前的博客。"><a href="#1、本周学会了hexo-GitHub搭建博客的技巧-也就是当前的博客。" class="headerlink" title="1、本周学会了hexo+GitHub搭建博客的技巧 也就是当前的博客。"></a>1、本周学会了hexo+GitHub搭建博客的技巧 也就是当前的博客。</h3><p>参考链接<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></p>
+<h3 id="2、本周学会了spring-boot方面的知识："><a href="#2、本周学会了spring-boot方面的知识：" class="headerlink" title="2、本周学会了spring boot方面的知识："></a>2、本周学会了spring boot方面的知识：</h3><h5 id="（1）yml语句的语法"><a href="#（1）yml语句的语法" class="headerlink" title="（1）yml语句的语法"></a>（1）yml语句的语法</h5><h6 id="1、基础语法"><a href="#1、基础语法" class="headerlink" title="1、基础语法"></a>1、基础语法</h6><p>k:(空格)v：表示一对键值对（空格必须有）；</p>
+<p>以<strong>空格</strong>的缩进来控制层级关系；只要是左对齐的一列数据，都是同一个层级的</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8081</span></span><br></pre></td></tr></table></figure>
+<p>ps:属性和值也是大小写敏感；</p>
+<h6 id="2、值的写法"><a href="#2、值的写法" class="headerlink" title="2、值的写法"></a>2、值的写法</h6><p>字面量：普通的值（数字，字符串，布尔）</p>
+<p>​    k: v：字面直接来写；</p>
+<p>​        字符串默认不用加上单引号或者双引号；</p>
+<p>​    “”：双引号；不会转义字符串里面的特殊字符；特殊字符会作为本身想表示的意思</p>
+<p>​                name:   “zhangsan \n lisi”：输出；zhangsan 换行  lisi</p>
+<p>​    ‘’：单引号；会转义特殊字符，特殊字符最终只是一个普通的字符串数据</p>
+<p>​                name:   ‘zhangsan \n lisi’：输出；zhangsan \n  lisi</p>
+<h6 id="3、对象、Map（属性和值）（键值对）："><a href="#3、对象、Map（属性和值）（键值对）：" class="headerlink" title="3、对象、Map（属性和值）（键值对）："></a>3、对象、Map（属性和值）（键值对）：</h6><p>​    k: v：在下一行来写对象的属性和值的关系；注意缩进</p>
+<p>​        对象还是k: v的方式</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">user:</span></span><br><span class="line">		<span class="attr">lastName:</span> <span class="string">test</span></span><br><span class="line">		<span class="attr">age:</span> <span class="number">18</span></span><br></pre></td></tr></table></figure>
+<p>行内写法：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">user:</span> <span class="string">&#123;lastName:</span> <span class="string">test,age:</span> <span class="number">18</span><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<h6 id="4、数组（List、Set）："><a href="#4、数组（List、Set）：" class="headerlink" title="4、数组（List、Set）："></a>4、数组（List、Set）：</h6><p>用- 值表示数组中的一个元素</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">users:</span></span><br><span class="line"><span class="bullet"> -</span> <span class="string">toms</span></span><br><span class="line"><span class="bullet"> -</span> <span class="string">mike</span></span><br></pre></td></tr></table></figure>
+<p>行内写法</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">users:</span> <span class="string">[toms,mike]</span></span><br></pre></td></tr></table></figure>
+<h5 id="（2）多Profile文件"><a href="#（2）多Profile文件" class="headerlink" title="（2）多Profile文件"></a>（2）多Profile文件</h5><p>我们在主配置文件编写的时候，可以配置多Profile，方便不同环境下的修改、测试、运行</p>
+<p>spring 默认使用application.properties的配置；</p>
+<p>例如：如果使用profile，文件名可以是 application-dev.properties/yml  （格式为application-{profile}.properties/yml），在配置文件中指定  spring.profiles.active=dev，那么就可以指定使用 application-dev.properties/yml 的配置</p>
+<h5 id="（3）配置文件的优先级"><a href="#（3）配置文件的优先级" class="headerlink" title="（3）配置文件的优先级"></a>（3）配置文件的优先级</h5><p>配置文件在spring boot里 分为jar包内 和jar包外的配置</p>
+<p><strong><u>在指定了外部配置的情况下，外部配置的优先级大于内部。</u></strong></p>
+<p>在jar包内的配置文件如下</p>
+<p>spring 默认使用application.properties/yml  为文件名的配置；</p>
+<p>优先级由高到底，高优先级的配置会覆盖低优先级的配置；</p>
+<p>优先级路径如下：</p>
+<p>–file:./config/</p>
+<p>–file:./</p>
+<p>–classpath:/config/</p>
+<p>–classpath:/</p>
+<p>spring boot还提供外部引入配置</p>
+<p>例如在命令行参数里指定端口：java -jar xxx.jar –server.port=8087  </p>
+<p><strong>官方文档的配置外部文件优先级</strong>(这里就不一一细说了)</p>
+<p>参考链接：<a href="https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-external-config" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-external-config</a></p>
+<ol>
+<li><a href="https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#using-boot-devtools-globalsettings" target="_blank" rel="noopener">Devtools global settings properties</a> on your home directory (<code>~/.spring-boot-devtools.properties</code> when devtools is active).</li>
+<li><a href="https://docs.spring.io/spring/docs/4.3.13.RELEASE/javadoc-api/org/springframework/test/context/TestPropertySource.html" target="_blank" rel="noopener"><code>@TestPropertySource</code></a> annotations on your tests.</li>
+<li><a href="https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/api/org/springframework/boot/test/context/SpringBootTest.html" target="_blank" rel="noopener"><code>@SpringBootTest#properties</code></a> annotation attribute on your tests.</li>
+<li>Command line arguments.</li>
+<li>Properties from <code>SPRING_APPLICATION_JSON</code> (inline JSON embedded in an environment variable or system property)</li>
+<li><code>ServletConfig</code> init parameters.</li>
+<li><code>ServletContext</code> init parameters.</li>
+<li>JNDI attributes from <code>java:comp/env</code>.</li>
+<li>Java System properties (<code>System.getProperties()</code>).</li>
+<li>OS environment variables.</li>
+<li>A <code>RandomValuePropertySource</code> that only has properties in <code>random.*</code>.</li>
+<li><a href="https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-external-config-profile-specific-properties" target="_blank" rel="noopener">Profile-specific application properties</a> outside of your packaged jar (<code>application-{profile}.properties</code> and YAML variants)</li>
+<li><a href="https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-external-config-profile-specific-properties" target="_blank" rel="noopener">Profile-specific application properties</a> packaged inside your jar (<code>application-{profile}.properties</code> and YAML variants)</li>
+<li>Application properties outside of your packaged jar (<code>application.properties</code> and YAML variants).</li>
+<li>Application properties packaged inside your jar (<code>application.properties</code> and YAML variants).</li>
+<li><a href="https://docs.spring.io/spring/docs/4.3.13.RELEASE/javadoc-api/org/springframework/context/annotation/PropertySource.html" target="_blank" rel="noopener"><code>@PropertySource</code></a> annotations on your <code>@Configuration</code> classes.</li>
+<li>Default properties (specified using <code>SpringApplication.setDefaultProperties</code>).</li>
+</ol>
+<h5 id="（4）Spring-boot-的自动装配原理初识"><a href="#（4）Spring-boot-的自动装配原理初识" class="headerlink" title="（4）Spring boot 的自动装配原理初识"></a>（4）Spring boot 的自动装配原理初识</h5><p>部分注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"xxxxx"</span>) <span class="comment">//将配置文件中配置的每一个属性的值，映射到这个组件中 例如类person（属性有name，age） 引入的prefix 为self.person 配置文件有self.person.name: tom ,self.person.age:18 ,那么就会在spring容器里注册进一个person的bean 其name属性为tom，age属性为18</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@PropertySource</span>(value = &#123;<span class="string">"classpath:xxx.properties"</span>&#125;)<span class="comment">//额外引入xxx.properties</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@ImportResource</span>(locations = &#123;<span class="string">"classpath:xxx.xml"</span>&#125;)<span class="comment">//引入spring配置的XML文件（既然使用了 spring boot 那么 个人就不推荐继续使用spring原有的xml方式进行配置）</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Import</span><span class="comment">//导入指定的类 并将该类注册到spring容器中</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Conditional</span><span class="comment">//条件注解 以次引申出了各类条件注解 例如@ConditionalOnBean可以判断当前环境中是否有指定的bean 、@ConditionalOnMissingBean判断当前环境是否没有指定的bean 等等各类注解。</span></span><br></pre></td></tr></table></figure>
+<p>SpringFactoriesLoader会扫描所有jar包类路径下  META-INF/spring.factories<br>把扫描到的这些文件的内容包装成properties对象<br>从properties中获取到EnableAutoConfiguration.class类（类名）对应的值，然后把他们添加在容器中。并且这些类一般都以xxxxAutoConfiguration命名。</p>
+<p>例如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span><span class="comment">//表示这是一个配置类</span></span><br><span class="line"><span class="meta">@ConditionalOnClass</span>(RedisOperations.class)<span class="comment">//判断当前环境里是否有指定的类</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(RedisProperties.class)<span class="comment">//启动指定类的ConfigurationProperties功能（将propertie的属性配置进bean里），并将其加入spring容器</span></span><br><span class="line"><span class="meta">@Import</span>(&#123; LettuceConnectionConfiguration.class, JedisConnectionConfiguration.class &#125;)<span class="comment">//注册指定的类，功能与spring的xml文件中的&lt;import /&gt;类似</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisAutoConfiguration</span> </span>&#123;  </span><br><span class="line">      </span><br><span class="line"> 	...</span><br><span class="line">      </span><br><span class="line">    <span class="meta">@Bean</span>  </span><br><span class="line">    <span class="meta">@ConditionalOnMissingBean</span>(RedisClient.class)<span class="comment">//容器中如果没有RedisClient这个类,那么自动配置这个RedisClient  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RedisClient <span class="title">redisClient</span><span class="params">(@Qualifier(<span class="string">"jedisPool"</span>)</span>JedisPool pool) </span>&#123;  </span><br><span class="line">        RedisClient redisClient = <span class="keyword">new</span> RedisClient();  </span><br><span class="line">        redisClient.setJedisPool(pool);  </span><br><span class="line">        <span class="keyword">return</span> redisClient;  </span><br><span class="line">    &#125;  </span><br><span class="line">      </span><br><span class="line">  	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面是一个redis的自动配置类，首先redis自动配置类 会进行环境的判断判断当前环境中是否有自己需要的类，如果有则其注解@conConfiguration生效，表明这是一个配置类，随后该类将会根据配置在容器中添加配置类RedisProperties，同时也会注册LettuceConnectionConfiguration、JedisConnectionConfiguration2个类。</p>
+<p>随后会开始下一步的具体的bean配置 该方法会进入redisClient（）方法，该方法会先判断环境中是否有RedisClient类的bean，若有（例如：用户自定义了该bean的情况），则不会继续注册这个bean，若没有该指定的bean，则会进行注册。</p>
+<h5 id="（5）利用自动配置进行组件的切换"><a href="#（5）利用自动配置进行组件的切换" class="headerlink" title="（5）利用自动配置进行组件的切换"></a>（5）利用自动配置进行组件的切换</h5><p>SpringBoot底层是Spring框架，Spring框架默认日志框架是用JCL，而spring boot的默认的日志配置则是slf4j+logback。</p>
+<p>如果我们需要修改slf4j+log4j的方式，则仅需要去除slf4j+log4j的依赖，然后引入slf4j-log4j12的依赖即可。</p>
+<p>因为spring boot有自动装配的功能，会自动判断环境，进行指定组件的注册，并不需要程序员进行太多的操作。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>logback-classic<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j-over-slf4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>PS：其它的组件切换也类似：例如tomcat切换成netty ，只需要将tomcat的依赖去掉，并加上netty 的依赖，即完成操作。</p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p>适时的总结，可以帮助我们梳理知识。</p>
+<p>在我写完这篇总结的过程中，我发现了有几个隐藏的知识点未曾注意到，也发现了几个知识点还未理解透彻，这也可以帮助我们发现自己的不足。</p>
+<p>做事情不要浮躁、每一个成功的人都是一点一滴积累起来的。将自己积累起来了，未来自己的选择也将更多更好。</p>
+<p>有好的想法就去尝试。任何事情如果都是光想不做，结果都是会失败。成功都是一点一点的积累起来。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第1周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第1周）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#时间-2019-03-19"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">时间:2019/03/19</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、本周学会了hexo-GitHub搭建博客的技巧-也就是当前的博客。"><span class="nav-number">1.3.1.</span> <span class="nav-text">1、本周学会了hexo+GitHub搭建博客的技巧 也就是当前的博客。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、本周学会了spring-boot方面的知识："><span class="nav-number">1.3.2.</span> <span class="nav-text">2、本周学会了spring boot方面的知识：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）yml语句的语法"><span class="nav-number">1.3.2.0.1.</span> <span class="nav-text">（1）yml语句的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1、基础语法"><span class="nav-number">1.3.2.0.1.1.</span> <span class="nav-text">1、基础语法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2、值的写法"><span class="nav-number">1.3.2.0.1.2.</span> <span class="nav-text">2、值的写法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3、对象、Map（属性和值）（键值对）："><span class="nav-number">1.3.2.0.1.3.</span> <span class="nav-text">3、对象、Map（属性和值）（键值对）：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4、数组（List、Set）："><span class="nav-number">1.3.2.0.1.4.</span> <span class="nav-text">4、数组（List、Set）：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）多Profile文件"><span class="nav-number">1.3.2.0.2.</span> <span class="nav-text">（2）多Profile文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）配置文件的优先级"><span class="nav-number">1.3.2.0.3.</span> <span class="nav-text">（3）配置文件的优先级</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（4）Spring-boot-的自动装配原理初识"><span class="nav-number">1.3.2.0.4.</span> <span class="nav-text">（4）Spring boot 的自动装配原理初识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（5）利用自动配置进行组件的切换"><span class="nav-number">1.3.2.0.5.</span> <span class="nav-text">（5）利用自动配置进行组件的切换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

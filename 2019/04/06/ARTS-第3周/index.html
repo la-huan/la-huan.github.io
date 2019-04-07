@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第3周）时间复杂度是同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。 计算机科学中，算法的时间复杂度是一个函数，它定性描述了该算法的运行时间。这是一个关于代表算法输入值的字符串的长度的函数。时间复杂度常用大O符号表述，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是渐近的，它考察当输入值大小趋近无">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS 第3周">
+<meta property="og:url" content="http://yoursite.com/2019/04/06/ARTS-第3周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第3周）时间复杂度是同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。 计算机科学中，算法的时间复杂度是一个函数，它定性描述了该算法的运行时间。这是一个关于代表算法输入值的字符串的长度的函数。时间复杂度常用大O符号表述，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是渐近的，它考察当输入值大小趋近无">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-07T03:54:30.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS 第3周">
+<meta name="twitter:description" content="ARTS （第3周）时间复杂度是同一问题可用不同算法解决，而一个算法的质量优劣将影响到算法乃至程序的效率。算法分析的目的在于选择合适算法和改进算法。 计算机科学中，算法的时间复杂度是一个函数，它定性描述了该算法的运行时间。这是一个关于代表算法输入值的字符串的长度的函数。时间复杂度常用大O符号表述，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是渐近的，它考察当输入值大小趋近无">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/06/ARTS-第3周/">
+
+
+
+
+
+  <title>ARTS 第3周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/06/ARTS-第3周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS 第3周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T23:26:55+08:00">
+                2019-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第3周）"><a href="#ARTS-（第3周）" class="headerlink" title="ARTS （第3周）"></a>ARTS （第3周）</h1><p>时间复杂度是同一问题可用不同<a href="https://baike.baidu.com/item/%E7%AE%97%E6%B3%95/209025" target="_blank" rel="noopener">算法</a>解决，而一个算法的质量优劣将影响到算法乃至<a href="https://baike.baidu.com/item/%E7%A8%8B%E5%BA%8F/13831935" target="_blank" rel="noopener">程序</a>的效率。算法分析的目的在于选择合适算法和改进算法。</p>
+<p>计算机科学中，算法的<strong>时间复杂度</strong>是一个函数，它定性描述了该算法的运行时间。这是一个关于代表算法输入值的<a href="https://baike.baidu.com/item/%E5%AD%97%E7%AC%A6%E4%B8%B2/1017763" target="_blank" rel="noopener">字符串</a>的长度的函数。时间复杂度常用<a href="https://baike.baidu.com/item/%E5%A4%A7O%E7%AC%A6%E5%8F%B7" target="_blank" rel="noopener">大O符号</a>表述，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是渐近的，它考察当输入值大小趋近无穷时的情况。</p>
+<p>摘自百度百科</p>
+<p><a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/1894057" target="_blank" rel="noopener">https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/1894057</a></p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><p>1、简易的LRU链表</p>
+<p>2、利用链表做回文判断</p>
+<p>出处为极客时间的专栏《数据结构与算法之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/126</a></p>
+<p>简易的LRU链表</p>
+<p>这个做的是一个简易的LRU链表  最大6个元素</p>
+<p>在插入的时候，进行去重以及最近最少使用策略 LRU（Least Recently Used）进行剔除大于6个的元素。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> jdk8test;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 简易LRU单向链表</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedObj</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> max = <span class="number">6</span>;<span class="comment">// 最大数量</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> size = <span class="number">0</span>;<span class="comment">// 集合大小</span></span><br><span class="line">	<span class="keyword">private</span> Item start;<span class="comment">// 首个</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取首个节点</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Item <span class="title">getStart</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> start;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 新增</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(T value)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (isRepeat(value)) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (size &gt;= max) &#123;</span><br><span class="line">			removeOne();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (size == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="comment">// 首个</span></span><br><span class="line">			<span class="keyword">this</span>.start = <span class="keyword">new</span> Item(value);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 非首个</span></span><br><span class="line">			Item v = start;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">				v = v.next;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 末尾添加链表</span></span><br><span class="line">			v.setNext(value);</span><br><span class="line">		&#125;</span><br><span class="line">		size++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 验证重复</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isRepeat</span><span class="params">(T value)</span> </span>&#123;</span><br><span class="line">		Item v = start;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size ; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (v.getValueWithOutCount().equals(value)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			v = v.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * LRU策略移出多余</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">removeOne</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		Item prev = <span class="keyword">null</span>;<span class="comment">// 目标的前一个</span></span><br><span class="line">		Item target = start;<span class="comment">// 目标</span></span><br><span class="line">		Item current = start;<span class="comment">// 当前</span></span><br><span class="line">		<span class="comment">// 先比对使用次数 如果存在相同的 则删除首个</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">			<span class="comment">// 如果后一个比前一个多 则替换</span></span><br><span class="line">			<span class="comment">/*</span></span><br><span class="line"><span class="comment">			 * if ( target.getTimes() &gt; current.getNext().getTimes()) &#123; //</span></span><br><span class="line"><span class="comment">			 * 当前次数比下一个多 prev = current; target = current.getNext();// 比较后替换 &#125;</span></span><br><span class="line"><span class="comment">			 */</span></span><br><span class="line">			<span class="comment">// 如果当前循环的数据的次数更少</span></span><br><span class="line">			<span class="keyword">if</span> (target.getTimes() &gt; current.getNext().getTimes()) &#123;</span><br><span class="line">				prev = current;</span><br><span class="line">				target = current.next;</span><br><span class="line">			&#125;</span><br><span class="line">			current = current.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 判断是否是第一个</span></span><br><span class="line">		<span class="keyword">if</span> (prev != <span class="keyword">null</span>) &#123;</span><br><span class="line">			prev.next = target.next;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.start = target.next;</span><br><span class="line">		&#125;</span><br><span class="line">		size--;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">		Item v = start;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; index; i++) &#123;</span><br><span class="line">			v = v.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> v.getValue();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		StringBuffer sb = <span class="keyword">new</span> StringBuffer(<span class="string">"["</span>);</span><br><span class="line">		Item target = start;</span><br><span class="line">		<span class="keyword">if</span> (target != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="comment">// 拼接首个</span></span><br><span class="line">			sb.append(target.getValueWithOutCount());</span><br><span class="line">			<span class="keyword">while</span> (target.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">				sb.append(<span class="string">","</span>);</span><br><span class="line">				<span class="comment">// 拼接下一个</span></span><br><span class="line">				target = target.next;</span><br><span class="line">				sb.append(target.getValueWithOutCount());</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(<span class="string">"]"</span>);</span><br><span class="line">		<span class="keyword">return</span> sb.toString();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 链表对象类</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Item</span> </span>&#123;</span><br><span class="line">		<span class="keyword">private</span> Item next;<span class="comment">// 单向链表 指向的下一个</span></span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">int</span> times;<span class="comment">// 使用次数</span></span><br><span class="line">		<span class="keyword">private</span> T value;<span class="comment">// 值</span></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Item</span><span class="params">(T value)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.value = value;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 取值 并累加</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> T <span class="title">getValue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			times++;<span class="comment">// 累加</span></span><br><span class="line">			<span class="keyword">return</span> value;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 取值</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> T <span class="title">getValueWithOutCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> value;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 设置下一节点</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNext</span><span class="params">(T value)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.next = <span class="keyword">new</span> Item(value);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 获取使用次数</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getTimes</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> times;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 获取下一个链表对象类</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> Item <span class="title">getNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> next;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试demo</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	LinkedObj&lt;Integer&gt; lo = <span class="keyword">new</span> LinkedObj&lt;Integer&gt;();</span><br><span class="line">	System.out.println(<span class="string">"do repeat---------"</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		lo.add(-<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(lo);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		lo.add(i);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">"do 0---------"</span>);</span><br><span class="line">	System.out.println(lo);</span><br><span class="line">	lo.get(<span class="number">0</span>);<span class="comment">// 获取下标0</span></span><br><span class="line">	lo.add(<span class="number">11</span>);</span><br><span class="line">	System.out.println(<span class="string">"do 1---------"</span>);</span><br><span class="line">	System.out.println(lo);</span><br><span class="line">	lo.get(<span class="number">1</span>);<span class="comment">// 获取 下标1</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">20</span>; i &lt; <span class="number">26</span>; i++) &#123;</span><br><span class="line">		lo.add(i);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">"do 2---------"</span>);</span><br><span class="line">	System.out.println(lo);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">50</span>; i &lt; <span class="number">56</span>; i++) &#123;</span><br><span class="line">		lo.add(i);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">"do 3---------"</span>);</span><br><span class="line">	System.out.println(lo);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		lo.get(i);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">60</span>; i &lt; <span class="number">66</span>; i++) &#123;</span><br><span class="line">		lo.add(i);</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">"do 4---------"</span>);</span><br><span class="line">	System.out.println(lo);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">5</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">		lo.add(i + <span class="number">66</span>);</span><br><span class="line">		System.out.println(<span class="string">"do "</span> + i + <span class="string">"---------"</span>);</span><br><span class="line">		System.out.println(lo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果符合预期</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">do repeat---------</span><br><span class="line">[-1]</span><br><span class="line">do 0---------</span><br><span class="line">[0,1,2,3,4,5]</span><br><span class="line">do 1---------</span><br><span class="line">[0,2,3,4,5,11]</span><br><span class="line">do 2---------</span><br><span class="line">[0,2,22,23,24,25]</span><br><span class="line">do 3---------</span><br><span class="line">[0,2,52,53,54,55]</span><br><span class="line">do 4---------</span><br><span class="line">[2,52,53,54,55,65]</span><br><span class="line">do 5---------</span><br><span class="line">[2,52,53,54,55,71]</span><br><span class="line">do 6---------</span><br><span class="line">[2,52,53,54,55,72]</span><br><span class="line">do 7---------</span><br><span class="line">[2,52,53,54,55,73]</span><br></pre></td></tr></table></figure>
+<p>如何判断一个字符串是否是回文字符串(采用单链表的方式实现，链表里每一个元素，都是一个char)</p>
+<p>我的思路：</p>
+<p>1、 快慢指针寻找中间节点，慢指针一边前进一边进行链表的反转。<br>2、 从中间节点开始，用逆序的前半部分节点和中间节点的后一个节点进行匹配<br>3、 还需要区分字符串是奇数还是偶数</p>
+<p>PS:使用的是之前我自己写的简易LRU链表。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 链表回文判断</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> start 链表起点</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isReverse</span><span class="params">(LinkedObj&lt;String&gt;.Item start)</span></span>&#123;</span><br><span class="line">	LinkedObj&lt;String&gt;.Item fast = start;</span><br><span class="line">	LinkedObj&lt;String&gt;.Item slow = start;</span><br><span class="line">	LinkedObj&lt;String&gt;.Item prev = <span class="keyword">null</span>;</span><br><span class="line">	LinkedObj&lt;String&gt;.Item next = <span class="keyword">null</span>;</span><br><span class="line">	<span class="comment">//找中点</span></span><br><span class="line">	<span class="keyword">while</span>(fast !=<span class="keyword">null</span> &amp;&amp; fast.next != <span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="comment">//每次前进2步</span></span><br><span class="line">		fast = fast.next.next;</span><br><span class="line">		<span class="comment">//暂存 要前进一步的对象</span></span><br><span class="line">		next =slow.next;</span><br><span class="line">		<span class="comment">//将当前慢指针的next指向前一个对象 如果是首个 则next为空 即链表末尾</span></span><br><span class="line">		<span class="comment">//实现反转</span></span><br><span class="line">		slow.next = prev;</span><br><span class="line">		<span class="comment">//前一个对象赋值为当前对象</span></span><br><span class="line">		prev=slow;</span><br><span class="line">		<span class="comment">//慢指针指向下一步对象</span></span><br><span class="line">		slow=next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//fast是否为空 为空则为偶数</span></span><br><span class="line">	<span class="keyword">if</span>(fast != <span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="comment">//奇数情况下，向后走一步 </span></span><br><span class="line">		<span class="comment">//如 1，2，3，2，1 从中点的3 走到第二个2的点 </span></span><br><span class="line">		slow=slow.next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//////////////////////////////////</span></span><br><span class="line">	<span class="comment">//prev 代表着：</span></span><br><span class="line">	<span class="comment">//偶数情况 当前链表的2个中点的前一个中点</span></span><br><span class="line">	<span class="comment">//奇数情况 当前链表的中点的前一个点</span></span><br><span class="line">	<span class="comment">//slow 代表着：</span></span><br><span class="line">	<span class="comment">//偶数情况 当前链表的2个中点的后一个中点</span></span><br><span class="line">	<span class="comment">//奇数情况 当前链表的中点</span></span><br><span class="line">	<span class="comment">///////////////////////////////</span></span><br><span class="line">	<span class="keyword">while</span>(prev!=<span class="keyword">null</span> &amp;&amp;slow!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!prev.getValue().equals(slow.getValue()))&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		prev=prev.next;</span><br><span class="line">		slow=slow.next;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用如下 </p>
+<p>PS：因为回文必定有重复的情况，在这里我将链表的去重功能去掉了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Solution s = <span class="keyword">new</span> Solution();</span><br><span class="line">		LinkedObj&lt;String&gt; lb =<span class="keyword">new</span> LinkedObj&lt;&gt;();</span><br><span class="line">		lb.add(<span class="string">"1"</span>);</span><br><span class="line">		lb.add(<span class="string">"2"</span>);</span><br><span class="line">		lb.add(<span class="string">"3"</span>);</span><br><span class="line">		lb.add(<span class="string">"3"</span>);</span><br><span class="line">		lb.add(<span class="string">"2"</span>);</span><br><span class="line">		lb.add(<span class="string">"1"</span>);</span><br><span class="line">		LinkedObj&lt;String&gt;.Item start = lb.getStart();</span><br><span class="line">		System.out.println(<span class="string">"--&gt;"</span>+s.isReverse(start));</span><br><span class="line">  		<span class="comment">//运行结果为：--&gt;true 符合预期</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="http://hadoop.apache.org/" target="_blank" rel="noopener">http://hadoop.apache.org/</a></p>
+<p>Apache Hadoop的官网，大概介绍了hadoop。</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="极客时间的专栏《数据结构与算法之美》"><a href="#极客时间的专栏《数据结构与算法之美》" class="headerlink" title="极客时间的专栏《数据结构与算法之美》"></a>极客时间的专栏《数据结构与算法之美》</h3><p>本周学习了该专栏中的0-9篇</p>
+<p>学习了时间复杂度、空间复杂度、数组、链表、堆结构、队列结构。</p>
+<p>出处：《数据结构与算法之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/126</a></p>
+<p>###自定义starter</p>
+<p>内容较多，就不一一贴上来了，大概说一下思路。</p>
+<p>需要创建2个项目或者模块</p>
+<p>第一个模块就是我们的启动器，里面只需要引入其它依赖，不需要有任何的代码。</p>
+<p>另一个模块就是我们的自动配置模块，从类路径下创建META-INF/spring.factories，在里面根据自己的需要配置初始化器、监听器或者bean（可以用条件注解进行环境判断），达到自动配置的效果。</p>
+<p>学习自尚硅谷</p>
+<p><a href="http://www.atguigu.com/" target="_blank" rel="noopener">http://www.atguigu.com/</a></p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p>本周的分享也就是我当前所学习的算法专栏</p>
+<p>《数据结构与算法之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/126</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/26/ARTS-第2周/" rel="next" title="ARTS 第2周">
+                <i class="fa fa-chevron-left"></i> ARTS 第2周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第3周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第3周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

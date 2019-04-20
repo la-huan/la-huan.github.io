@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第X周）开篇词 这周做的算法题，使我收获了几个东西： 1、并不是一定更多重循环就比更少重循环的执行效率差，比如，希尔排序是插入排序的优化，插入排序比较标准的写法是双重循环，而希尔排序是三重循环，但是为什么能希尔排序反而是插入排序的优化呢？因为执行次数，希尔排序的执行次数并不会比插入排序多。而交换次数更少。 2、代码长短并不是最重要的，短的代码固然看起来舒服，但是如果写的长而效果更好，那">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS-第5周">
+<meta property="og:url" content="http://yoursite.com/2019/04/20/ARTS-第5周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第X周）开篇词 这周做的算法题，使我收获了几个东西： 1、并不是一定更多重循环就比更少重循环的执行效率差，比如，希尔排序是插入排序的优化，插入排序比较标准的写法是双重循环，而希尔排序是三重循环，但是为什么能希尔排序反而是插入排序的优化呢？因为执行次数，希尔排序的执行次数并不会比插入排序多。而交换次数更少。 2、代码长短并不是最重要的，短的代码固然看起来舒服，但是如果写的长而效果更好，那">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-20T06:13:38.525Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS-第5周">
+<meta name="twitter:description" content="ARTS （第X周）开篇词 这周做的算法题，使我收获了几个东西： 1、并不是一定更多重循环就比更少重循环的执行效率差，比如，希尔排序是插入排序的优化，插入排序比较标准的写法是双重循环，而希尔排序是三重循环，但是为什么能希尔排序反而是插入排序的优化呢？因为执行次数，希尔排序的执行次数并不会比插入排序多。而交换次数更少。 2、代码长短并不是最重要的，短的代码固然看起来舒服，但是如果写的长而效果更好，那">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/04/20/ARTS-第5周/">
+
+
+
+
+
+  <title>ARTS-第5周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/20/ARTS-第5周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS-第5周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-20T13:35:00+08:00">
+                2019-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第X周）"><a href="#ARTS-（第X周）" class="headerlink" title="ARTS （第X周）"></a>ARTS （第X周）</h1><p>开篇词</p>
+<p>这周做的算法题，使我收获了几个东西：</p>
+<p>1、并不是一定更多重循环就比更少重循环的执行效率差，比如，希尔排序是插入排序的优化，插入排序比较标准的写法是双重循环，而希尔排序是三重循环，但是为什么能希尔排序反而是插入排序的优化呢？因为执行次数，希尔排序的执行次数并不会比插入排序多。而交换次数更少。</p>
+<p>2、代码长短并不是最重要的，短的代码固然看起来舒服，但是如果写的长而效果更好，那就应该写长点。</p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="线性排序"><a href="#线性排序" class="headerlink" title="线性排序"></a>线性排序</h3><h5 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h5><p>核心思想就是根据数据大小 将数据桶分为几个若干的桶，并且每个桶之间都有大小关系。分完之后，再每个桶进行排序，最后将每个桶的东西全部汇集到一起。</p>
+<p>比如我这里的写了3种，分别是用list和数组做的，</p>
+<p>我这里是按照位数进行分桶，1位数一个桶，2位数1个桶，以此类推。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 桶排序 demo 这个分桶策略是简单地根据位数进行的分桶的</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bucketSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 使用list 而不是数组 是因为list可以帮助我们统计桶的大小</span></span><br><span class="line">		<span class="comment">// 也可以另外建立一个数组存放桶大小</span></span><br><span class="line">		ArrayList&lt;ArrayList&lt;Integer&gt;&gt; all = <span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</span><br><span class="line">		<span class="comment">// 因为是个demo 桶排序 在不同场景下的分桶方式也可能不一样 桶排序的核心也在于分桶</span></span><br><span class="line">		<span class="comment">// 这里我简单的采用位数进行分桶 比如1位数放第一位桶 二位数放第二位桶</span></span><br><span class="line">		<span class="comment">// max 这里我传入的是最大数字</span></span><br><span class="line">		<span class="comment">// 桶大小</span></span><br><span class="line">		<span class="comment">// 初始化桶</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">			all.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> bucketNo = getBucketNo(arr[i]);</span><br><span class="line">			<span class="comment">// 放到指定的桶</span></span><br><span class="line">			</span><br><span class="line">			bucketInsert(all.get(bucketNo), arr[i]);</span><br><span class="line">			<span class="comment">// 最初我在这里的做法是放进桶 然后这个循环结束之后</span></span><br><span class="line">			<span class="comment">// 在建立一个循环 对每个桶进行排序 Collections.sort </span></span><br><span class="line">			<span class="comment">// 写完后，在CSDN上看到一个桶排序的写法 ，并不是插入完桶再排序，</span></span><br><span class="line">			<span class="comment">// 是另外写了一个方法 在插入桶的时候 就进行排序 我觉得这种方法更高效 就改成了这种</span></span><br><span class="line">			<span class="comment">// 链接:https://blog.csdn.net/afei__/article/details/82965834</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// 赋值</span></span><br><span class="line">		<span class="keyword">for</span> (ArrayList&lt;Integer&gt; arrayList : all) &#123;</span><br><span class="line">			<span class="keyword">for</span> (Integer integer : arrayList) &#123;</span><br><span class="line">				arr[i++] = integer;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 桶排序 demo 这个分桶策略是简单地根据位数进行的分桶的</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bucketSort2</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[][] all = <span class="keyword">new</span> <span class="keyword">int</span>[s][];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s; i++) &#123;</span><br><span class="line">			all[i] = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span>[] size = <span class="keyword">new</span> <span class="keyword">int</span>[s];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> bucketNo = getBucketNo(arr[i]);</span><br><span class="line">			all[bucketNo][size[bucketNo]++] = arr[i];</span><br><span class="line">			<span class="comment">// bucketInsert(all[bucketNo],size[bucketNo++],arr[i]);</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; all.length; i++) &#123;</span><br><span class="line">			quickSort(all[i], <span class="number">0</span>, size[i] - <span class="number">1</span>);<span class="comment">// 快排</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; all.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span>[] b = all[i];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; b.length; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (size[i]-- == <span class="number">0</span>) &#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				arr[index++] = b[j];</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 桶排序 demo 这个分桶策略是简单地根据位数进行的分桶的</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bucketSort3</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[][] all = <span class="keyword">new</span> <span class="keyword">int</span>[s][];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s; i++) &#123;</span><br><span class="line">			all[i] = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span>[] size = <span class="keyword">new</span> <span class="keyword">int</span>[s];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> bucketNo = getBucketNo(arr[i]);</span><br><span class="line">			bucketInsert(all[bucketNo], size[bucketNo]++, arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; all.length; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span>[] b = all[i];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; b.length; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (size[i]-- == <span class="number">0</span>) &#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				arr[index++] = b[j];</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 采用类似插入排序的思想 查找后找到新数据应该在的位置</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bucketInsert</span><span class="params">(<span class="keyword">int</span>[] l, <span class="keyword">int</span> s, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (l[i] &lt; n) &#123;</span><br><span class="line">				index++;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; s; i++) &#123;</span><br><span class="line">			l[i+<span class="number">1</span>] = l[i];</span><br><span class="line">		&#125;</span><br><span class="line">		l[index] = n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 采用类似插入排序的思想 查找后找到新数据应该在的位置</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bucketInsert</span><span class="params">(List&lt;Integer&gt; l, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (n &gt; l.get(i)) &#123;</span><br><span class="line">				index++;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		l.add(index, n);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 分桶策略 桶排序的核心内容之一 场景不同 计算方式也不一样 这里是简单的根据位数进行分组</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">getBucketNo</span><span class="params">(<span class="keyword">int</span> v)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (<span class="string">""</span> + v).length() - <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h5><p>当数组里有N个数，数组里最大值为M的时候，就将数据分为M个桶。</p>
+<p>然后进行counter[i] = counter[i] + counter[i - 1]的操作，这样的话，桶的下标就是对应的数值，而桶里的值就是这个数值，所应该在的位置，但有重复数值的时候需要一些特别的处理，具体可以看代码，注释齐全。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 计数排序</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">countingSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] temp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];<span class="comment">// 备份</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; temp.length; i++) &#123;</span><br><span class="line">		temp[i] = arr[i];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span>[] counter = <span class="keyword">new</span> <span class="keyword">int</span>[max + <span class="number">1</span>];<span class="comment">// 加一是因为有0</span></span><br><span class="line">	<span class="comment">// 通过下标统计每个数字有的数量 比如 最后的结果 下标1的值是1 就代表值是1的数据一共有1条</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">		counter[arr[i]]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 这里是为了计算每个数 所处的位置，假设下标2的值为2,</span></span><br><span class="line">	<span class="comment">// 就代表着小于等于值2的数字一共有2个</span></span><br><span class="line">	<span class="comment">// 也就是说2应该放在第二个位置，也就是下标1的位置</span></span><br><span class="line">	<span class="comment">// 当然如果有重复的数字就会有问题 这个问题在下一个循环里解决</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; counter.length; i++) &#123;</span><br><span class="line">		counter[i] = counter[i] + counter[i - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> v = temp[i];<span class="comment">// 当前值</span></span><br><span class="line">		<span class="comment">// 去counter找到对应的数据，也就是当前值说应该在的位置</span></span><br><span class="line">		<span class="comment">// 获取的时候就要进行--，是为了得到正确的坐标 还可以预防重复数据，</span></span><br><span class="line">		<span class="comment">// 而如果多次获取相同的数，也就是重复的时候该怎么做呢</span></span><br><span class="line">		<span class="comment">// 假设数据是[2，2，1],那么counter的结果应该会是[0,1,3]</span></span><br><span class="line">		<span class="comment">// 下标2的数值是2 就是说小于等2的数值一共有2个，我们有2个2</span></span><br><span class="line">		<span class="comment">// 然后下标1的数值是1 就是说小于等于1的数值有一个1</span></span><br><span class="line">		<span class="comment">// 因此 1这个数字第一次获取的时候，所在的下标应该是0，而第一次获取2所在的下标应该是2，</span></span><br><span class="line">		<span class="comment">// 但再来获取一次2 就发现数据不对了，应该需要往前一位进行填充，</span></span><br><span class="line">		<span class="comment">// 那么我们可以减一后获取，然后这个做法就得很精巧 也不用需要过多的逻辑</span></span><br><span class="line">		<span class="comment">// 原本counter[2]=3，获取之后减一就变成了counter[2]=2</span></span><br><span class="line">		<span class="comment">// 下次再获取下标2的时候 就变成了1 ，也就是这个数正确的位置</span></span><br><span class="line">		<span class="keyword">int</span> index = --counter[v];</span><br><span class="line">		<span class="comment">// 赋值</span></span><br><span class="line">		arr[index] = temp[i];</span><br><span class="line">		<span class="comment">// 这个循环里的操作 还可以缩写成这样 但为了写注释 我就拆分开来了</span></span><br><span class="line">		<span class="comment">// arr[--counter[temp[i]]]=temp[i];</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h5><p>与桶排序的思想有些类似，也是将数据分为多个桶，比如10个桶，每个1位数的数字就代表了每一个桶。然后从个位开始排序，排序完了，排第十位数，以次类推。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * 基数排序 集合版 入参为数组和最大数字的位数</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">radixSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">	ArrayList&lt;ArrayList&lt;Integer&gt;&gt; all = <span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</span><br><span class="line">	<span class="comment">// 建立10个桶 放10个数字的数据</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">		all.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;());</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 每个位数的循环</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s; i++) &#123;</span><br><span class="line">		<span class="comment">//</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">			<span class="comment">// 第一次取出个位 第二次十位 第三次百位 以此类推</span></span><br><span class="line">			<span class="keyword">int</span> num = getNum(arr[j], i);</span><br><span class="line">			all.get(num).add(arr[j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (ArrayList&lt;Integer&gt; arrayList : all) &#123;</span><br><span class="line">			<span class="keyword">for</span> (Integer integer : arrayList) &#123;</span><br><span class="line">				arr[index++] = integer;</span><br><span class="line">			&#125;</span><br><span class="line">			arrayList.clear();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取数据第N位的值</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] a = &#123; <span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>, <span class="number">1000</span>, <span class="number">10000</span>, <span class="number">100000</span> &#125;;</span><br><span class="line">	<span class="keyword">return</span> (num / a[n - <span class="number">1</span>]) % <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 基数排序 数组版 入参为数组和最大数字的位数 为了预防数组不够放东西 所以每个数组都设置的很大</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">radixSort2</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[][] all = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>][];</span><br><span class="line">	<span class="keyword">int</span>[] size = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];<span class="comment">// 桶大小</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">		all[i] = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">			<span class="comment">/*</span></span><br><span class="line"><span class="comment">			 * int num = getNum(arr[j], i); int index = size[num]; int[] bb</span></span><br><span class="line"><span class="comment">			 * = all[num]; bb[index] = arr[j]; size[num]++;</span></span><br><span class="line"><span class="comment">			 */</span></span><br><span class="line">			<span class="comment">// 缩写成下面这样</span></span><br><span class="line">			<span class="keyword">int</span> num = getNum(arr[j], i);</span><br><span class="line">			all[num][size[num]++] = arr[j];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; <span class="number">10</span>; x++) &#123;</span><br><span class="line">			<span class="comment">// 循环10个桶</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j : all[x]) &#123;</span><br><span class="line">				<span class="keyword">if</span> (size[x] == <span class="number">0</span>) &#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				size[x]--;</span><br><span class="line">				arr[index++] = j;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="独特的排序"><a href="#独特的排序" class="headerlink" title="独特的排序"></a>独特的排序</h3><p>这些独特的排序，效率可能不是很好，但思路比较独特，所以我也试着写了写。</p>
+<p>分别是:猴子排序，睡排序。</p>
+<p>PS：睡眠排序的效率，以现在的语言来说，怎么看效果都很差，但我在网络上看到的一个说法，就是这种排序方式如果能用相匹配的硬件支持，效果将会极佳。甚至可以依照这种算法，专门设计出一种硬件来进行排序。但我对硬件的运行机制 不是很了解，这里不做评价</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 猴子排序</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">monkeySort</span><span class="params">(<span class="keyword">int</span>[]arr)</span></span>&#123;</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">//outer:</span></span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">				<span class="keyword">int</span> p = random.nextInt(i+<span class="number">1</span>);</span><br><span class="line">				<span class="keyword">int</span> tmp = arr[i];</span><br><span class="line">				arr[i] = arr[p];</span><br><span class="line">				arr[p] = tmp;</span><br><span class="line">			&#125;</span><br><span class="line">			t++;</span><br><span class="line">			<span class="comment">//System.out.println("猴子第"+(t++)+"次排序:"+Arrays.toString(arr));</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(i==arr.length-<span class="number">1</span>)&#123;</span><br><span class="line">					<span class="keyword">return</span> t;<span class="comment">//结束</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(arr[i]&gt;arr[i+<span class="number">1</span>])</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="comment">//continue outer;</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;	</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 睡排序</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">sleepSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">			<span class="keyword">new</span> Thread(<span class="keyword">new</span> sleepSort(arr[i])).start();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span>  <span class="keyword">int</span> SleepIndex=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span>  <span class="keyword">int</span>[] sellpArr = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">2048</span>,<span class="number">512</span>,<span class="number">1024</span>,<span class="number">2500</span>,<span class="number">1500</span>,<span class="number">3000</span> &#125;;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">setSleepIndex</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">		sellpArr[SleepIndex]=v;</span><br><span class="line">		System.out.println(<span class="string">"第"</span>+SleepIndex+<span class="string">"个睡眠结束，值是"</span>+v);</span><br><span class="line">		SleepIndex++;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">sleepSort</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">		<span class="keyword">long</span> times;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">sleepSort</span><span class="params">(<span class="keyword">long</span> times)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.times=times;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				Thread.sleep(times);</span><br><span class="line">				setSleepIndex((<span class="keyword">int</span>) times);</span><br><span class="line">			&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="LeetoCode"><a href="#LeetoCode" class="headerlink" title="LeetoCode"></a>LeetoCode</h3><h5 id="整数反转"><a href="#整数反转" class="headerlink" title="整数反转"></a>整数反转</h5><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
+<p><a href="https://leetcode-cn.com/problems/reverse-integer/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-integer/</a></p>
+<p>这里我做了2种方式，一个是转字符串的，一个是用long计算的方式。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse2</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">long</span> r = <span class="number">0L</span>;</span><br><span class="line">	<span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">int</span> i = x % <span class="number">10</span>;</span><br><span class="line">		x /= <span class="number">10</span>;</span><br><span class="line">		r *= <span class="number">10</span>;</span><br><span class="line">		r += (i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (r &gt; Integer.MAX_VALUE || r &lt; Integer.MIN_VALUE)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> (<span class="keyword">int</span>) r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 反转</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse1</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">boolean</span> minus = <span class="keyword">false</span>;</span><br><span class="line">	<span class="keyword">if</span> (x &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		minus = <span class="keyword">true</span>;</span><br><span class="line">		x = -x;</span><br><span class="line">	&#125;</span><br><span class="line">	String s = x + <span class="string">""</span>;</span><br><span class="line">	StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = s.length() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		sb.append(s.charAt(i));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (minus)</span><br><span class="line">			<span class="keyword">return</span> -Integer.valueOf(sb.toString());</span><br><span class="line">		<span class="keyword">return</span> Integer.valueOf(sb.toString());</span><br><span class="line">	&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="回文数"><a href="#回文数" class="headerlink" title="回文数"></a>回文数</h5><p>数字是否回文串</p>
+<p><a href="https://leetcode-cn.com/problems/palindrome-number/comments/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-number/comments/</a></p>
+<p>如果用转字符串的计算的话，会很简单，取出首尾进行判断就行了，但题目说希望用数字的方式进行。想到之前做的那题数值回转的题，刚好思路可以用到这里来，将数字进行一下反转，就可以得到反转后的数值，匹配一下是否相等，就可以得到结果了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 是否回文数</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@time</span> 2019年4月15日-上午10:54:51</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 小于0直接false</span></span><br><span class="line">		<span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 最初想用数字首位和末尾进行判断，判断完后砍掉首位和末位继续判断</span></span><br><span class="line">		<span class="comment">// 后来想了想 砍掉首位之后如果新的数值首位是0 再接下去的判断就会很麻烦</span></span><br><span class="line">		<span class="comment">// 所以放弃了这种想法</span></span><br><span class="line">		<span class="comment">// 改成使用反转</span></span><br><span class="line">		<span class="keyword">int</span> temp = x;</span><br><span class="line">		<span class="keyword">long</span> r = <span class="number">0L</span>;</span><br><span class="line">		<span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> i = x % <span class="number">10</span>;</span><br><span class="line">			x /= <span class="number">10</span>;</span><br><span class="line">			r *= <span class="number">10</span>;</span><br><span class="line">			r += (i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 溢出</span></span><br><span class="line">		<span class="keyword">if</span> (r &gt; Integer.MAX_VALUE)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (r == temp)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="罗马数字转整数"><a href="#罗马数字转整数" class="headerlink" title="罗马数字转整数"></a>罗马数字转整数</h5><p><a href="https://leetcode-cn.com/problems/roman-to-integer/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/roman-to-integer/</a></p>
+<p>这题就是要求将罗马数字转换为整数.</p>
+<p>因为我对于罗马数字的了解不足，这是我做的第一个答案，提交后，效率竟然达到了超越99%的人，这个时候我是有点不信的，后来我去看了各种提交的答案，看到很多答案里，用了很多字符串处理的api 等，这些字符串的处理里，循环是少不了的。也应该是因此，我这个答案的循环次数极少，所以才会有比较高的排名。</p>
+<p>对此，在结合之前看过的希尔排序，我感觉到了1个结论</p>
+<p>1、并不是一定更多重循环就比更少重循环的执行效率差，比如，希尔排序是插入排序的优化，插入排序比较标准的写法是双重循环，而希尔排序是三重循环，但是为什么能希尔排序反而是插入排序的优化呢？因为执行次数，希尔排序的执行次数并不会比插入排序多。而交换次数更少。</p>
+<p>2、代码长短并不是最重要的，短的代码固然看起来舒服，但是如果写的长而效果更好，那就应该写长点。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">romanToInt1</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> r = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> l = s.length();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">			<span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'M'</span>) &#123;</span><br><span class="line">				r += <span class="number">1000</span>;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'D'</span>) &#123;</span><br><span class="line">				r += <span class="number">500</span>;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'L'</span>) &#123;</span><br><span class="line">				r += <span class="number">50</span>;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'V'</span>) &#123;</span><br><span class="line">				r += <span class="number">5</span>;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'C'</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i == l - <span class="number">1</span>) &#123;</span><br><span class="line">					r += <span class="number">100</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">char</span> n = s.charAt(i + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">if</span> (n == <span class="string">'D'</span>) &#123;</span><br><span class="line">					i++;</span><br><span class="line">					r += <span class="number">400</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="string">'M'</span>) &#123;</span><br><span class="line">					i++;</span><br><span class="line">					r += <span class="number">900</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					r += <span class="number">100</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'X'</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i == l - <span class="number">1</span>) &#123;</span><br><span class="line">					r += <span class="number">10</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">char</span> n = s.charAt(i + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">if</span> (n == <span class="string">'L'</span>) &#123;</span><br><span class="line">					i++;</span><br><span class="line">					r += <span class="number">40</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="string">'C'</span>) &#123;</span><br><span class="line">					i++;</span><br><span class="line">					r += <span class="number">90</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					r += <span class="number">10</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (c == <span class="string">'I'</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i == l - <span class="number">1</span>) &#123;</span><br><span class="line">					r += <span class="number">1</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">char</span> n = s.charAt(i + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">if</span> (n == <span class="string">'V'</span>) &#123;</span><br><span class="line">					i++;</span><br><span class="line">					r += <span class="number">4</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="string">'X'</span>) &#123;</span><br><span class="line">					i++;</span><br><span class="line">					r += <span class="number">9</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					r += <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> r;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>然后我看到了第一名的做法，很精巧的一个答案</p>
+<p>利用下标进行取数判断，最后得出值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span>[] symbols = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;</span><br><span class="line">	            <span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">500</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">50</span>, <span class="number">1000</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">10</span></span><br><span class="line">	    &#125;;</span><br><span class="line"></span><br><span class="line">	    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(String a)</span> </span>&#123;</span><br><span class="line">	        <span class="keyword">int</span> prev = <span class="number">0</span>, sum = <span class="number">0</span>, cur = <span class="number">0</span>;</span><br><span class="line">	        <span class="keyword">for</span> (<span class="keyword">int</span> i = a.length() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">	            cur = symbols[a.charAt(i) - <span class="string">'A'</span>];</span><br><span class="line">	            sum += cur &gt;= prev ? cur : -cur;</span><br><span class="line">	            prev = cur;</span><br><span class="line">	        &#125;</span><br><span class="line">	        <span class="keyword">return</span> sum;</span><br><span class="line">	    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="https://hbase.apache.org/" target="_blank" rel="noopener">https://hbase.apache.org/</a></p>
+<p>这篇文章简单的介绍了hbase的使用。</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="极客时间的专栏《数据结构与算法之美》"><a href="#极客时间的专栏《数据结构与算法之美》" class="headerlink" title="极客时间的专栏《数据结构与算法之美》"></a>极客时间的专栏《数据结构与算法之美》</h3><p>本周学习了该专栏中的13-14篇</p>
+<p>学习了排序优化和线性排序算法。</p>
+<p>出处：《数据结构与算法之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/126</a></p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p>本周的分享也是我的开篇词</p>
+<p>1、并不是一定更多重循环就比更少重循环的执行效率差，比如，希尔排序是插入排序的优化，插入排序比较标准的写法是双重循环，而希尔排序是三重循环，但是为什么能希尔排序反而是插入排序的优化呢？因为执行次数，希尔排序的执行次数并不会比插入排序多。而交换次数更少。</p>
+<p>2、代码长短并不是最重要的，短的代码固然看起来舒服，但是如果写的长而效果更好，那就应该写长点。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/13/ARTS-第4周/" rel="next" title="ARTS 第4周">
+                <i class="fa fa-chevron-left"></i> ARTS 第4周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第X周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第X周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线性排序"><span class="nav-number">1.1.1.</span> <span class="nav-text">线性排序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#桶排序"><span class="nav-number">1.1.1.0.1.</span> <span class="nav-text">桶排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计数排序"><span class="nav-number">1.1.1.0.2.</span> <span class="nav-text">计数排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基数排序"><span class="nav-number">1.1.1.0.3.</span> <span class="nav-text">基数排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#独特的排序"><span class="nav-number">1.1.2.</span> <span class="nav-text">独特的排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LeetoCode"><span class="nav-number">1.1.3.</span> <span class="nav-text">LeetoCode</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#整数反转"><span class="nav-number">1.1.3.0.1.</span> <span class="nav-text">整数反转</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#回文数"><span class="nav-number">1.1.3.0.2.</span> <span class="nav-text">回文数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#罗马数字转整数"><span class="nav-number">1.1.3.0.3.</span> <span class="nav-text">罗马数字转整数</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

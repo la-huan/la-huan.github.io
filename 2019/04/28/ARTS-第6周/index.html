@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ARTS （第6周）即使生活再忙碌也不能忘记学习。 即使生活再忙碌也不能思考未来。">
+<meta name="description" content="ARTS （第6周）即使生活再忙碌也不能忘记学习。即使生活再忙碌也不能思考未来。">
 <meta name="keywords" content="ARTS,每周总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARTS-第6周">
 <meta property="og:url" content="http://yoursite.com/2019/04/28/ARTS-第6周/index.html">
 <meta property="og:site_name" content="拉环的微博">
-<meta property="og:description" content="ARTS （第6周）即使生活再忙碌也不能忘记学习。 即使生活再忙碌也不能思考未来。">
+<meta property="og:description" content="ARTS （第6周）即使生活再忙碌也不能忘记学习。即使生活再忙碌也不能思考未来。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-28T03:34:23.914Z">
+<meta property="og:updated_time" content="2019-05-05T03:23:22.777Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARTS-第6周">
-<meta name="twitter:description" content="ARTS （第6周）即使生活再忙碌也不能忘记学习。 即使生活再忙碌也不能思考未来。">
+<meta name="twitter:description" content="ARTS （第6周）即使生活再忙碌也不能忘记学习。即使生活再忙碌也不能思考未来。">
 
 
 
@@ -300,15 +300,14 @@
       
 
       
-        <h1 id="ARTS-（第6周）"><a href="#ARTS-（第6周）" class="headerlink" title="ARTS （第6周）"></a>ARTS （第6周）</h1><p>即使生活再忙碌也不能忘记学习。</p>
-<p>即使生活再忙碌也不能思考未来。</p>
+        <h1 id="ARTS-（第6周）"><a href="#ARTS-（第6周）" class="headerlink" title="ARTS （第6周）"></a>ARTS （第6周）</h1><p>即使生活再忙碌也不能忘记学习。<br>即使生活再忙碌也不能思考未来。</p>
 <a id="more"></a>
 <h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="删除数据重复项"><a href="#删除数据重复项" class="headerlink" title="删除数据重复项"></a>删除数据重复项</h3><p><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/submissions/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/submissions/</a></p>
 <p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
 <p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
 <p>做法：</p>
 <p>定一个一个坐标，从第2个数字开始，从前往后遍历，当前数字和前一个的数字不相同的时候，就进行重新赋值的操作，题目要求是不管重复的数据如何，并且因为这是顺序执行的，所以有用的数据不会有数据丢失的情况。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> len = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">			<span class="comment">// 当前数字和前一个数字不相同</span></span><br><span class="line">			<span class="keyword">if</span> (nums[i] != nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">				nums[len++] = nums[i];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> len;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> len = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">			<span class="comment">// 当前数字和前一个数字不相同</span></span><br><span class="line">			<span class="keyword">if</span> (nums[i] != nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">				nums[len++] = nums[i];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> len;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="https://hive.apache.org/" target="_blank" rel="noopener">https://hive.apache.org/</a> 简单的介绍了hive。</p>
 <h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="极客时间的专栏《数据结构与算法之美》"><a href="#极客时间的专栏《数据结构与算法之美》" class="headerlink" title="极客时间的专栏《数据结构与算法之美》"></a>极客时间的专栏《数据结构与算法之美》</h3><p>本周学习了该专栏中的15-16篇</p>
 <p>学习了二分法以及复杂情况下的二分法。</p>
@@ -323,8 +322,7 @@
 <p>id    pid    name<br>1    NULL    n1<br>2    1    n2<br>3    1    n3<br>4    1    n4<br>5    2    n5<br>6    2    n6<br>7    5    n7</p>
 <p>执行结果：</p>
 <p>id    pid    name<br>7    5    n7<br>5    2    n5<br>2    1    n2<br>1    NULL    n1</p>
-<p>###sqlserver链接服务器</p>
-<p>如何使用：</p>
+<h3 id="sqlserver链接服务器"><a href="#sqlserver链接服务器" class="headerlink" title="sqlserver链接服务器"></a>sqlserver链接服务器</h3><p>如何使用：</p>
 <p><a href="https://blog.csdn.net/enweitech/article/details/80570735" target="_blank" rel="noopener">https://blog.csdn.net/enweitech/article/details/80570735</a></p>
 <p>链接服务器部分问题的解决方案：</p>
 <p><a href="https://blog.csdn.net/tao2581/article/details/7484677" target="_blank" rel="noopener">https://blog.csdn.net/tao2581/article/details/7484677</a></p>
@@ -381,6 +379,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/05/ARTS-第7周/" rel="prev" title="ARTS-第7周">
+                ARTS-第7周 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -457,7 +459,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -503,7 +505,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第6周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第6周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据重复项"><span class="nav-number">1.1.1.</span> <span class="nav-text">删除数据重复项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlserver-递归查询"><span class="nav-number">1.3.2.</span> <span class="nav-text">sqlserver 递归查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第6周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第6周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据重复项"><span class="nav-number">1.1.1.</span> <span class="nav-text">删除数据重复项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlserver-递归查询"><span class="nav-number">1.3.2.</span> <span class="nav-text">sqlserver 递归查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlserver链接服务器"><span class="nav-number">1.3.3.</span> <span class="nav-text">sqlserver链接服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
             
 
           </div>

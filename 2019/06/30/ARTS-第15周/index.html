@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第15周）触类旁通。 很多结构都是另一个结构引申和优化出来的。 本周： AC自动机、SUNDAY算法、贪心算法小练习。">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS-第15周">
+<meta property="og:url" content="http://yoursite.com/2019/06/30/ARTS-第15周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第15周）触类旁通。 很多结构都是另一个结构引申和优化出来的。 本周： AC自动机、SUNDAY算法、贪心算法小练习。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-30T06:03:04.163Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS-第15周">
+<meta name="twitter:description" content="ARTS （第15周）触类旁通。 很多结构都是另一个结构引申和优化出来的。 本周： AC自动机、SUNDAY算法、贪心算法小练习。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/30/ARTS-第15周/">
+
+
+
+
+
+  <title>ARTS-第15周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/30/ARTS-第15周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS-第15周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-30T13:33:44+08:00">
+                2019-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第15周）"><a href="#ARTS-（第15周）" class="headerlink" title="ARTS （第15周）"></a>ARTS （第15周）</h1><p>触类旁通。</p>
+<p>很多结构都是另一个结构引申和优化出来的。</p>
+<p>本周：</p>
+<p><strong>AC自动机、SUNDAY算法、贪心算法小练习。</strong></p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="AC自动机"><a href="#AC自动机" class="headerlink" title="AC自动机"></a>AC自动机</h3><p>基于trie树构建一个类似KMP算法失效函数的失效指针，当进行树结构的匹配失败的时候，就通过失效指针进行快速跳转。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> search;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Ac</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> err = <span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100000</span>; i++) &#123;</span><br><span class="line">			test();</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"err:"</span>+err);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		String[] p = <span class="keyword">new</span> String[<span class="number">2</span>];</span><br><span class="line">		<span class="comment">//String text = generateString(10);</span></span><br><span class="line">		<span class="comment">//使用固定并且不同字符的字符串 </span></span><br><span class="line">		<span class="comment">//因为indexof是匹配首个 而ac是匹配全部 防止重复</span></span><br><span class="line">		String text = <span class="string">"abcdefg"</span>;</span><br><span class="line">		Ac ac = <span class="keyword">new</span> Ac();</span><br><span class="line">		ArrayList&lt;Integer&gt; r1 = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		ArrayList&lt;Integer&gt; r2 = <span class="keyword">null</span>;</span><br><span class="line">		System.out.println(<span class="string">"test:"</span> + text);</span><br><span class="line"></span><br><span class="line">		System.out.print(<span class="string">"match:"</span>);</span><br><span class="line">		<span class="comment">// 固定生成2个字符的 固定生成2个</span></span><br><span class="line">		<span class="comment">//因为indexof是匹配首个 而ac是匹配全部 防止重复</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">2</span>; j++) &#123;</span><br><span class="line">			p[j] = generateString(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">if</span>(j==<span class="number">1</span>)&#123;</span><br><span class="line">				<span class="keyword">while</span>(p[<span class="number">0</span>].equals(p[<span class="number">1</span>]))&#123;</span><br><span class="line">					<span class="keyword">try</span> &#123;</span><br><span class="line">						Thread.sleep(<span class="number">8</span>);</span><br><span class="line">					&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">					&#125;</span><br><span class="line">					p[j] = generateString(<span class="number">2</span>);</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			System.out.print(p[j] + <span class="string">","</span>);</span><br><span class="line">			ac.insert(p[j]);</span><br><span class="line">			Integer io = Integer.valueOf(text.indexOf(p[j]));</span><br><span class="line">			<span class="comment">// 匹配到了</span></span><br><span class="line">			<span class="keyword">if</span> (!io.equals(Integer.valueOf(-<span class="number">1</span>)))</span><br><span class="line">				r1.add(io);</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		ac.build();</span><br><span class="line">		r2 = ac.match2test(text);</span><br><span class="line"></span><br><span class="line">		Collections.sort(r1);</span><br><span class="line">		Collections.sort(r2);</span><br><span class="line">		System.out.println(<span class="string">"io_r:"</span> + r1);</span><br><span class="line">		System.out.println(<span class="string">"ac_r:"</span> + r2);</span><br><span class="line">		<span class="keyword">if</span> (r1.size() != r2.size()) &#123;</span><br><span class="line">			System.out.println(<span class="string">"err1"</span>);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">			err++;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; r1.size(); i++) &#123;</span><br><span class="line">				Integer i1 = r1.get(i);</span><br><span class="line">				Integer i2 = r2.get(i);</span><br><span class="line">				<span class="keyword">if</span> (i1 != i2) &#123;</span><br><span class="line">					System.out.println(<span class="string">"err2"</span>);</span><br><span class="line">					System.exit(<span class="number">0</span>);</span><br><span class="line">					err++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CHARS = <span class="string">"abcdefg"</span>;<span class="comment">//// 随机字符串池</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 随机字符串</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> length</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">generateString</span><span class="params">(<span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">			sb.append(CHARS.charAt(random.nextInt(CHARS.length())));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> sb.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MAX_SIZE = <span class="number">7</span>;<span class="comment">// 只匹配26个字符的情况</span></span><br><span class="line"></span><br><span class="line">	Node root = <span class="keyword">new</span> Node(<span class="string">'/'</span>);<span class="comment">// 根节点</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		insert(s.toCharArray());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">match2test</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> match2test(s.toCharArray());</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">match</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		match(s.toCharArray());</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">build</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 从根节点开始生成</span></span><br><span class="line">		Queue&lt;Node&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">		root.f = <span class="keyword">null</span>;<span class="comment">// root匹配 方便后面进行跳出</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX_SIZE; i++) &#123;</span><br><span class="line">			Node cn = root.n[i];</span><br><span class="line">			<span class="keyword">if</span> (cn != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="comment">// 从第二级开始</span></span><br><span class="line">				queue.add(cn);</span><br><span class="line">				cn.f = root;<span class="comment">// 第一级子节点失败全部指向root</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">			<span class="comment">// 取出元素 父级节点</span></span><br><span class="line">			Node p = queue.remove();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX_SIZE; i++) &#123;</span><br><span class="line">				Node c = p.n[i];<span class="comment">// 子节点</span></span><br><span class="line">				<span class="keyword">if</span> (c == <span class="keyword">null</span>)</span><br><span class="line">					<span class="keyword">continue</span>;</span><br><span class="line">				<span class="comment">// 按层遍历 放入下一层遍历的对象</span></span><br><span class="line">				<span class="comment">// 循环最前面放进去和最后放进去 没有差别</span></span><br><span class="line">				queue.add(c);</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">int</span> index = c.v - <span class="string">'a'</span>;<span class="comment">// 当前值的索引</span></span><br><span class="line">				Node f = p.f;<span class="comment">// 父节点的fail节点</span></span><br><span class="line">				<span class="keyword">while</span> (f != <span class="keyword">null</span>) &#123;</span><br><span class="line">					Node node = f.n[index];</span><br><span class="line">					<span class="keyword">if</span> (node != <span class="keyword">null</span>) &#123;</span><br><span class="line">						<span class="comment">// 父节点的失败节点里查找子节点</span></span><br><span class="line">						<span class="comment">// 找到就可以跳出了</span></span><br><span class="line">						c.f = node;</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="comment">// 找不到 就找失败节点的失败节点</span></span><br><span class="line">					f = f.f;</span><br><span class="line">					<span class="comment">//</span></span><br><span class="line">					<span class="comment">// 即更短后缀的词 如父节点是abc当前是x</span></span><br><span class="line">					<span class="comment">// 存在bc 和 c</span></span><br><span class="line">					<span class="comment">// 那么如果abcx找不到就找bc下找x节点 即找bcx节点</span></span><br><span class="line">					<span class="comment">// 再找不到去c节点下找x节点，即找cx节点</span></span><br><span class="line">					<span class="comment">// 再没有就去找root节点</span></span><br><span class="line">					<span class="comment">// 如果root都没有就跳出 跳出后赋值为root</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (f == <span class="keyword">null</span>) &#123;</span><br><span class="line">					c.f = root;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">match2test</span><span class="params">(<span class="keyword">char</span>[] text)</span> </span>&#123; <span class="comment">// text 是主串</span></span><br><span class="line">		ArrayList&lt;Integer&gt; r = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();<span class="comment">//</span></span><br><span class="line">		<span class="keyword">int</span> len = text.length;</span><br><span class="line">		<span class="comment">// 带头指针</span></span><br><span class="line">		<span class="comment">// 即当前匹配字符的前一个字符</span></span><br><span class="line">		Node p = root;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> idx = text[i] - <span class="string">'a'</span>;<span class="comment">// 当前值的索引</span></span><br><span class="line">			<span class="comment">// 当前带头指针的后一个字符和当前值不相等</span></span><br><span class="line">			<span class="comment">// 就去找失败指针重新进行匹配 直到找不到 或者root为止</span></span><br><span class="line">			<span class="comment">// 当p.n[idx] 的值为null的时候 就代表着当前词缀不符合的主串</span></span><br><span class="line">			<span class="comment">// 那么就应该重新迭代 寻找失效指针 找最长相同后缀</span></span><br><span class="line">			<span class="comment">// p!=root的判断是为了判断是否到了root节点</span></span><br><span class="line">			<span class="comment">// 我这里的写法 root的失效指针指向了root</span></span><br><span class="line">			<span class="comment">// 如果root的失效指针为null 那这部的写法应该是p != null</span></span><br><span class="line">			<span class="keyword">while</span> (p != root &amp;&amp; p.n[idx] == <span class="keyword">null</span>) &#123;<span class="comment">//</span></span><br><span class="line">				p = p.f;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 匹配的话 p就前进一个节点</span></span><br><span class="line">			<span class="comment">// 如果不匹配 p就会变成null 在下面的循环里就会被重设为root</span></span><br><span class="line">			p = p.n[idx];</span><br><span class="line">			<span class="comment">// 找不到匹配值的时候 重设为root</span></span><br><span class="line">			<span class="keyword">if</span> (p == <span class="keyword">null</span>) &#123;</span><br><span class="line">				p = root;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 遍历节点和当前节点的失效指针</span></span><br><span class="line">			<span class="comment">// 判断是否是结束节点</span></span><br><span class="line">			Node temp = p;</span><br><span class="line">			<span class="keyword">while</span> (temp != root) &#123;</span><br><span class="line">				<span class="keyword">if</span> (temp.isEnd == <span class="keyword">true</span>) &#123;</span><br><span class="line">					<span class="comment">// 这里不进行输出了记录数组下标位置 以便做测试</span></span><br><span class="line">					<span class="keyword">int</span> pos = i - temp.len + <span class="number">1</span>;</span><br><span class="line">					r.add(pos);</span><br><span class="line">					<span class="comment">/*</span></span><br><span class="line"><span class="comment">					 * int pos = i - temp.len + 1; // 偏移量和长度 String str = new</span></span><br><span class="line"><span class="comment">					 * String(text, pos, p.len); System.out.println("符合值为:" +</span></span><br><span class="line"><span class="comment">					 * str);</span></span><br><span class="line"><span class="comment">					 */</span></span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				temp = temp.f;<span class="comment">// 重设设失效指针，即相同后缀的指针 判断isEnd值</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> r;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 匹配</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">match</span><span class="params">(<span class="keyword">char</span>[] text)</span> </span>&#123; <span class="comment">// text 是主串</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> len = text.length;</span><br><span class="line">		<span class="comment">// 带头指针</span></span><br><span class="line">		<span class="comment">// 即当前匹配字符的前一个字符</span></span><br><span class="line">		Node p = root;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> idx = text[i] - <span class="string">'a'</span>;<span class="comment">// 当前值的索引</span></span><br><span class="line">			<span class="comment">// 当前带头指针的后一个字符和当前值不相等</span></span><br><span class="line">			<span class="comment">// 就去找失败指针重新进行匹配 直到找不到 或者root为止</span></span><br><span class="line">			<span class="comment">// 当p.n[idx] 的值为null的时候 就代表着当前词缀不符合的主串</span></span><br><span class="line">			<span class="comment">// 那么就应该重新迭代 寻找失效指针 找最长相同后缀</span></span><br><span class="line">			<span class="comment">// p!=root的判断是为了判断是否到了root节点</span></span><br><span class="line">			<span class="comment">// 我这里的写法 root的失效指针指向了root</span></span><br><span class="line">			<span class="comment">// 如果root的失效指针为null 那这部的写法应该是p != null</span></span><br><span class="line">			<span class="keyword">while</span> (p != root &amp;&amp; p.n[idx] == <span class="keyword">null</span>) &#123;<span class="comment">//</span></span><br><span class="line">				p = p.f;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 匹配的话 p就前进一个节点</span></span><br><span class="line">			<span class="comment">// 如果不匹配 p就会变成null 在下面的循环里就会被重设为root</span></span><br><span class="line">			p = p.n[idx];</span><br><span class="line">			<span class="comment">// 找不到匹配值的时候 重设为root</span></span><br><span class="line">			<span class="keyword">if</span> (p == <span class="keyword">null</span>) &#123;</span><br><span class="line">				p = root;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 遍历节点和当前节点的失效指针</span></span><br><span class="line">			<span class="comment">// 判断是否是结束节点</span></span><br><span class="line">			Node temp = p;</span><br><span class="line">			<span class="keyword">while</span> (temp != root) &#123;</span><br><span class="line">				<span class="keyword">if</span> (temp.isEnd == <span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">					<span class="keyword">int</span> pos = i - temp.len + <span class="number">1</span>;</span><br><span class="line">					<span class="comment">// 偏移量和长度</span></span><br><span class="line">					String str = <span class="keyword">new</span> String(text, pos, p.len);</span><br><span class="line">					System.out.println(<span class="string">"符合值为:"</span> + str);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				temp = temp.f;<span class="comment">// 重设设失效指针，即相同后缀的指针 判断isEnd值</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">char</span>[] text)</span> </span>&#123;</span><br><span class="line">		Node p = root;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; text.length; ++i) &#123;</span><br><span class="line">			<span class="keyword">int</span> index = text[i] - <span class="string">'a'</span>;</span><br><span class="line">			<span class="keyword">if</span> (p.n[index] == <span class="keyword">null</span>) &#123;</span><br><span class="line">				Node newNode = <span class="keyword">new</span> Node(text[i]);</span><br><span class="line">				p.n[index] = newNode;</span><br><span class="line">			&#125;</span><br><span class="line">			p = p.n[index];</span><br><span class="line">			p.len = i + <span class="number">1</span>;<span class="comment">// 深度</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//</span></span><br><span class="line">		p.isEnd = <span class="keyword">true</span>;</span><br><span class="line">		p.len = text.length;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// trie树的节点</span></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">char</span> v;<span class="comment">// 值</span></span><br><span class="line"></span><br><span class="line">		Node[] n = <span class="keyword">new</span> Node[MAX_SIZE];<span class="comment">// 下一个节点</span></span><br><span class="line"></span><br><span class="line">		Node f;<span class="comment">// 失败指针</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">boolean</span> isEnd = <span class="keyword">false</span>;<span class="comment">// 是否最后一个词缀</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> len = -<span class="number">1</span>;<span class="comment">// 从根到这里的长度</span></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">char</span> v)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.v = v;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (f != <span class="keyword">this</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="string">"Node [v="</span> + v + <span class="string">", f="</span> + f + <span class="string">"]"</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">"Node [v="</span> + v + <span class="string">", f= root]"</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="SUNDAY字符串搜索算法"><a href="#SUNDAY字符串搜索算法" class="headerlink" title="SUNDAY字符串搜索算法"></a>SUNDAY字符串搜索算法</h3><p>和BM KMP等算法类似，都是先构建出一些辅助的数组来加块匹配，</p>
+<p>这个算法的简易来说就是将主串和模式串对齐，从前开始匹配到最后 如果不匹配，就取主串后面的那个字符。</p>
+<p>去辅助数组里查找对应字符是否存在，存在则进行相应的跳跃。不存在则跳过模式串长度+1。以此达到快速匹配的效果。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> search;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SundaySearch</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">////////////////////////////////////////</span></span><br><span class="line">	<span class="comment">// 这部分为测试部分，70行往下才是BM算法</span></span><br><span class="line">	<span class="comment">////////////////////////////////////////</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// test() ;</span></span><br><span class="line">		<span class="comment">// System.out.println(2&lt;&lt;15);</span></span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">100000</span>;</span><br><span class="line">		<span class="keyword">int</span> err = <span class="number">0</span>;</span><br><span class="line">		BMSearch bms = <span class="keyword">new</span> BMSearch();</span><br><span class="line">		System.out.println(<span class="string">"========test========="</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</span><br><span class="line">			String pattern = generateString(<span class="number">3</span>);</span><br><span class="line">			String text = generateString(<span class="number">20</span>);</span><br><span class="line">			<span class="keyword">char</span>[] t = text.toCharArray();</span><br><span class="line">			<span class="keyword">char</span>[] p = pattern.toCharArray();</span><br><span class="line">			<span class="comment">// 创建随机字符串</span></span><br><span class="line">			<span class="comment">// 用BM算法和string类的indexof得出的结果进行比对</span></span><br><span class="line">			<span class="keyword">int</span> bm = bms.bm(t, p);</span><br><span class="line">			<span class="keyword">int</span> sd = sunday(t, p);</span><br><span class="line">			<span class="keyword">if</span> (bm != sd) &#123;</span><br><span class="line">				System.err.println(i + <span class="string">":"</span> + text + <span class="string">":"</span> + pattern + <span class="string">":fail:--&gt;"</span> + bm + <span class="string">":"</span> + sd);</span><br><span class="line">				<span class="comment">// System.exit(0);</span></span><br><span class="line">				err++;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(i + <span class="string">":"</span> + text + <span class="string">":"</span> + pattern + <span class="string">":ok:--&gt;"</span> + bm + <span class="string">":"</span> + sd);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"err:"</span> + err);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CHARS = <span class="string">"abcdefg"</span>;<span class="comment">//// 随机字符串池</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 随机字符串</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> length</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">generateString</span><span class="params">(<span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">			sb.append(CHARS.charAt(random.nextInt(CHARS.length())));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> sb.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> ASCII_SIZE = <span class="number">126</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sunday</span><span class="params">(<span class="keyword">char</span>[] t, <span class="keyword">char</span>[] p)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n = t.length;</span><br><span class="line">		<span class="keyword">int</span> m = p.length;</span><br><span class="line">		<span class="keyword">int</span>[] move = <span class="keyword">new</span> <span class="keyword">int</span>[ASCII_SIZE];</span><br><span class="line">		<span class="comment">// 初始化</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ASCII_SIZE; i++) &#123;</span><br><span class="line">			<span class="comment">// 默认移动长度 代表在模式串中不存在该字符串的情况</span></span><br><span class="line">			<span class="comment">// 默认值为数组长度+1</span></span><br><span class="line">			move[i] = m + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 从后往前 保证后面的会覆盖前面的 保证后面的优先级</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> index = p[i];<span class="comment">// 模式串字符的ascii码 当作move数组的索引</span></span><br><span class="line">			move[index] = m - i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> pos = <span class="number">0</span>;<span class="comment">// 偏移量</span></span><br><span class="line">		<span class="keyword">while</span> (pos + m &lt;= n) &#123;</span><br><span class="line">			<span class="keyword">int</span> i = <span class="number">0</span>;<span class="comment">// 模式串指针</span></span><br><span class="line">			<span class="keyword">while</span> (t[i + pos] == p[i]) &#123;</span><br><span class="line">				i++;</span><br><span class="line">				<span class="comment">// 匹配</span></span><br><span class="line">				<span class="keyword">if</span> (i == m) &#123;</span><br><span class="line">					<span class="keyword">return</span> pos;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 防止索引溢出</span></span><br><span class="line">			<span class="keyword">if</span> (pos + m &gt;= n) &#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 主串的下一个字符串</span></span><br><span class="line">			<span class="keyword">char</span> idx = t[pos + m];</span><br><span class="line">			<span class="comment">// 应该移动的位置</span></span><br><span class="line">			pos = pos + move[idx];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="贪心算法小练习题"><a href="#贪心算法小练习题" class="headerlink" title="贪心算法小练习题"></a>贪心算法小练习题</h3><p>这是算法专栏里作者提供的3道小练习题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> greed;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 贪心算法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreedTest</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> Random rd = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		LinkedList&lt;Integer&gt; candy = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">		LinkedList&lt;Integer&gt; child = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">			candy.add(rd.nextInt(<span class="number">10</span>) + <span class="number">1</span>);</span><br><span class="line">			child.add(rd.nextInt(<span class="number">10</span>) + <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		getCandy(candy, child);</span><br><span class="line">		<span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">7</span>];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">			nums[i] = (<span class="keyword">int</span>) (Math.random() * <span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// int[] nums2 = &#123;0,0,0,0,0,0,1110&#125;;</span></span><br><span class="line">		getMoney2((<span class="keyword">int</span>) (Math.random() * <span class="number">1000</span>));</span><br><span class="line">		getMoney((<span class="keyword">int</span>) (Math.random() * <span class="number">1000</span>), nums);</span><br><span class="line">		List&lt;Integer[]&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> a = (<span class="keyword">int</span>) (Math.random() * <span class="number">7</span>);</span><br><span class="line">			<span class="keyword">int</span> b = (<span class="keyword">int</span>) (Math.random() * <span class="number">5</span>) + a + <span class="number">1</span>;</span><br><span class="line">			Integer[] is = &#123; a, b &#125;;</span><br><span class="line">			list.add(is);</span><br><span class="line">		&#125;</span><br><span class="line">		region(list);</span><br><span class="line">		region2(list);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 分糖果</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * 我们有 m 个糖果和 n 个孩子。我们现在要把糖果分给这些孩子吃，但是糖果少，孩子多（m&lt;n），所以糖果只能分配给一部分孩子。</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * 每个糖果的大小不等，这 m 个糖果的大小分别是</span></span><br><span class="line"><span class="comment">	 * s1，s2，s3，……，sm。除此之外，每个孩子对糖果大小的需求也是不一样的，只有糖果的大小大于等于孩子的对糖果大小的需求的时候，孩子才得到满足。</span></span><br><span class="line"><span class="comment">	 * 假设这 n 个孩子对糖果大小的需求分别是 g1，g2，g3，……，gn。</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * 我的问题是，如何分配糖果，能尽可能满足最多数量的孩子？</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// 极客时间版权所有: https://time.geekbang.org/column/article/73188</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getCandy</span><span class="params">(LinkedList&lt;Integer&gt; candy, LinkedList&lt;Integer&gt; child)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"======贪心算法思路-分糖果======="</span>);</span><br><span class="line">		Collections.sort(child);</span><br><span class="line">		Collections.sort(candy);</span><br><span class="line">		System.out.println(<span class="string">"糖果大小:"</span> + candy);</span><br><span class="line">		System.out.println(<span class="string">"小孩需求:"</span> + child);</span><br><span class="line">		<span class="comment">// 小孩和糖果从小到大排序</span></span><br><span class="line">		<span class="comment">// 从最小需求的小孩匹配最小的糖果</span></span><br><span class="line">		<span class="comment">// 符合就删除</span></span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; child.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; candy.size(); j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (child.get(i).intValue() &lt;= candy.get(j).intValue()) &#123;</span><br><span class="line">					System.out.println(i + <span class="string">"号小孩，拿了"</span> + (j + count) + <span class="string">"号糖果,需求-糖果大小:"</span> + child.get(i) + <span class="string">"-"</span> + candy.get(j));</span><br><span class="line">					count++;</span><br><span class="line">					candy.remove(j);</span><br><span class="line">					<span class="keyword">break</span>;<span class="comment">//</span></span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"count:"</span> + count);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 钱币找零</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * 这个问题在我们的日常生活中更加普遍。假设我们有 1 元、2 元、5 元、10 元、20 元、50 元、100 元这些面额的纸币， 它们的张数分别是</span></span><br><span class="line"><span class="comment">	 * c1、c2、c5、c10、c20、c50、c100。我们现在要用这些钱来支付 K 元，最少要用多少张纸币呢？</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// 极客时间版权所有: https://time.geekbang.org/column/article/73188</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getMoney</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"=====贪心算法思路-钱币找零-有数量限制======"</span>);</span><br><span class="line">		System.out.println(<span class="string">"初始金额:"</span> + n);</span><br><span class="line">		System.out.println(<span class="string">"零钱数量:"</span>);</span><br><span class="line">		<span class="keyword">int</span>[] moneys = &#123; <span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span> &#125;;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">			System.out.print(moneys[i] + <span class="string">"元:"</span> + nums[i] + <span class="string">"张,"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		LinkedList&lt;Integer&gt; r = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; moneys.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (n &gt;= moneys[i] &amp;&amp; nums[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				n -= moneys[i];</span><br><span class="line">				nums[i]--;</span><br><span class="line">				r.add(moneys[i]);</span><br><span class="line">				i--;<span class="comment">// 符合就在当前继续</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		System.out.println();</span><br><span class="line">		System.out.println(<span class="string">"结果:"</span> + r);</span><br><span class="line">		<span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		System.out.print(<span class="string">"张数:"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; r.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (r.get(i) == moneys[idx]) &#123;</span><br><span class="line">				count++;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (count != <span class="number">0</span>)</span><br><span class="line">					System.out.print(moneys[idx] + <span class="string">"元:"</span> + count + <span class="string">"张,"</span>);</span><br><span class="line">				idx++;</span><br><span class="line">				i--;<span class="comment">// 符合就在当前继续</span></span><br><span class="line">				count = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (count != <span class="number">0</span>)</span><br><span class="line">			System.out.print(moneys[idx] + <span class="string">"元:"</span> + count + <span class="string">"张,"</span>);</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="keyword">if</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			System.err.println(<span class="string">"钱不够,还剩余:"</span> + n);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 无数量限制</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getMoney2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"=====贪心算法思路-钱币找零-无数量限制======"</span>);</span><br><span class="line">		System.out.println(<span class="string">"初始金额:"</span> + n);</span><br><span class="line">		<span class="keyword">int</span>[] moneys = &#123; <span class="number">100</span>, <span class="number">50</span>, <span class="number">20</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span> &#125;;</span><br><span class="line">		LinkedList&lt;Integer&gt; r = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; moneys.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (n &gt;= moneys[i]) &#123;</span><br><span class="line">				n -= moneys[i];</span><br><span class="line">				r.add(moneys[i]);</span><br><span class="line">				i--;<span class="comment">// 符合就在当前继续</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"结果:"</span> + r);</span><br><span class="line">		<span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		System.out.print(<span class="string">"张数:"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; r.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (r.get(i) == moneys[idx]) &#123;</span><br><span class="line">				count++;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (count != <span class="number">0</span>)</span><br><span class="line">					System.out.print(moneys[idx] + <span class="string">"元:"</span> + count + <span class="string">"张,"</span>);</span><br><span class="line">				idx++;</span><br><span class="line">				i--;<span class="comment">// 符合就在当前继续</span></span><br><span class="line">				count = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (count != <span class="number">0</span>)</span><br><span class="line">			System.out.print(moneys[idx] + <span class="string">":"</span> + count + <span class="string">"张,"</span>);</span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 区间覆盖</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * 假设我们有 n 个区间，区间的起始端点和结束端点分别是 [l1, r1]，[l2, r2]，[l3, r3]，……，[ln, rn]。 我们从这</span></span><br><span class="line"><span class="comment">	 * n 个区间中选出一部分区间，这部分区间满足两两不相交（端点相交的情况不算相交），最多能选出多少个区间呢？</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// 极客时间版权所有: https://time.geekbang.org/column/article/73188</span></span><br><span class="line">	<span class="comment">// 根据右边索引</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">region</span><span class="params">(List&lt;Integer[]&gt; a)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"====贪心算法思路-区间覆盖-根据右边索引======"</span>);</span><br><span class="line">		System.out.println(<span class="string">"原始:"</span>);</span><br><span class="line">		<span class="keyword">for</span> (Integer[] integers : a) &#123;</span><br><span class="line">			System.out.print(Arrays.toString(integers));</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="comment">// 找最小</span></span><br><span class="line">		List&lt;Integer[]&gt; r = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">		<span class="keyword">int</span> min = a.get(<span class="number">0</span>)[<span class="number">0</span>];<span class="comment">// 有最小索引的</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.size(); i++) &#123;</span><br><span class="line">			Integer[] b = a.get(i);</span><br><span class="line">			<span class="keyword">if</span> (min &gt; b[<span class="number">0</span>]) &#123;</span><br><span class="line">				min = b[<span class="number">0</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> idx = -<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">int</span> rIdx = -<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.size(); i++) &#123;</span><br><span class="line">				Integer[] b = a.get(i);</span><br><span class="line">				<span class="comment">// 在最小节点的右边</span></span><br><span class="line">				<span class="comment">// 长度比当前最小长度要小 或者未赋值过</span></span><br><span class="line">				<span class="comment">// 右边更小</span></span><br><span class="line">				<span class="keyword">if</span> (b[<span class="number">0</span>] &gt;= min &amp;&amp; (b[<span class="number">1</span>] &lt; rIdx || rIdx == -<span class="number">1</span>)) &#123;</span><br><span class="line">					rIdx = b[<span class="number">1</span>];</span><br><span class="line">					idx = i;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (idx == -<span class="number">1</span>)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			Integer[] arr = a.get(idx);</span><br><span class="line">			r.add(arr);</span><br><span class="line">			min = rIdx;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"结果："</span>);</span><br><span class="line">		<span class="keyword">for</span> (Integer[] integers : r) &#123;</span><br><span class="line">			System.out.print(Arrays.toString(integers));</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 根据长度</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">region2</span><span class="params">(List&lt;Integer[]&gt; a)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"====贪心算法思路-区间覆盖-根据区间长度======"</span>);</span><br><span class="line">		System.out.println(<span class="string">"原始:"</span>);</span><br><span class="line">		<span class="keyword">for</span> (Integer[] integers : a) &#123;</span><br><span class="line">			System.out.print(Arrays.toString(integers));</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">		<span class="comment">// 找最小</span></span><br><span class="line">		List&lt;Integer[]&gt; r = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">		<span class="keyword">int</span> min = a.get(<span class="number">0</span>)[<span class="number">0</span>];<span class="comment">// 有最小索引的</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.size(); i++) &#123;</span><br><span class="line">			Integer[] b = a.get(i);</span><br><span class="line">			<span class="keyword">if</span> (min &gt; b[<span class="number">0</span>]) &#123;</span><br><span class="line">				min = b[<span class="number">0</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> idx = -<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">int</span> len = -<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.size(); i++) &#123;</span><br><span class="line">				Integer[] b = a.get(i);</span><br><span class="line">				<span class="keyword">int</span> bl = b[<span class="number">1</span>] - b[<span class="number">0</span>];</span><br><span class="line">				<span class="comment">// 在最小节点的右边</span></span><br><span class="line">				<span class="comment">// 长度比当前最小长度要小 或者未赋值过</span></span><br><span class="line">				<span class="comment">// 右边更小</span></span><br><span class="line">				<span class="keyword">if</span> (b[<span class="number">0</span>] &gt;= min &amp;&amp; (bl &lt; len || len == -<span class="number">1</span>)) &#123;</span><br><span class="line">					len = bl;</span><br><span class="line">					idx = i;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//</span></span><br><span class="line">			<span class="keyword">if</span> (idx == -<span class="number">1</span>)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			Integer[] arr = a.get(idx);</span><br><span class="line">			r.add(arr);</span><br><span class="line">			min = arr[<span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"结果："</span>);</span><br><span class="line">		<span class="keyword">for</span> (Integer[] integers : r) &#123;</span><br><span class="line">			System.out.print(Arrays.toString(integers));</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="http://kafka.apache.org/intro" target="_blank" rel="noopener">http://kafka.apache.org/intro</a></p>
+<p>kafka的介绍（引导）</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="极客时间的专栏《数据结构与算法之美》"><a href="#极客时间的专栏《数据结构与算法之美》" class="headerlink" title="极客时间的专栏《数据结构与算法之美》"></a>极客时间的专栏《数据结构与算法之美》</h3><p>本周学习了该专栏中的35-37篇</p>
+<p>内容如下：</p>
+<p>TRIE树：又称单词查找树，是一种哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希树高。</p>
+<p>AC自动机：基于trie树构建一个类似KMP算法失效函数的失效指针，当进行树结构的匹配失败的时候，就通过失效指针进行快速跳转。</p>
+<p>贪心算法：贪心算法的核心思想就是每次选择都选择对于当前来说是最好的选择。但是这样选择的最终结果不一定是最好的。</p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p><a href="https://www.jianshu.com/p/2e6eb7386cd3" target="_blank" rel="noopener">https://www.jianshu.com/p/2e6eb7386cd3</a><br>SUNDAY 算法</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/22/ARTS-第14周/" rel="next" title="ARTS-第14周">
+                <i class="fa fa-chevron-left"></i> ARTS-第14周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第15周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第15周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AC自动机"><span class="nav-number">1.1.1.</span> <span class="nav-text">AC自动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUNDAY字符串搜索算法"><span class="nav-number">1.1.2.</span> <span class="nav-text">SUNDAY字符串搜索算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贪心算法小练习题"><span class="nav-number">1.1.3.</span> <span class="nav-text">贪心算法小练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

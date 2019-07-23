@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ARTS （第17周）开篇词 本周学习了动态规划的内容，发现一句话用来形容动态规划很好 千里之行，始于足下。 本周内容： 动态规划">
+<meta name="description" content="ARTS （第17周）开篇词 本周学习了动态规划的内容，发现一句话用来形容动态规划很好 千里之行，始于足下。 本周： 动态规划">
 <meta name="keywords" content="ARTS,每周总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARTS-第17周">
 <meta property="og:url" content="http://yoursite.com/2019/07/14/ARTS-第17周/index.html">
 <meta property="og:site_name" content="拉环的微博">
-<meta property="og:description" content="ARTS （第17周）开篇词 本周学习了动态规划的内容，发现一句话用来形容动态规划很好 千里之行，始于足下。 本周内容： 动态规划">
+<meta property="og:description" content="ARTS （第17周）开篇词 本周学习了动态规划的内容，发现一句话用来形容动态规划很好 千里之行，始于足下。 本周： 动态规划">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-14T06:35:39.196Z">
+<meta property="og:updated_time" content="2019-07-20T06:38:43.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARTS-第17周">
-<meta name="twitter:description" content="ARTS （第17周）开篇词 本周学习了动态规划的内容，发现一句话用来形容动态规划很好 千里之行，始于足下。 本周内容： 动态规划">
+<meta name="twitter:description" content="ARTS （第17周）开篇词 本周学习了动态规划的内容，发现一句话用来形容动态规划很好 千里之行，始于足下。 本周： 动态规划">
 
 
 
@@ -303,7 +303,7 @@
         <h1 id="ARTS-（第17周）"><a href="#ARTS-（第17周）" class="headerlink" title="ARTS （第17周）"></a>ARTS （第17周）</h1><p>开篇词</p>
 <p>本周学习了动态规划的内容，发现一句话用来形容动态规划很好</p>
 <p>千里之行，始于足下。</p>
-<p>本周内容：</p>
+<p>本周：</p>
 <p><strong>动态规划</strong></p>
 <a id="more"></a>
 <h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="动态规划01背包"><a href="#动态规划01背包" class="headerlink" title="动态规划01背包"></a>动态规划01背包</h3><p>用动态规划和备忘录模式等几种模式做的动态规划</p>
@@ -312,8 +312,8 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getMoney</span><span class="params">(<span class="keyword">int</span>[] it, <span class="keyword">int</span> p, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> p2 = p * max;</span><br><span class="line">		<span class="keyword">int</span> len = it.length;</span><br><span class="line">		<span class="keyword">boolean</span>[][] t = <span class="keyword">new</span> <span class="keyword">boolean</span>[len][p2];</span><br><span class="line">		t[<span class="number">0</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (it[<span class="number">0</span>] &lt;= p2) &#123;</span><br><span class="line">			t[<span class="number">0</span>][it[<span class="number">0</span>]] = <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; p2; j++) &#123;</span><br><span class="line">				t[i][j] = t[i - <span class="number">1</span>][j];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j + it[i] &lt; p2; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (t[i - <span class="number">1</span>][j]) &#123;</span><br><span class="line">					t[i][j + it[i]] = <span class="keyword">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> r = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = p; i &lt; p2; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (t[t.length - <span class="number">1</span>][i] == <span class="keyword">true</span>) &#123;</span><br><span class="line">				r = i;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (r == -<span class="number">1</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"没有"</span>);</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"有："</span> + r);</span><br><span class="line">		<span class="comment">// 从最后一个物品往前</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = it.length - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">			<span class="comment">// 减去当前价钱 去前一行找</span></span><br><span class="line">			<span class="comment">// 有就是有放入</span></span><br><span class="line">			<span class="keyword">if</span> (r - it[i] &gt;= <span class="number">0</span> &amp;&amp; t[i - <span class="number">1</span>][r - it[i]] == <span class="keyword">true</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"第"</span> + i + <span class="string">"个物品,价钱"</span> + it[i]);</span><br><span class="line">				r = r - it[i];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 如果t[i - 1][r]==true可以理解成是当前物品不放入 这里就不继续写了</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 最后一个物品的判断 it[0][0]=true</span></span><br><span class="line">		<span class="keyword">if</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"第"</span> + <span class="number">0</span> + <span class="string">"个物品,价钱"</span> + it[<span class="number">0</span>]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="http://dubbo.apache.org/en-us/docs/user/quick-start.html" target="_blank" rel="noopener">http://dubbo.apache.org/en-us/docs/user/quick-start.html</a></p>
 <p>dubbo 的介绍和简单开始。</p>
-<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><p>本周学习了该专栏中的40-42篇</p>
-<p>内容为动态规划：简而言之，动态规划就是构建出最基础的东西，然后根据底层的数据再逐层构建出更上层的东西。直到计算玩全部的数据。动态规划的效率较高。</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="极客时间的专栏《数据结构与算法之美》"><a href="#极客时间的专栏《数据结构与算法之美》" class="headerlink" title="极客时间的专栏《数据结构与算法之美》"></a>极客时间的专栏《数据结构与算法之美》</h3><p>本周学习了该专栏中的40-42篇</p>
+<p>内容为动态规划：简而言之，动态规划就是构建出最基础的东西，然后根据底层的数据再逐层构建出更上层的东西。直到计算玩全部的数据。并且动态规划的效率较高。</p>
 <h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p><a href="https://blog.csdn.net/BEYONDMA/article/details/88365203" target="_blank" rel="noopener">https://blog.csdn.net/BEYONDMA/article/details/88365203</a></p>
 <p>ai换脸原理</p>
 
@@ -357,6 +357,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/20/ARTS-第18周/" rel="prev" title="ARTS-第18周">
+                ARTS-第18周 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -433,7 +437,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -479,7 +483,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第17周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第17周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划01背包"><span class="nav-number">1.1.1.</span> <span class="nav-text">动态规划01背包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划-凑单"><span class="nav-number">1.1.2.</span> <span class="nav-text">动态规划-凑单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第17周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第17周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划01背包"><span class="nav-number">1.1.1.</span> <span class="nav-text">动态规划01背包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划-凑单"><span class="nav-number">1.1.2.</span> <span class="nav-text">动态规划-凑单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
             
 
           </div>

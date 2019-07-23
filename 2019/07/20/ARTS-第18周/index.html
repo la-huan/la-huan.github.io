@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第18周）想要真正的掌握，就应该多练多用多想。 本周： 动态规划">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS-第18周">
+<meta property="og:url" content="http://yoursite.com/2019/07/20/ARTS-第18周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第18周）想要真正的掌握，就应该多练多用多想。 本周： 动态规划">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-20T06:40:34.846Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS-第18周">
+<meta name="twitter:description" content="ARTS （第18周）想要真正的掌握，就应该多练多用多想。 本周： 动态规划">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/20/ARTS-第18周/">
+
+
+
+
+
+  <title>ARTS-第18周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/ARTS-第18周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS-第18周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-20T21:13:38+08:00">
+                2019-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第18周）"><a href="#ARTS-（第18周）" class="headerlink" title="ARTS （第18周）"></a>ARTS （第18周）</h1><p>想要真正的掌握，就应该多练多用多想。</p>
+<p>本周：</p>
+<p><strong>动态规划</strong></p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="凑单问题-所有情况的罗列"><a href="#凑单问题-所有情况的罗列" class="headerlink" title="凑单问题-所有情况的罗列"></a>凑单问题-所有情况的罗列</h3><p>凑单问题：罗列全部的情况</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> dynamic_programming;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DpMoneyTest</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// while (true) &#123;</span></span><br><span class="line">		testMoney();</span><br><span class="line">		<span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testMoney</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">15</span>];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">			a[i] = (<span class="keyword">int</span>) (Math.random() * <span class="number">10</span>) + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> p = (<span class="keyword">int</span>) (Math.random() * <span class="number">50</span> + <span class="number">25</span>);</span><br><span class="line">		<span class="comment">// a[0] = 101;</span></span><br><span class="line">		<span class="comment">// a[1] = 55;</span></span><br><span class="line">		<span class="comment">// p = 100;</span></span><br><span class="line">		System.out.println(p + <span class="string">":"</span> + Arrays.toString(a));</span><br><span class="line">		getMoney(a, p, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getMoney</span><span class="params">(<span class="keyword">int</span>[] it, <span class="keyword">int</span> p, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> p2 = p * max;</span><br><span class="line">		<span class="keyword">int</span> len = it.length;</span><br><span class="line">		<span class="keyword">boolean</span>[][] t = <span class="keyword">new</span> <span class="keyword">boolean</span>[len][p2];</span><br><span class="line">		t[<span class="number">0</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (it[<span class="number">0</span>] &lt;= len) &#123;</span><br><span class="line">			t[<span class="number">0</span>][it[<span class="number">0</span>]] = <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; p2; j++) &#123;</span><br><span class="line">				t[i][j] = t[i - <span class="number">1</span>][j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j + it[i] &lt; p2; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (t[i - <span class="number">1</span>][j]) &#123;</span><br><span class="line">					t[i][j + it[i]] = <span class="keyword">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> r = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = p; i &lt; p2; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (t[t.length - <span class="number">1</span>][i] == <span class="keyword">true</span>) &#123;</span><br><span class="line">				r = i;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (r == -<span class="number">1</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"没有"</span>);</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"有："</span> + r);</span><br><span class="line"></span><br><span class="line">		System.out.println(<span class="string">"不放的角度解析A========"</span>);</span><br><span class="line">		print2(t, r, it);</span><br><span class="line">		System.out.println(<span class="string">"不放的角度解析B========"</span>);</span><br><span class="line">		print3(t, r, it);</span><br><span class="line">		System.out.println(<span class="string">"放的角度解析========"</span>);</span><br><span class="line">		print1(t, r, it);</span><br><span class="line">		System.out.println(<span class="string">"放和不放的混合解析========"</span>);</span><br><span class="line">		LinkedList&lt;Integer&gt; list = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">		printAll(t, r, it, it.length - <span class="number">1</span>, <span class="number">0</span>, list, r);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printAll</span><span class="params">(<span class="keyword">boolean</span>[][] t, <span class="keyword">int</span> r, <span class="keyword">int</span>[] it, <span class="keyword">int</span> i, <span class="keyword">int</span> level, LinkedList&lt;Integer&gt; list,</span></span></span><br><span class="line"><span class="function"><span class="params">			<span class="keyword">int</span> total)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="comment">// 最后个物品的判断</span></span><br><span class="line">				<span class="comment">// System.out.println("第" + 0 + "个物品,价钱" + it[0]);</span></span><br><span class="line">				list.add(<span class="number">0</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// System.out.println("into:" + list);</span></span><br><span class="line">			<span class="keyword">int</span> validate = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (Integer ix : list) &#123;</span><br><span class="line">				validate += it[ix];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (validate == total) &#123;</span><br><span class="line">				System.out.println(<span class="string">"result:"</span> + list);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.err.println(<span class="string">"err:"</span> + list);<span class="comment">//输出这里就是算法不对</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 放入的角度</span></span><br><span class="line">		<span class="keyword">if</span> ((r - it[i] &gt;= <span class="number">0</span> &amp;&amp; t[i - <span class="number">1</span>][r - it[i]] == <span class="keyword">true</span>)) &#123;</span><br><span class="line">			flag++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 放入的角度-&gt;不放入的角度取反</span></span><br><span class="line">		<span class="keyword">if</span> ((r &gt;= <span class="number">0</span> &amp;&amp; t[i - <span class="number">1</span>][r] == <span class="keyword">false</span>)) &#123;</span><br><span class="line">			flag++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 情况分析：</span></span><br><span class="line">		<span class="comment">// 全部失败 走失败的</span></span><br><span class="line">		<span class="comment">// 一个失败一个成功 失败成功的都走</span></span><br><span class="line">		<span class="comment">// 全部成功 不走失败的</span></span><br><span class="line">		<span class="comment">// 即：存在成功的就走成功的 存在失败的就走失败的</span></span><br><span class="line">		<span class="keyword">if</span> (flag &gt; <span class="number">0</span>) &#123;<span class="comment">// 1 or 2</span></span><br><span class="line">			LinkedList&lt;Integer&gt; two = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; list.size(); j++) &#123;</span><br><span class="line">				two.add(list.get(j));</span><br><span class="line">			&#125;</span><br><span class="line">			two.add(i);</span><br><span class="line">			printAll(t, r - it[i], it, i - <span class="number">1</span>, level + <span class="number">1</span>, two, total);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (flag &lt; <span class="number">2</span>) &#123;<span class="comment">// 0 or 1</span></span><br><span class="line">			printAll(t, r, it, i - <span class="number">1</span>, level + <span class="number">1</span>, list, total);<span class="comment">// 存在匹配失败的</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 放的角度判断</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print1</span><span class="params">(<span class="keyword">boolean</span>[][] t, <span class="keyword">int</span> r, <span class="keyword">int</span>[] it)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 从最后一个物品往前</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = it.length - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">			<span class="comment">// 减去当前价钱 去前一行找</span></span><br><span class="line">			<span class="comment">// 有就是有放入</span></span><br><span class="line">			<span class="keyword">if</span> (r - it[i] &gt;= <span class="number">0</span> &amp;&amp; t[i - <span class="number">1</span>][r - it[i]] == <span class="keyword">true</span>) &#123;</span><br><span class="line">				System.out.println(<span class="string">"第"</span> + i + <span class="string">"个物品,价钱"</span> + it[i]);</span><br><span class="line">				r = r - it[i];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">// 如果t[i - 1][r]==true可以理解成是当前物品不放入 这里就不继续写了</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 最后一个物品的判断 it[0][0]=true</span></span><br><span class="line">		<span class="keyword">if</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"第"</span> + <span class="number">0</span> + <span class="string">"个物品,价钱"</span> + it[<span class="number">0</span>]);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 不放的角度判断</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print2</span><span class="params">(<span class="keyword">boolean</span>[][] t, <span class="keyword">int</span> r, <span class="keyword">int</span>[] it)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = it.length - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">			<span class="comment">// 减去当前价钱 去前一行找</span></span><br><span class="line">			<span class="comment">// 当前物品 有放入</span></span><br><span class="line">			<span class="comment">// t[i - 1][r]==true可以理解成是当前物品不放入 取反就是当前物品放入</span></span><br><span class="line">			<span class="keyword">if</span> (!(r &gt;= <span class="number">0</span> &amp;&amp; t[i - <span class="number">1</span>][r] == <span class="keyword">true</span>)) &#123;</span><br><span class="line">				System.out.println(<span class="string">"第"</span> + i + <span class="string">"个物品,价钱"</span> + it[i]);</span><br><span class="line">				r = r - it[i];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"第"</span> + <span class="number">0</span> + <span class="string">"个物品,价钱"</span> + it[<span class="number">0</span>]);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 不放的角度判断</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print3</span><span class="params">(<span class="keyword">boolean</span>[][] t, <span class="keyword">int</span> r, <span class="keyword">int</span>[] it)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = it.length - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">			<span class="comment">// 减去当前价钱 去前一行找</span></span><br><span class="line">			<span class="comment">// 当前物品 有放入</span></span><br><span class="line">			<span class="comment">// t[i - 1][r]==true可以理解成是当前物品不放入 取反就是当前物品放入</span></span><br><span class="line">			<span class="keyword">if</span> ((r &gt;= <span class="number">0</span> &amp;&amp; t[i - <span class="number">1</span>][r] == <span class="keyword">false</span>)) &#123;</span><br><span class="line">				System.out.println(<span class="string">"第"</span> + i + <span class="string">"个物品,价钱"</span> + it[i]);</span><br><span class="line">				r = r - it[i];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (r != <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(<span class="string">"第"</span> + <span class="number">0</span> + <span class="string">"个物品,价钱"</span> + it[<span class="number">0</span>]);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="硬币问题"><a href="#硬币问题" class="headerlink" title="硬币问题"></a>硬币问题</h3><p>有若干个不同额度的硬币，如需要一定的金额，最少需要几个硬币</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> dynamic_programming;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DpCoins</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		testCalCoins();</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//测试</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testCalCoins</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] c = &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span> &#125;;</span><br><span class="line">		<span class="keyword">int</span> m = (<span class="keyword">int</span>) (<span class="number">1</span> + (Math.random() * <span class="number">99</span>));</span><br><span class="line">		<span class="comment">// m = 9;</span></span><br><span class="line">		<span class="keyword">int</span> r = calMinCoins(c, m);</span><br><span class="line">		<span class="keyword">int</span> r2 = calMinCoins2(c, m);</span><br><span class="line"></span><br><span class="line">		System.out.println(m + <span class="string">"-&gt;"</span> + r2 + <span class="string">":"</span> + r);</span><br><span class="line">		<span class="keyword">if</span> (r2 != r) &#123;</span><br><span class="line">			System.err.println(<span class="string">"err"</span>);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 算硬币</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calMinCoins</span><span class="params">(<span class="keyword">int</span>[] c, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 最少数量</span></span><br><span class="line">		<span class="keyword">boolean</span>[][] a = <span class="keyword">new</span> <span class="keyword">boolean</span>[m][m + <span class="number">1</span>];</span><br><span class="line">		<span class="comment">// 若干元 可以用若干个硬币达到</span></span><br><span class="line">		<span class="comment">// a[0][0] = true;// 啥都不放</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; c.length; x++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (c[x] == m) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (c[x] &lt; m) &#123;</span><br><span class="line">				a[<span class="number">0</span>][c[x]] = <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= m; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (a[i - <span class="number">1</span>][j]) &#123;<span class="comment">// 上一层如果放入</span></span><br><span class="line">					a[i][j] = <span class="keyword">true</span>;</span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; c.length; x++) &#123;</span><br><span class="line">						<span class="keyword">if</span> (j + c[x] &lt;= m) &#123;</span><br><span class="line">							a[i][j + c[x]] = <span class="keyword">true</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">					<span class="comment">// 核心</span></span><br><span class="line">					<span class="keyword">if</span> (a[i][m] == <span class="keyword">true</span>) &#123;</span><br><span class="line">						<span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		System.err.println(<span class="string">"错误1"</span>);</span><br><span class="line">		System.exit(<span class="number">0</span>);<span class="comment">// exit</span></span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">// 算法错误的时候</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 算硬币</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calMinCoins2</span><span class="params">(<span class="keyword">int</span>[] c, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 最少数量</span></span><br><span class="line">		<span class="keyword">boolean</span>[] a = <span class="keyword">new</span> <span class="keyword">boolean</span>[m + <span class="number">1</span>];</span><br><span class="line">		<span class="comment">// 若干元 可以用若干个硬币达到</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; c.length; x++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (c[x] == m) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (c[x] &lt; m) &#123;</span><br><span class="line">				a[c[x]] = <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = m; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">				<span class="keyword">if</span> (a[j]) &#123;<span class="comment">// 上一层如果放入</span></span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; c.length; x++) &#123;</span><br><span class="line">						<span class="keyword">if</span> (j + c[x] &lt;= m) &#123;</span><br><span class="line">							a[j + c[x]] = <span class="keyword">true</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">					<span class="comment">// 核心</span></span><br><span class="line">					<span class="keyword">if</span> (a[m] == <span class="keyword">true</span>) &#123;</span><br><span class="line">						<span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		System.err.println(<span class="string">"错误2"</span>);</span><br><span class="line">		System.exit(<span class="number">0</span>);<span class="comment">// exit</span></span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">// 算法错误的时候</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="算距离"><a href="#算距离" class="headerlink" title="算距离"></a>算距离</h3><p>莱温斯坦距离、最长公共子序列</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> dynamic_programming;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DpTestDistance</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// testLwst();</span></span><br><span class="line">		 testLcs();</span><br><span class="line">		String x = <span class="string">"efabeda"</span>;</span><br><span class="line">		String y = <span class="string">"ecfafgbdc"</span>;</span><br><span class="line">		<span class="keyword">int</span> b = lcs(x, y);</span><br><span class="line">		<span class="keyword">int</span> a = lcs_(x.toCharArray(), y.toCharArray());</span><br><span class="line">		<span class="comment">//System.out.println(a + "," + b);</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testLcs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">1000</span>;</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</span><br><span class="line">			l = random.nextInt(<span class="number">9</span>) + <span class="number">1</span>;</span><br><span class="line">			String x = generateString(l);</span><br><span class="line">			l = random.nextInt(<span class="number">9</span>) + <span class="number">1</span>;</span><br><span class="line">			String y = generateString(l);</span><br><span class="line">			<span class="keyword">int</span> a = lcs_(x.toCharArray(), y.toCharArray());</span><br><span class="line">			<span class="keyword">int</span> b = lcs(x, y);</span><br><span class="line">			System.out.println(i + <span class="string">"-&gt;"</span> + x + <span class="string">":"</span> + y);</span><br><span class="line">			System.out.println(a + <span class="string">","</span> + b);</span><br><span class="line">			<span class="keyword">if</span> (a != b) &#123;</span><br><span class="line">				System.out.println(<span class="string">"err"</span>);</span><br><span class="line">				System.exit(<span class="number">0</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 最长公共前缀</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcs</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> lcs(a.toCharArray(), b.toCharArray());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 最长公共前缀</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcs</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">char</span>[] b)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> al = a.length;</span><br><span class="line">		<span class="keyword">int</span> bl = b.length;</span><br><span class="line">		<span class="keyword">int</span>[][] t = <span class="keyword">new</span> <span class="keyword">int</span>[al][bl];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (a[<span class="number">0</span>] == b[<span class="number">0</span>]) &#123;<span class="comment">// 首行首个</span></span><br><span class="line">			t[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;<span class="comment">// 相同不需要编辑</span></span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			t[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 首行</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; bl; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (a[<span class="number">0</span>] == b[i]) &#123;</span><br><span class="line">				<span class="comment">// 当成前面的都不相等</span></span><br><span class="line">				t[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 当成前面的都不相等</span></span><br><span class="line">				t[<span class="number">0</span>][i] = t[<span class="number">0</span>][i - <span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 首列</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; al; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (a[i] == b[<span class="number">0</span>]) &#123;</span><br><span class="line">				<span class="comment">// 当成前面的都不相等</span></span><br><span class="line">				t[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 当成前面的都不相等</span></span><br><span class="line">				t[i][<span class="number">0</span>] = t[i - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">				;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; al; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; bl; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (a[i] == b[j]) &#123;</span><br><span class="line">					t[i][j] = max(t[i - <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">1</span>, t[i][j - <span class="number">1</span>], t[i - <span class="number">1</span>][j]);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					t[i][j] = max(t[i - <span class="number">1</span>][j - <span class="number">1</span>], t[i][j - <span class="number">1</span>], t[i - <span class="number">1</span>][j]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> t[al - <span class="number">1</span>][bl - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 三个数字里的最大数</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> m = x;</span><br><span class="line">		<span class="keyword">if</span> (y &gt; m) &#123;</span><br><span class="line">			m = y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (z &gt; m) &#123;</span><br><span class="line">			m = z;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> m;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testLwst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">1000</span>;</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; max; i++) &#123;</span><br><span class="line">			l = random.nextInt(<span class="number">9</span>) + <span class="number">1</span>;</span><br><span class="line">			String x = generateString(l);</span><br><span class="line">			l = random.nextInt(<span class="number">9</span>) + <span class="number">1</span>;</span><br><span class="line">			String y = generateString(l);</span><br><span class="line">			<span class="keyword">int</span> a = lwstDP(x.toCharArray(), y.toCharArray());</span><br><span class="line">			<span class="keyword">int</span> b = lwst(x, y);</span><br><span class="line">			System.out.println(i + <span class="string">"-&gt;"</span> + x + <span class="string">":"</span> + y);</span><br><span class="line">			System.out.println(a + <span class="string">"-"</span> + b);</span><br><span class="line">			<span class="keyword">if</span> (a != b) &#123;</span><br><span class="line">				System.err.println(<span class="string">"err"</span>);</span><br><span class="line">				System.exit(<span class="number">0</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 来文斯坦距离 需要编辑的最短距离(删除 新增 修改)</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lwst</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> lwst(a.toCharArray(), b.toCharArray());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 来文斯坦距离 需要编辑的最短距离(删除 新增 修改)</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lwst</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">char</span>[] b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> al = a.length;</span><br><span class="line">		<span class="keyword">int</span> bl = b.length;</span><br><span class="line">		<span class="keyword">int</span>[][] t = <span class="keyword">new</span> <span class="keyword">int</span>[al][bl];</span><br><span class="line">		<span class="keyword">if</span> (a[<span class="number">0</span>] == b[<span class="number">0</span>]) &#123;<span class="comment">// 首行首个</span></span><br><span class="line">			t[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;<span class="comment">// 相同不需要编辑</span></span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			t[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 其实这里的x轴和y轴的首行都是根据规律计算的</span></span><br><span class="line">		<span class="comment">// 如ABAA和ABCD在计算的时候 可以添加这样一个辅助的 0来进行计算(这里的0不是代表字符‘0’代表绝对不匹配的字符)</span></span><br><span class="line">		<span class="comment">////////////////////</span></span><br><span class="line">		<span class="comment">// - 0 A B A A</span></span><br><span class="line">		<span class="comment">// 0 0 1 2 3 4</span></span><br><span class="line">		<span class="comment">// A 1 0 0 0 0</span></span><br><span class="line">		<span class="comment">// B 2 0 0 0 0</span></span><br><span class="line">		<span class="comment">// C 2 0 0 1 1</span></span><br><span class="line">		<span class="comment">// D 3 0 0 1 2</span></span><br><span class="line">		<span class="comment">//////////////////////////</span></span><br><span class="line">		<span class="comment">// 这里根据动态规划算法整理出来的的规律,</span></span><br><span class="line">		<span class="comment">// 则t[j][i]的值是通过t[j][i-1] 和t[j-1][i-1] 和t[j-1][i-1] 三个数里最小的那个进行推导出来的</span></span><br><span class="line">		<span class="comment">// 那么t[0][i] 是通过t[0][i-1] 和矩阵里该位置上方(值是i+2)、左上方的(值是i+1) 三个值进行比大小 取最小值</span></span><br><span class="line">		<span class="comment">// 也即是t[0][i-1]和i比哪个数更小</span></span><br><span class="line">		<span class="comment">// 那么求当i=1的时候 t[0][1]的数字的时候可以发现 就是去找 t[0][0]小还是 1小</span></span><br><span class="line">		<span class="comment">// 因为 t[0][0]的值可以是1也可能是0</span></span><br><span class="line">		<span class="comment">// 因此 要么 t[0][i-1] == i 要么 t[0][i-1] &lt; i</span></span><br><span class="line">		<span class="comment">// 所以直接用 t[0][i-1]即可,</span></span><br><span class="line">		<span class="comment">// 因为使用的是动态规划解法的思想,后续判断(Y轴也是一样,就是换个角度)用相同的判断即可</span></span><br><span class="line">		<span class="comment">// 参考状态转移方程</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; bl; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (a[<span class="number">0</span>] == b[i]) &#123;</span><br><span class="line">				t[<span class="number">0</span>][i] = i;<span class="comment">// 当成前面的都不相等</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 去取所有的前面里最小的进行+1 在这里最小的就是 t[0][i-1]</span></span><br><span class="line">				t[<span class="number">0</span>][i] = t[<span class="number">0</span>][i - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; al; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (a[i] == b[<span class="number">0</span>]) &#123;</span><br><span class="line">				t[i][<span class="number">0</span>] = i;<span class="comment">// 当成前面的都不相等</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// 去取所有的前面里最小的进行+1 在这里最小的就是 t[i-1][0]</span></span><br><span class="line">				t[i][<span class="number">0</span>] = t[i - <span class="number">1</span>][<span class="number">0</span>] + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; al; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; bl; j++) &#123;</span><br><span class="line">				<span class="comment">// 相等</span></span><br><span class="line">				<span class="keyword">if</span> (a[i] == b[j]) &#123;</span><br><span class="line">					<span class="comment">// 去三个数字里找最小的</span></span><br><span class="line">					t[i][j] = min(t[i - <span class="number">1</span>][j - <span class="number">1</span>], t[i][j - <span class="number">1</span>] + <span class="number">1</span>, t[i - <span class="number">1</span>][j] + <span class="number">1</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="comment">// 去三个数里找最小的加一</span></span><br><span class="line">					<span class="comment">// 去三个数字里找最小的</span></span><br><span class="line">					t[i][j] = min(t[i - <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">1</span>, t[i][j - <span class="number">1</span>] + <span class="number">1</span>, t[i - <span class="number">1</span>][j] + <span class="number">1</span>);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> t[al - <span class="number">1</span>][bl - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 三个数字里的最小数</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> m = x;</span><br><span class="line">		<span class="keyword">if</span> (y &lt; m) &#123;</span><br><span class="line">			m = y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (z &lt; m) &#123;</span><br><span class="line">			m = z;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> m;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">////////////////////////////////</span></span><br><span class="line">	<span class="comment">// 测试用-复制自极客时间</span></span><br><span class="line">	<span class="comment">////////////////////////////////////</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcs_</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">char</span>[] b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n = a.length;</span><br><span class="line">		<span class="keyword">int</span> m = b.length;</span><br><span class="line">		<span class="keyword">int</span>[][] maxlcs = <span class="keyword">new</span> <span class="keyword">int</span>[n][m];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;<span class="comment">// 初始化第 0 行：a[0..0] 与 b[0..j] 的 maxlcs</span></span><br><span class="line">			<span class="keyword">if</span> (a[<span class="number">0</span>] == b[j])</span><br><span class="line">				maxlcs[<span class="number">0</span>][j] = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (j != <span class="number">0</span>)</span><br><span class="line">				maxlcs[<span class="number">0</span>][j] = maxlcs[<span class="number">0</span>][j - <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				maxlcs[<span class="number">0</span>][j] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;<span class="comment">// 初始化第 0 列：a[0..i] 与 b[0..0] 的 maxlcs</span></span><br><span class="line">			<span class="keyword">if</span> (a[i] == b[<span class="number">0</span>])</span><br><span class="line">				maxlcs[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (i != <span class="number">0</span>)</span><br><span class="line">				maxlcs[i][<span class="number">0</span>] = maxlcs[i - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				maxlcs[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123; <span class="comment">// 填表</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; m; ++j) &#123;</span><br><span class="line">				<span class="keyword">if</span> (a[i] == b[j])</span><br><span class="line">					maxlcs[i][j] = max_(maxlcs[i - <span class="number">1</span>][j], maxlcs[i][j - <span class="number">1</span>], maxlcs[i - <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					maxlcs[i][j] = max_(maxlcs[i - <span class="number">1</span>][j], maxlcs[i][j - <span class="number">1</span>], maxlcs[i - <span class="number">1</span>][j - <span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> maxlcs[n - <span class="number">1</span>][m - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max_</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> maxv = Integer.MIN_VALUE;</span><br><span class="line">		<span class="keyword">if</span> (x &gt; maxv)</span><br><span class="line">			maxv = x;</span><br><span class="line">		<span class="keyword">if</span> (y &gt; maxv)</span><br><span class="line">			maxv = y;</span><br><span class="line">		<span class="keyword">if</span> (z &gt; maxv)</span><br><span class="line">			maxv = z;</span><br><span class="line">		<span class="keyword">return</span> maxv;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lwstDP</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">char</span>[] b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n = a.length;</span><br><span class="line">		<span class="keyword">int</span> m = b.length;</span><br><span class="line">		<span class="keyword">int</span>[][] minDist = <span class="keyword">new</span> <span class="keyword">int</span>[n][m];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123; <span class="comment">// 初始化第 0 行:a[0..0] 与 b[0..j] 的编辑距离</span></span><br><span class="line">			<span class="keyword">if</span> (a[<span class="number">0</span>] == b[j])</span><br><span class="line">				minDist[<span class="number">0</span>][j] = j;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (j != <span class="number">0</span>)</span><br><span class="line">				minDist[<span class="number">0</span>][j] = minDist[<span class="number">0</span>][j - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				minDist[<span class="number">0</span>][j] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123; <span class="comment">// 初始化第 0 列:a[0..i] 与 b[0..0] 的编辑距离</span></span><br><span class="line">			<span class="keyword">if</span> (a[i] == b[<span class="number">0</span>])</span><br><span class="line">				minDist[i][<span class="number">0</span>] = i;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (i != <span class="number">0</span>)</span><br><span class="line">				minDist[i][<span class="number">0</span>] = minDist[i - <span class="number">1</span>][<span class="number">0</span>] + <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				minDist[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123; <span class="comment">// 按行填表</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; m; ++j) &#123;</span><br><span class="line">				<span class="keyword">if</span> (a[i] == b[j])</span><br><span class="line">					minDist[i][j] = min_(minDist[i - <span class="number">1</span>][j] + <span class="number">1</span>, minDist[i][j - <span class="number">1</span>] + <span class="number">1</span>, minDist[i - <span class="number">1</span>][j - <span class="number">1</span>]);</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">					minDist[i][j] = min_(minDist[i - <span class="number">1</span>][j] + <span class="number">1</span>, minDist[i][j - <span class="number">1</span>] + <span class="number">1</span>, minDist[i - <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> minDist[n - <span class="number">1</span>][m - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">min_</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> minv = Integer.MAX_VALUE;</span><br><span class="line">		<span class="keyword">if</span> (x &lt; minv)</span><br><span class="line">			minv = x;</span><br><span class="line">		<span class="keyword">if</span> (y &lt; minv)</span><br><span class="line">			minv = y;</span><br><span class="line">		<span class="keyword">if</span> (z &lt; minv)</span><br><span class="line">			minv = z;</span><br><span class="line">		<span class="keyword">return</span> minv;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CHARS = <span class="string">"abcdefg"</span>;<span class="comment">//// 随机字符串池</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 随机字符串</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@author</span> lfy</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> length</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">generateString</span><span class="params">(<span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">		StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">		Random random = <span class="keyword">new</span> Random();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">			sb.append(CHARS.charAt(random.nextInt(CHARS.length())));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> sb.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArr</span><span class="params">(Object[][] arr)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"----------------//"</span>);</span><br><span class="line">		<span class="keyword">for</span> (Object[] is : arr) &#123;</span><br><span class="line">			System.out.println(Arrays.toString(is));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArr</span><span class="params">(Object[] arr)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"-----------------/"</span>);</span><br><span class="line">		System.out.println(Arrays.toString(arr));</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="三角形小练习（最短路径计算）"><a href="#三角形小练习（最短路径计算）" class="headerlink" title="三角形小练习（最短路径计算）"></a>三角形小练习（最短路径计算）</h3><p>有一个类似杨辉三角的结构，但是每个节点的数值都是随机的，这个值就代表距离。</p>
+<p>现在从最顶部的节点到达最底部的节点需要走的最短距离是多少。</p>
+<p>其实就是个动态规划的最短路径计算。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> dynamic_programming;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DpTriangle</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testRandTri</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[][] a = triangleRand(<span class="number">5</span>);</span><br><span class="line">		calMinDistance(a);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 计算随机三角</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calMinDistance</span><span class="params">(<span class="keyword">int</span>[][] arr)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> l = arr.length;</span><br><span class="line">		<span class="keyword">if</span> (l == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (l == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> arr[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 前2行都是固定的</span></span><br><span class="line">		arr[<span class="number">0</span>][<span class="number">0</span>] = arr[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">		arr[<span class="number">1</span>][<span class="number">0</span>] = arr[<span class="number">1</span>][<span class="number">0</span>] + arr[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">		arr[<span class="number">1</span>][<span class="number">1</span>] = arr[<span class="number">1</span>][<span class="number">1</span>] + arr[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; l; i++) &#123;</span><br><span class="line">			<span class="comment">// 首个和末尾只能由单个到达 直接累加</span></span><br><span class="line">			arr[i][<span class="number">0</span>] = arr[i - <span class="number">1</span>][<span class="number">0</span>] + arr[i][<span class="number">0</span>];</span><br><span class="line">			arr[i][i] = arr[i - <span class="number">1</span>][i - <span class="number">1</span>] + arr[i][i];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; j++) &#123;</span><br><span class="line">				<span class="comment">// 求的是最短路径 并且后续节点是固定的 所以求出到当前节点最短的路径即可</span></span><br><span class="line">				<span class="comment">// 判断能到达当前行的 哪一个更小</span></span><br><span class="line">				<span class="keyword">if</span> (arr[i - <span class="number">1</span>][j] &gt; arr[i - <span class="number">1</span>][j - <span class="number">1</span>]) &#123;</span><br><span class="line">					arr[i][j] = arr[i - <span class="number">1</span>][j - <span class="number">1</span>] + arr[i][j];</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					arr[i][j] = arr[i - <span class="number">1</span>][j] + arr[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; l; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (arr[l - <span class="number">1</span>][i] &lt; arr[l - <span class="number">1</span>][idx]) &#123;</span><br><span class="line">				idx = i;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// print</span></span><br><span class="line">		printDistance(arr, idx, l);</span><br><span class="line">		<span class="keyword">return</span> arr[l - <span class="number">1</span>][idx];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 输出</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printDistance</span><span class="params">(<span class="keyword">int</span>[][] arr, <span class="keyword">int</span> idx, <span class="keyword">int</span> l)</span> </span>&#123;</span><br><span class="line">		System.out.println();</span><br><span class="line">		System.out.println(<span class="string">"最短:"</span> + arr[l - <span class="number">1</span>][idx]);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = l - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">			<span class="keyword">if</span> (idx == <span class="number">0</span>) &#123;</span><br><span class="line">				System.out.println(i + <span class="string">"行:"</span> + idx + <span class="string">"个:"</span> + (arr[i][idx] - arr[i - <span class="number">1</span>][idx]));</span><br><span class="line"></span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (idx == i || arr[i - <span class="number">1</span>][idx - <span class="number">1</span>] &lt; arr[i - <span class="number">1</span>][idx]) &#123;</span><br><span class="line">				System.out.println(i + <span class="string">"行:"</span> + idx + <span class="string">"个:"</span> + (arr[i][idx] - arr[i - <span class="number">1</span>][--idx]));</span><br><span class="line">				<span class="comment">// --idx ;</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(i + <span class="string">"行:"</span> + idx + <span class="string">"个:"</span> + (arr[i][idx] - arr[i - <span class="number">1</span>][idx]));</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="number">0</span> + <span class="string">"行:"</span> + idx + <span class="string">"个:"</span> + (arr[<span class="number">0</span>][idx]));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 随机三角</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] triangleRand(<span class="keyword">int</span> l) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[l][];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">			a[i] = <span class="keyword">new</span> <span class="keyword">int</span>[i + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; a[i].length; j++) &#123;</span><br><span class="line">				a[i][j] = (<span class="keyword">int</span>) (Math.random() * <span class="number">9</span> + <span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		printTriangleRand(a, l);</span><br><span class="line">		<span class="keyword">return</span> a;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 随机三角输出</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printTriangleRand</span><span class="params">(<span class="keyword">int</span>[][] a, <span class="keyword">int</span> l)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 比较规律的输出</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l - <span class="number">1</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">int</span>[] is = a[i];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> n : is) &#123;</span><br><span class="line">				System.out.print(<span class="string">""</span> + n + <span class="string">"  "</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> n : is) &#123;</span><br><span class="line">				System.out.print(<span class="string">"↓↘"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> n : a[l - <span class="number">1</span>]) &#123;</span><br><span class="line">			System.out.print(<span class="string">""</span> + n + <span class="string">"  "</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 构建杨辉三角</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">triangle</span><span class="params">(<span class="keyword">int</span> l)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[l][];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">			a[i] = <span class="keyword">new</span> <span class="keyword">int</span>[i + <span class="number">1</span>];</span><br><span class="line">			a[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">			a[i][i] = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i; j++) &#123;</span><br><span class="line">				<span class="comment">// 也算是动态规划吧。。</span></span><br><span class="line">				a[i][j] = a[i - <span class="number">1</span>][j] + a[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		printTriangle(a, l);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 打印杨辉三角</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printTriangle</span><span class="params">(<span class="keyword">int</span>[][] a, <span class="keyword">int</span> l)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> x = <span class="number">1</span>;<span class="comment">// 空格</span></span><br><span class="line">		<span class="keyword">int</span> max = a[l - <span class="number">1</span>][l / <span class="number">2</span>];</span><br><span class="line">		<span class="keyword">while</span> (max / <span class="number">10</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			x++;</span><br><span class="line">			max /= <span class="number">10</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">			<span class="comment">// 空格</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; l; j++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; x; y++) &#123;</span><br><span class="line">					System.out.print(<span class="string">" "</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; a[i].length; j++) &#123;</span><br><span class="line">				<span class="keyword">int</span> z = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">int</span> c = a[i][j];</span><br><span class="line">				<span class="keyword">while</span> (c / <span class="number">10</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">					z++;</span><br><span class="line">					c /= <span class="number">10</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				z = x - z + <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">int</span> hf = z / <span class="number">2</span>;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt;= hf; y++) &#123;</span><br><span class="line">					System.out.print(<span class="string">" "</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				System.out.print(a[i][j]);</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> y = hf; y &lt; z; y++) &#123;</span><br><span class="line">					System.out.print(<span class="string">" "</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="https://spring.io/guides" target="_blank" rel="noopener">https://spring.io/guides</a></p>
+<p>spring的引导介绍</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="极客时间的专栏《数据结构与算法之美》"><a href="#极客时间的专栏《数据结构与算法之美》" class="headerlink" title="极客时间的专栏《数据结构与算法之美》"></a>极客时间的专栏《数据结构与算法之美》</h3><p>本周继续学习该专栏中的40-42篇</p>
+<p>内容为动态规划：简而言之，动态规划就是构建出最基础的东西，然后根据底层的数据再逐层构建出更上层的东西。直到计算玩全部的数据。并且动态规划的效率较高。</p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p>50条最经典的程序员至理名言<br><a href="https://www.jianshu.com/p/8f446f967b2d" target="_blank" rel="noopener">https://www.jianshu.com/p/8f446f967b2d</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/14/ARTS-第17周/" rel="next" title="ARTS-第17周">
+                <i class="fa fa-chevron-left"></i> ARTS-第17周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第18周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第18周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#凑单问题-所有情况的罗列"><span class="nav-number">1.1.1.</span> <span class="nav-text">凑单问题-所有情况的罗列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#硬币问题"><span class="nav-number">1.1.2.</span> <span class="nav-text">硬币问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算距离"><span class="nav-number">1.1.3.</span> <span class="nav-text">算距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三角形小练习（最短路径计算）"><span class="nav-number">1.1.4.</span> <span class="nav-text">三角形小练习（最短路径计算）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极客时间的专栏《数据结构与算法之美》"><span class="nav-number">1.3.1.</span> <span class="nav-text">极客时间的专栏《数据结构与算法之美》</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

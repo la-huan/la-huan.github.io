@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第28周）今天做LeetCode的题目的时候，看到了一个评论，感觉说的很好，换个思路，完全不一样！ LeetCode 一位名为 咖喱土豆的用户 警醒自己不要沉迷于算法的精妙而忽视实际情况。 具体内容看本篇的算法部分。">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS-第28周">
+<meta property="og:url" content="http://yoursite.com/2019/10/07/ARTS-第28周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第28周）今天做LeetCode的题目的时候，看到了一个评论，感觉说的很好，换个思路，完全不一样！ LeetCode 一位名为 咖喱土豆的用户 警醒自己不要沉迷于算法的精妙而忽视实际情况。 具体内容看本篇的算法部分。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-07T11:03:53.012Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS-第28周">
+<meta name="twitter:description" content="ARTS （第28周）今天做LeetCode的题目的时候，看到了一个评论，感觉说的很好，换个思路，完全不一样！ LeetCode 一位名为 咖喱土豆的用户 警醒自己不要沉迷于算法的精妙而忽视实际情况。 具体内容看本篇的算法部分。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/07/ARTS-第28周/">
+
+
+
+
+
+  <title>ARTS-第28周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/07/ARTS-第28周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS-第28周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-07T18:57:46+08:00">
+                2019-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第28周）"><a href="#ARTS-（第28周）" class="headerlink" title="ARTS （第28周）"></a>ARTS （第28周）</h1><p>今天做LeetCode的题目的时候，看到了一个评论，感觉说的很好，换个思路，完全不一样！</p>
+<p>LeetCode 一位名为 咖喱土豆的用户</p>
+<p>警醒自己不要沉迷于算法的精妙而忽视实际情况。</p>
+<p>具体内容看本篇的算法部分。</p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70. 爬楼梯"></a><a href="https://leetcode-cn.com/problems/climbing-stairs/" target="_blank" rel="noopener">70. 爬楼梯</a></h3><p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p>注意：给定 n 是一个正整数。</p>
+<p>示例 1：</p>
+<p>输入： 2<br>输出： 2<br>解释： 有两种方法可以爬到楼顶。</p>
+<ol>
+<li>1 阶 + 1 阶</li>
+<li>2 阶<br>示例 2：</li>
+</ol>
+<p>输入： 3<br>输出： 3<br>解释： 有三种方法可以爬到楼顶。</p>
+<ol>
+<li>1 阶 + 1 阶 + 1 阶</li>
+<li>1 阶 + 2 阶</li>
+<li>2 阶 + 1 阶</li>
+</ol>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/climbing-stairs" target="_blank" rel="noopener">https://leetcode-cn.com/problems/climbing-stairs</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>第1个答案-动态规划</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 执行用时 :0 ms, 在所有 Java 提交中击败了100.00%的用户</span></span><br><span class="line">	<span class="comment">// 内存消耗 :33.1 MB, 在所有 Java 提交中击败了71.56%的用户</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs_dp</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> n;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 动态规划</span></span><br><span class="line">		<span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">		dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">		dp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= n; i++) &#123;</span><br><span class="line">			<span class="comment">// 可以从i-1走到i 也可以从i-2走到i</span></span><br><span class="line">			<span class="comment">// 即有[n-1] +[n-2]种可能走到n</span></span><br><span class="line">			dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dp[n];</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>第2个答案-动态规划优化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 执行用时 :0 ms, 在所有 Java 提交中击败了100.00%的用户</span></span><br><span class="line">	<span class="comment">// 内存消耗 :33.2 MB, 在所有 Java 提交中击败了69.96%的用户</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs_dp2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (n &lt; <span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> n;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 动态规划</span></span><br><span class="line">		<span class="keyword">int</span> n1 = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> n2 = <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= n; i++) &#123;</span><br><span class="line">			<span class="comment">// 因为每次有用的数字只有前两个</span></span><br><span class="line">			<span class="comment">// 每次更新n1为之前的n2 n2更新为最新的值即可</span></span><br><span class="line">			<span class="keyword">int</span> temp = n1 + n2;</span><br><span class="line">			n1 = n2;</span><br><span class="line">			n2 = temp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> n2;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>看到的一个特别的答案</p>
+<p>作者原话：</p>
+<p>Java的话因为返回值为int，n=46时，结果会溢出，因此n &lt; 46，那么就有：</p>
+<p>长度较短的有限集合的解，可直接返回值，自己学习算法最终的目的还是为了更好地解决问题。</p>
+<p>警醒自己不要沉迷于算法的精妙而忽视实际情况，上了很好的一课。</p>
+<p>PS:换个思路，完全不一样！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">switch</span>(n)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>: result = <span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>: result = <span class="number">2</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>: result = <span class="number">3</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>: result = <span class="number">5</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>: result = <span class="number">8</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>: result = <span class="number">13</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">7</span>: result = <span class="number">21</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">8</span>: result = <span class="number">34</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span>: result = <span class="number">55</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">10</span>: result = <span class="number">89</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span>: result = <span class="number">144</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">12</span>: result = <span class="number">233</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">13</span>: result = <span class="number">377</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">14</span>: result = <span class="number">610</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">15</span>: result = <span class="number">987</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">16</span>: result = <span class="number">1597</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">17</span>: result = <span class="number">2584</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">18</span>: result = <span class="number">4181</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">19</span>: result = <span class="number">6765</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">20</span>: result = <span class="number">10946</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">21</span>: result = <span class="number">17711</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">22</span>: result = <span class="number">28657</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">23</span>: result = <span class="number">46368</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">24</span>: result = <span class="number">75025</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">25</span>: result = <span class="number">121393</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">26</span>: result = <span class="number">196418</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">27</span>: result = <span class="number">317811</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">28</span>: result = <span class="number">514229</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">29</span>: result = <span class="number">832040</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">30</span>: result = <span class="number">1346269</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">31</span>: result = <span class="number">2178309</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">32</span>: result = <span class="number">3524578</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">33</span>: result = <span class="number">5702887</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">34</span>: result = <span class="number">9227465</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">35</span>: result = <span class="number">14930352</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">36</span>: result = <span class="number">24157817</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">37</span>: result = <span class="number">39088169</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">38</span>: result = <span class="number">63245986</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">39</span>: result = <span class="number">102334155</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">40</span>: result = <span class="number">165580141</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">41</span>: result = <span class="number">267914296</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">42</span>: result = <span class="number">433494437</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">43</span>: result = <span class="number">701408733</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">44</span>: result = <span class="number">1134903170</span>; <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">45</span>: result = <span class="number">1836311903</span>; <span class="keyword">break</span>;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="http://kafka.apache.org/intro" target="_blank" rel="noopener">http://kafka.apache.org/intro</a></p>
+<p>kafka的简易介绍</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><p>搭建一个简易的rmpt服务器</p>
+<p>1、安装nginx依赖</p>
+<p>yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</p>
+<p>2、下载解压nginx</p>
+<p>wget <a href="http://nginx.org/download/nginx-1.6.1.tar.gz" target="_blank" rel="noopener">http://nginx.org/download/nginx-1.6.1.tar.gz</a></p>
+<p>tar -xvf nginx-1.6.1.tar.gz</p>
+<p>3、下载Rtmp模块</p>
+<p>git clone <a href="https://github.com/arut/nginx-rtmp-module.git" target="_blank" rel="noopener">https://github.com/arut/nginx-rtmp-module.git</a></p>
+<p>4、安装（先进入nginx解压目录</p>
+<p> ./configure –add-module=/data/bak/nginx-rtmp-module –with-http_ssl_module</p>
+<p>nginx -V</p>
+<p>查看是否有这样一行：</p>
+<p>configure arguments: –add-module=/data/bak/nginx-rtmp-module –with-http_ssl_module</p>
+<p>5、关闭防火墙</p>
+<p>6、配置nginx</p>
+<p>7、使用obs等软件进行推流</p>
+<p>具体参见 <a href="https://www.jianshu.com/p/b4ee6956d1ea" target="_blank" rel="noopener">https://www.jianshu.com/p/b4ee6956d1ea</a> </p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p><a href="https://www.jianshu.com/p/b4ee6956d1ea" target="_blank" rel="noopener">https://www.jianshu.com/p/b4ee6956d1ea</a> </p>
+<p>nginx+rmtp以及 obs推流</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/22/ARTS-第27周/" rel="next" title="ARTS-第27周">
+                <i class="fa fa-chevron-left"></i> ARTS-第27周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第28周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第28周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#70-爬楼梯"><span class="nav-number">1.1.1.</span> <span class="nav-text">70. 爬楼梯</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第37周）自我感想：BUG的出现，其实很多时候，都是因为分支情况的考虑不够周全。">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS 第37周">
+<meta property="og:url" content="http://yoursite.com/2019/12/07/ARTS-第37周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第37周）自我感想：BUG的出现，其实很多时候，都是因为分支情况的考虑不够周全。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-07T07:19:35.451Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS 第37周">
+<meta name="twitter:description" content="ARTS （第37周）自我感想：BUG的出现，其实很多时候，都是因为分支情况的考虑不够周全。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/07/ARTS-第37周/">
+
+
+
+
+
+  <title>ARTS 第37周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/07/ARTS-第37周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS 第37周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-07T13:26:55+08:00">
+                2019-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第37周）"><a href="#ARTS-（第37周）" class="headerlink" title="ARTS （第37周）"></a>ARTS （第37周）</h1><p>自我感想：BUG的出现，其实很多时候，都是因为分支情况的考虑不够周全。</p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="三角形最小路径和"><a href="#三角形最小路径和" class="headerlink" title="三角形最小路径和"></a>三角形最小路径和</h3><p><a href="https://leetcode-cn.com/problems/triangle/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/triangle/</a></p>
+<p>leetcode 120</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">给定一个三角形，找出自顶向下的最小路径和。每一步只能移动到下一行中相邻的结点上。</span><br><span class="line"></span><br><span class="line">例如，给定三角形：</span><br><span class="line"></span><br><span class="line">[</span><br><span class="line">     [2],</span><br><span class="line">    [3,4],</span><br><span class="line">   [6,5,7],</span><br><span class="line">  [4,1,8,3]</span><br><span class="line">]</span><br><span class="line">自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">如果你可以只使用 O(n) 的额外空间（n 为三角形的总行数）来解决这个问题，那么你的算法会很加分。</span><br><span class="line"></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">链接：https://leetcode-cn.com/problems/triangle</span><br><span class="line">著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<p>解法1 最简单的暴力搜索法</p>
+<p>这里采用的是回溯的思路。(提交之后结果和我预料的一样是超时= =)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumTotal</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; triangle)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(triangle==<span class="keyword">null</span> ||triangle.size()==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> minimumTotalHelo(triangle, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumTotalHelo</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; triangle, <span class="keyword">int</span> cur, <span class="keyword">int</span> r, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (r &gt;= triangle.size() || c &gt;= triangle.get(r).size()) &#123;</span><br><span class="line">			<span class="keyword">return</span> cur;</span><br><span class="line">		&#125;</span><br><span class="line">		cur += triangle.get(r).get(c);</span><br><span class="line">		<span class="keyword">return</span> Math.min(minimumTotalHelo(triangle, cur, r + <span class="number">1</span>, c), minimumTotalHelo(triangle, cur, r + <span class="number">1</span>, c + <span class="number">1</span>));</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>解法2 动态规划 自底向上的动态规划</p>
+<p>这个题目其实只需要考虑底下的两个节点哪个更小即可。很简单的判断。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> 	<span class="comment">// 执行用时:4 ms,在所有java提交中击败了59.36%的用户</span></span><br><span class="line"><span class="comment">// 内存消耗:37.8 MB,在所有java提交中击败了57.43%的用户</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumTotal</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; triangle)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (triangle == <span class="keyword">null</span> || triangle.size() == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> size = triangle.size();</span><br><span class="line">	<span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[size];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">         <span class="comment">//最底下一层的初始化</span></span><br><span class="line">		dp[i] = triangle.get(size - <span class="number">1</span>).get(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = triangle.size() - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; triangle.get(i).size(); j++) &#123;</span><br><span class="line">			<span class="keyword">int</span> c = triangle.get(i).get(j);</span><br><span class="line">             <span class="comment">//只需要考虑底下的两个节点哪个更小即可</span></span><br><span class="line">			c +=  Math.min(dp[j], dp[j + <span class="number">1</span>]);</span><br><span class="line">			dp[j]=c;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//System.out.println(Arrays.toString(dp));</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解法3 备忘录模式</p>
+<p>最初从暴力法自顶部向下进行备忘，然后发现不对，</p>
+<p>才发现这种情况 其实也应该由底部向上做备忘，或者初始化好最后一层后再进行备忘</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">// 备忘录</span></span><br><span class="line">	<span class="comment">// 执行用时:2 ms,在所有java提交中击败了97.54%的用户</span></span><br><span class="line">	<span class="comment">// 内存消耗:37.2 MB,在所有java提交中击败了76.43%的用户</span></span><br><span class="line">	Integer[][] minimumTotalHeloMemo = <span class="keyword">null</span>;<span class="comment">// 备忘录</span></span><br><span class="line">	Integer minimumTotalHeloMemoDefault = <span class="keyword">null</span>;<span class="comment">// 初始值</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumTotal_mem</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; triangle)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (triangle == <span class="keyword">null</span> || triangle.size() == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// 初始化备忘录</span></span><br><span class="line">		minimumTotalHeloMemo = <span class="keyword">new</span> Integer[triangle.size()][];</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; minimumTotalHeloMemo.length; i++) &#123;</span><br><span class="line">			minimumTotalHeloMemo[i] = <span class="keyword">new</span> Integer[i + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; minimumTotalHeloMemo[i].length; j++) &#123;</span><br><span class="line">				minimumTotalHeloMemo[i][j] = minimumTotalHeloMemoDefault;<span class="comment">// 初始值</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 初始化最后一行</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; minimumTotalHeloMemo.length; i++) &#123;</span><br><span class="line">			minimumTotalHeloMemo[minimumTotalHeloMemo.length - <span class="number">1</span>][i] = triangle.get(minimumTotalHeloMemo.length - <span class="number">1</span>)</span><br><span class="line">					.get(i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> v = minimumTotalHelo_mem(triangle, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">		<span class="keyword">return</span> v;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minimumTotalHelo_mem</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; triangle, <span class="keyword">int</span> r, <span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (minimumTotalHeloMemo[r][c] != minimumTotalHeloMemoDefault) &#123;</span><br><span class="line">			<span class="keyword">return</span> minimumTotalHeloMemo[r][c];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> cur = triangle.get(r).get(c);</span><br><span class="line">		<span class="keyword">int</span> v = cur + Math.min(minimumTotalHelo_mem(triangle, r + <span class="number">1</span>, c), minimumTotalHelo_mem(triangle, r + <span class="number">1</span>, c + <span class="number">1</span>));</span><br><span class="line">		minimumTotalHeloMemo[r][c] = v;</span><br><span class="line">		<span class="comment">// printArr(minimumTotalHeloMemo);</span></span><br><span class="line">		<span class="keyword">return</span> v;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="乘积最大子序列"><a href="#乘积最大子序列" class="headerlink" title="乘积最大子序列"></a>乘积最大子序列</h3><p><a href="https://leetcode-cn.com/problems/maximum-product-subarray/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-product-subarray/</a></p>
+<p>leetcode 152</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组 nums ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。</span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: [2,3,-2,4]</span><br><span class="line">输出: 6</span><br><span class="line">解释: 子数组 [2,3] 有最大乘积 6。</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: [-2,0,-1]</span><br><span class="line">输出: 0</span><br><span class="line">解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。</span><br><span class="line"></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">链接：https://leetcode-cn.com/problems/maximum-product-subarray</span><br><span class="line">著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<p>解法1暴力搜索法</p>
+<p>双重循环 时间复杂度n^2</p>
+<p>结果是毫无意外的超时= =</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//暴力搜索</span></span><br><span class="line">	<span class="comment">//超出时间限制</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (nums.length == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> nums[<span class="number">0</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> max = Integer.MIN_VALUE;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = i ; j &lt; nums.length; j++) &#123;</span><br><span class="line">				<span class="keyword">int</span> val = nums[i];</span><br><span class="line"></span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> s = i + <span class="number">1</span>; s &lt;= j; s++) &#123;</span><br><span class="line">					val *= nums[s];</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				max = Math.max(max, val);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> max;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>解法2 动态规划</p>
+<p>因为需要考虑奇数个负数的情况</p>
+<p>所以需要2个DP数组</p>
+<p>这里是2种解法 思路是一致的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 执行用时:3ms,在所有java提交中击败了53.21%的用户</span></span><br><span class="line">		<span class="comment">// 内存消耗:37.3MB,在所有java提交中击败了38.15%的用户</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProduct_DP2</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			<span class="comment">// 2个DP数组 到每个位置时候，最大和最小的乘积值</span></span><br><span class="line">			<span class="keyword">int</span> dpMax = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span> dpMin = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span> r = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span> cMax = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">int</span> cMin = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">				<span class="comment">// 将当前数字和前一个最大和最小进行相乘</span></span><br><span class="line">				cMax = nums[i] * dpMax;</span><br><span class="line">				cMin = nums[i] * dpMin;</span><br><span class="line">				<span class="comment">// 核心思想：因为有负数的可能性 负负得正 如果之前的数字有负数 当前也是负数 那么就可能负负得正的值更大</span></span><br><span class="line">				dpMax = Math.max(nums[i], Math.max(cMax, cMin));</span><br><span class="line">				dpMin = Math.min(nums[i], Math.min(cMax, cMin));</span><br><span class="line">				<span class="comment">// 取更大的值</span></span><br><span class="line">				r = Math.max(r, dpMax);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> r;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 执行用时:3ms,在所有java提交中击败了53.21%的用户</span></span><br><span class="line">		<span class="comment">// 内存消耗:37.1MB,在所有java提交中击败了41.30%的用户</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProduct_dp</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			<span class="comment">// 2个DP数组 到每个位置时候，最大和最小的乘积值</span></span><br><span class="line">			<span class="keyword">int</span>[] dpMax = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">			dpMax[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span>[] dpMin = <span class="keyword">new</span> <span class="keyword">int</span>[nums.length];</span><br><span class="line">			dpMin[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span> r = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">				<span class="comment">// 将当前数字和前一个最大和最小进行相乘</span></span><br><span class="line">				<span class="keyword">int</span> cMax = nums[i] * dpMax[i - <span class="number">1</span>];</span><br><span class="line">				<span class="keyword">int</span> cMin = nums[i] * dpMin[i - <span class="number">1</span>];</span><br><span class="line">				<span class="comment">// 核心思想：因为有负数的可能性 负负得正 如果之前的数字有负数 当前也是负数 那么就可能负负得正的值更大</span></span><br><span class="line">				dpMax[i] = Math.max(nums[i], Math.max(cMax, cMin));</span><br><span class="line">				dpMin[i] = Math.min(nums[i], Math.min(cMax, cMin));</span><br><span class="line">				<span class="comment">// 取更大的值</span></span><br><span class="line">				r = Math.max(r, dpMax[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> r;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<p>解法3 分段法</p>
+<p>这里将这题的情况分支考虑的话就是如下</p>
+<pre><code>这里用0隔开做分段
+第1种可能 分段里全是正数 或者有偶数个负数 -&gt;将值全部相乘即可
+第2种可能 分段里有奇数个负数
+  -&gt;舍弃末尾的奇数 从分段起始位置乘到最后一个奇数前面 情况A
+  -&gt;舍弃第一个奇数 第1个奇数后面的数字开始乘到分段末尾 情况B
+根据上面的情况就可以写出代码了。
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行用时:1ms,在所有java提交中击败了100.00%的用户</span></span><br><span class="line">		<span class="comment">//内存消耗:36.6MB,在所有java提交中击败了43.95%的用户</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProduct_</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			<span class="comment">// 用0隔开做分段</span></span><br><span class="line">			<span class="comment">// 第1种可能 分段里全是正数 或者有偶数个负数 -&gt;将值全部相乘即可</span></span><br><span class="line">			<span class="comment">// 第2种可能 分段里有奇数个负数</span></span><br><span class="line">			<span class="comment">// -&gt;舍弃末尾的奇数 从分段起始位置乘到最后一个奇数前面 情况A</span></span><br><span class="line">			<span class="comment">// -&gt;舍弃第一个奇数 第1个奇数后面的数字开始乘到分段末尾 情况B</span></span><br><span class="line">			<span class="keyword">int</span> r = nums[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">int</span> m = <span class="number">1</span>;<span class="comment">// 初始值 1</span></span><br><span class="line">			<span class="comment">// 情况A的循环</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">				<span class="comment">// 累乘判断</span></span><br><span class="line">				m = m * nums[i];</span><br><span class="line">				<span class="comment">// 这里的max判断 情况如下</span></span><br><span class="line">				<span class="comment">// 1 分段里全是正数 或者有偶数个负数 -&gt;将值全部相乘</span></span><br><span class="line">				<span class="comment">// 2 分段里有奇数个负数 -&gt;舍弃末尾的奇数 从分段起始位置乘到最后一个奇数前面</span></span><br><span class="line">				<span class="comment">// 但是在这里无法考虑到舍弃首个奇数的情况 因此 需要再来一个循环 从后面向前循环即可</span></span><br><span class="line">				r = Math.max(m, r);</span><br><span class="line">				<span class="keyword">if</span> (nums[i] == <span class="number">0</span>) &#123;</span><br><span class="line">					m = <span class="number">1</span>;<span class="comment">// 回归初始值 即新的分段</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			m = <span class="number">1</span>;<span class="comment">// 初始值 1</span></span><br><span class="line">			<span class="comment">// 情况B的循环</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = nums.length-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">				<span class="comment">// 累乘判断</span></span><br><span class="line">				m = m * nums[i];</span><br><span class="line">				<span class="comment">// 这里的max判断 情况如下</span></span><br><span class="line">				<span class="comment">// 1 分段里全是正数 或者有偶数个负数 -&gt;将值全部相乘</span></span><br><span class="line">				<span class="comment">// 2 分段里有奇数个负数 -&gt;舍弃第一个奇数 第1个奇数后面的数字开始乘到分段末尾</span></span><br><span class="line">				<span class="comment">// 这里的2个循环的逻辑一致 是为了考虑情况A和情况B</span></span><br><span class="line">				r = Math.max(m, r);</span><br><span class="line">				<span class="keyword">if</span> (nums[i] == <span class="number">0</span>) &#123;</span><br><span class="line">					m = <span class="number">1</span>;<span class="comment">// 回归初始值 即新的分段</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> r;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="https://spring.io/projects/spring-cloud" target="_blank" rel="noopener">https://spring.io/projects/spring-cloud</a></p>
+<p>springcloud 简洁和各个组件的介绍</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><p>状态码</p>
+<p>1 消息<br> 100 Continue<br> 101 Switching Protocols<br> 102 Processing</p>
+<p>2 成功<br> 200 OK<br> 201 Created<br> 202 Accepted<br> 203 Non-Authoritative Information<br> 204 No Content<br> 205 Reset Content<br> 206 Partial Content<br> 207 Multi-Status</p>
+<p>3 重定向<br> 300 Multiple Choices<br> 301 Moved Permanently<br> 302 Move Temporarily<br> 303 See Other<br> 304 Not Modified<br> 305 Use Proxy<br> 306 Switch Proxy<br> 307 Temporary Redirect</p>
+<p>4 请求错误<br> 400 Bad Request<br> 401 Unauthorized<br> 402 Payment Required<br> 403 Forbidden<br> 404 Not Found<br> 405 Method Not Allowed<br> 406 Not Acceptable<br> 407 Proxy Authentication Required<br> 408 Request Timeout<br> 409 Conflict<br> 410 Gone<br> 411 Length Required<br> 412 Precondition Failed<br> 413 Request Entity Too Large<br> 414 Request-URI Too Long<br> 415 Unsupported Media Type<br> 416 Requested Range Not Satisfiable<br> 417 Expectation Failed<br> 418 I’m a teapot<br> 421 Too Many Connections<br> 422 Unprocessable Entity<br> 423 Locked<br> 424 Failed Dependency<br> 425 Too Early<br> 426 Upgrade Required<br> 449 Retry With<br> 451 Unavailable For Legal Reasons</p>
+<p>5 服务器错误<br> 500 Internal Server Error<br> 501 Not Implemented<br> 502 Bad Gateway<br> 503 Service Unavailable<br> 504 Gateway Timeout<br> 505 HTTP Version Not Supported<br> 506 Variant Also Negotiates<br> 507 Insufficient Storage<br> 509 Bandwidth Limit Exceeded<br> 510 Not Extended<br> 600 Unparseable Response Headers</p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p>因为最近项目可能需要使用vue 就简单的了解了一下。</p>
+<p><a href="https://www.jianshu.com/p/bb4a347b903a" target="_blank" rel="noopener">https://www.jianshu.com/p/bb4a347b903a</a>  VueJS简明教程(二)之组件<br><a href="https://www.jianshu.com/p/5d0d913d2453" target="_blank" rel="noopener">https://www.jianshu.com/p/5d0d913d2453</a> VueJS简明教程(一)之基本使用方法</p>
+<p><a href="https://www.jianshu.com/p/1a7bbdd8ca4e" target="_blank" rel="noopener">https://www.jianshu.com/p/1a7bbdd8ca4e</a> 三十分钟学会使用VUE搭建单页应用(SPA) 上</p>
+<p><a href="https://www.jianshu.com/p/47a207618cbd" target="_blank" rel="noopener">https://www.jianshu.com/p/47a207618cbd</a>  三十分钟学会使用VUE搭建单页应用(SPA) 下</p>
+<p>知识储备：</p>
+<p><a href="https://blog.csdn.net/huoji555/article/details/79595533" target="_blank" rel="noopener">https://blog.csdn.net/huoji555/article/details/79595533</a> JAVA百度OCR的调用</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/30/ARTS-第36周/" rel="next" title="ARTS 第35周">
+                <i class="fa fa-chevron-left"></i> ARTS 第35周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第37周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第37周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三角形最小路径和"><span class="nav-number">1.1.1.</span> <span class="nav-text">三角形最小路径和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘积最大子序列"><span class="nav-number">1.1.2.</span> <span class="nav-text">乘积最大子序列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

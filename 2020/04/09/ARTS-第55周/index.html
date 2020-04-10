@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第55周）“看懂”和“会用”是两回事，而“用好”更是难上加难。 实际上，不管是应用设计原则还是设计模式，最终的目的还是提高代码的可读性、可扩展性、复用性、可维护性等。我们在考虑应用某一个设计原则是否合理的时候，也可以以此作为最终的考量标准。 出处：极客时间《设计模式之美》（作者：王争） https://time.geekbang.org/column/intro/250">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS 第55周">
+<meta property="og:url" content="http://yoursite.com/2020/04/09/ARTS-第55周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第55周）“看懂”和“会用”是两回事，而“用好”更是难上加难。 实际上，不管是应用设计原则还是设计模式，最终的目的还是提高代码的可读性、可扩展性、复用性、可维护性等。我们在考虑应用某一个设计原则是否合理的时候，也可以以此作为最终的考量标准。 出处：极客时间《设计模式之美》（作者：王争） https://time.geekbang.org/column/intro/250">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-04-10T02:57:14.613Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS 第55周">
+<meta name="twitter:description" content="ARTS （第55周）“看懂”和“会用”是两回事，而“用好”更是难上加难。 实际上，不管是应用设计原则还是设计模式，最终的目的还是提高代码的可读性、可扩展性、复用性、可维护性等。我们在考虑应用某一个设计原则是否合理的时候，也可以以此作为最终的考量标准。 出处：极客时间《设计模式之美》（作者：王争） https://time.geekbang.org/column/intro/250">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/09/ARTS-第55周/">
+
+
+
+
+
+  <title>ARTS 第55周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/09/ARTS-第55周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS 第55周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-09T21:21:51+08:00">
+                2020-04-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第55周）"><a href="#ARTS-（第55周）" class="headerlink" title="ARTS （第55周）"></a>ARTS （第55周）</h1><p>“看懂”和“会用”是两回事，而“用好”更是难上加难。</p>
+<p>实际上，不管是应用设计原则还是设计模式，最终的目的还是提高代码的可读性、可扩展性、复用性、可维护性等。我们在考虑应用某一个设计原则是否合理的时候，也可以以此作为最终的考量标准。</p>
+<p>出处：极客时间《设计模式之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/250</a></p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="孩子们的游戏-圆圈中最后剩下的数"><a href="#孩子们的游戏-圆圈中最后剩下的数" class="headerlink" title="孩子们的游戏(圆圈中最后剩下的数)"></a>孩子们的游戏(圆圈中最后剩下的数)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0...m-1报数....这样下去....直到剩下最后一个小朋友,可以不用表演,并且拿到牛客名贵的“名侦探柯南”典藏版(名额有限哦!!^_^)。请你试着想下,哪个小朋友会得到这份礼品呢？(注：小朋友的编号是从0到n-1)</span><br><span class="line">如果没有小朋友，请返回-1</span><br><span class="line">https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6?tpId=13&amp;tqId=11199&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法1 将数组视为环，逐个遍历。并创建个数组保存是否去除</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 环形遍历数组 记录已遍历的数据</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution_</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> r = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (n &lt;= <span class="number">0</span> || m &lt; <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">		<span class="comment">// 剩余数量</span></span><br><span class="line">		<span class="keyword">int</span> size = n;</span><br><span class="line">		<span class="comment">// 当前索引</span></span><br><span class="line">		<span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">		<span class="comment">// 记录当前位置是否去除</span></span><br><span class="line">		<span class="keyword">boolean</span>[] ex = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">		<span class="comment">// 环形遍历数组 记录确认的数据</span></span><br><span class="line">		<span class="comment">// 0 1 2 3 4</span></span><br><span class="line">		<span class="comment">// 3 1 r 2 4</span></span><br><span class="line">		<span class="keyword">while</span> (size &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> count = m;</span><br><span class="line">			<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (!ex[idx]) &#123;</span><br><span class="line">					<span class="keyword">if</span> (--count == <span class="number">0</span>) &#123;</span><br><span class="line">						ex[idx] = <span class="keyword">true</span>;</span><br><span class="line">						size--;</span><br><span class="line"></span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (++idx == n) &#123;</span><br><span class="line">					idx = <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 找出没有记录的那个</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ex.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (!ex[i]) &#123;</span><br><span class="line">				r = i;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> r;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>解法2  </p>
+<p>这个是解法1的优化，依旧将数组视为环，通过计算快速找出索引。并创建个数组保存是否去除</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据索引快速找到位置</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution__</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> r = -<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (n &lt;= <span class="number">0</span> || m &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	<span class="comment">// 剩余数量</span></span><br><span class="line">	<span class="keyword">int</span> size = n;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> idx = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">// 记录当前位置是否去除</span></span><br><span class="line">	<span class="keyword">boolean</span>[] ex = <span class="keyword">new</span> <span class="keyword">boolean</span>[n];</span><br><span class="line">	<span class="comment">// 环形数组 记录已遍历的数据</span></span><br><span class="line">	<span class="comment">// 0 1 2 3 4</span></span><br><span class="line">	<span class="comment">// 3 1 r 2 4</span></span><br><span class="line">	<span class="keyword">while</span> (size &gt; <span class="number">1</span>) &#123;</span><br><span class="line">		idx = (m - <span class="number">1</span>) % (size) + idx;</span><br><span class="line">		idx = idx % size;</span><br><span class="line">		count = -<span class="number">1</span>;<span class="comment">//</span></span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (; i &lt; ex.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (!ex[i]) &#123;</span><br><span class="line">				<span class="keyword">if</span> (++count == idx) &#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 记录为已遍历</span></span><br><span class="line">		ex[i] = <span class="keyword">true</span>;</span><br><span class="line">		size--;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 找出没有记录的那个</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ex.length; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (!ex[i]) &#123;</span><br><span class="line">			r = i;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解法3 动态规划</p>
+<p>在题解里看到，这个其实是个约瑟夫环问题</p>
+<p>通过最后一个来逐个找到上一个。原本看到的是递归写法的动态规划，后面我改成这种。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> r = -<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (n &lt;= <span class="number">0</span> || m &lt; <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	<span class="comment">// int[] dp = new int[n];</span></span><br><span class="line">	<span class="keyword">int</span> dp = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;java</span><br><span class="line">		dp = (dp + m) % i;</span><br><span class="line">		<span class="comment">// System.out.print(dp+",");</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// System.out.println();</span></span><br><span class="line">	<span class="keyword">return</span> dp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="求1-2-3-…-n"><a href="#求1-2-3-…-n" class="headerlink" title="求1+2+3+…+n"></a>求1+2+3+…+n</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">求1+2+3+...+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</span><br><span class="line">https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&amp;tqId=11200&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法 递归+短路</p>
+<p>这题的重点是需要判断，而大部分判断语句都禁止使用，然后这里是使用&amp;&amp;短路的写法实现了判断。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 递归短路</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Sum_Solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> x = (n &gt; <span class="number">0</span>) &amp;&amp; (n += Sum_Solution(n - <span class="number">1</span>)) &gt; <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> n;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="不用加减乘除做加法"><a href="#不用加减乘除做加法" class="headerlink" title="不用加减乘除做加法"></a>不用加减乘除做加法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。</span><br><span class="line">https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&amp;tqId=11201&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法 二进制计算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 二进制解法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> r = num1 ^ num2;</span><br><span class="line">	<span class="keyword">int</span> p = (num1 &amp; num2) &lt;&lt; <span class="number">1</span>;<span class="comment">// 进位</span></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="number">0</span>) &#123;</span><br><span class="line">		temp = r ^ p;</span><br><span class="line">		p = (p &amp; r) &lt;&lt; <span class="number">1</span>;</span><br><span class="line">		r = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">将一个字符串转换成一个整数，要求不能使用字符串转换整数的库函数。 数值为0或者字符串不是一个合法的数值则返回0</span><br><span class="line">输入描述:</span><br><span class="line">输入一个字符串,包括数字字母符号,可以为空</span><br><span class="line">输出描述:</span><br><span class="line">如果是合法的数值表达则返回该数字，否则返回0</span><br><span class="line">https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&amp;tqId=11202&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法</p>
+<p>逐个字符获取，然后旧值*10后进行累加的解法。但因为需要判断正负数、INT_MAX值的判断，加入了很多判断语句。</p>
+<p>核心语句就是:</p>
+<p>//cur代表当前字符</p>
+<p>res = res * 10 + cur;//正数</p>
+<p>res = res * 10 - cur;//负数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 逐个累加</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">StrToInt</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (str == <span class="keyword">null</span> || <span class="string">""</span>.equals(str.trim()))</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">char</span>[] cs = str.toCharArray();</span><br><span class="line">		<span class="keyword">boolean</span> position = <span class="keyword">true</span>;<span class="comment">// 正数</span></span><br><span class="line">		<span class="keyword">if</span> (cs[<span class="number">0</span>] == <span class="string">'-'</span>) &#123;</span><br><span class="line">			<span class="comment">// 负数</span></span><br><span class="line">			position = <span class="keyword">false</span>;</span><br><span class="line">			i++;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cs[<span class="number">0</span>] == <span class="string">'+'</span>) &#123;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (position) &#123;</span><br><span class="line">			<span class="keyword">for</span> (; i &lt; cs.length; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (StrToInt_NotNum(cs[i])) &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">int</span> cur = (cs[i] - <span class="string">'0'</span>);</span><br><span class="line">				<span class="keyword">if</span> ((res &gt; Integer.MAX_VALUE / <span class="number">10</span> || res == Integer.MAX_VALUE / <span class="number">10</span> &amp;&amp; cur &gt; <span class="number">7</span>)) &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				res = res * <span class="number">10</span> + cur;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (; i &lt; cs.length; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (StrToInt_NotNum(cs[i])) &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">int</span> cur = (cs[i] - <span class="string">'0'</span>);</span><br><span class="line">				<span class="keyword">if</span> ((res &lt; Integer.MIN_VALUE / <span class="number">10</span> || res == Integer.MIN_VALUE / <span class="number">10</span> &amp;&amp; cur &gt; <span class="number">8</span>)) &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				res = res * <span class="number">10</span> - cur;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">StrToInt_NotNum</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> c &lt;= <span class="string">'0'</span> || c &gt;= <span class="string">'9'</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数组中重复的数字"><a href="#数组中重复的数字" class="headerlink" title="数组中重复的数字"></a>数组中重复的数字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组&#123;2,3,1,0,2,5,3&#125;，那么对应的输出是第一个重复的数字2。</span><br><span class="line">https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&amp;tqId=11203&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法1 排序法</p>
+<p>排序后，判断数组的前后位置是否相等，相等即可返回。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">duplicate_</span><span class="params">(<span class="keyword">int</span> numbers[], <span class="keyword">int</span> length, <span class="keyword">int</span>[] duplication)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (numbers == <span class="keyword">null</span> || numbers.length == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		Arrays.sort(numbers);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (numbers[i] == numbers[i - <span class="number">1</span>]) &#123;</span><br><span class="line">				duplication[<span class="number">0</span>] = numbers[i];</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>解法2 索引位置交换位置法</p>
+<p>交换法也是一个很经常在数组中用到的解法。</p>
+<p>遍历数组，将每个数都放到对应索引位置上，交换位置，这样最多一次遍历就可以找出重复。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重复查找</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> numbers[], <span class="keyword">int</span> length, <span class="keyword">int</span>[] duplication)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (numbers == <span class="keyword">null</span> || numbers.length == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numbers.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (numbers[i] != i) &#123;</span><br><span class="line">				<span class="keyword">if</span> (numbers[i] == numbers[numbers[i]]) &#123;</span><br><span class="line">					duplication[<span class="number">0</span>] = numbers[i];</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">int</span> temp = numbers[i];</span><br><span class="line">			numbers[i] = numbers[temp];</span><br><span class="line">			numbers[temp] = temp;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="构建乘积数组"><a href="#构建乘积数组" class="headerlink" title="构建乘积数组"></a>构建乘积数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">给定一个数组A[0,1,...,n-1],请构建一个数组B[0,1,...,n-1],其中B中的元素B[i]=A[0]*A[1]*...*A[i-1]*A[i+1]*...*A[n-1]。不能使用除法。（注意：规定B[0] = A[1] * A[2] * ... * A[n-1]，B[n-1] = A[0] * A[1] * ... * A[n-2];）</span><br><span class="line">https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&amp;tqId=11204&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法 前后缀解法</p>
+<p>其实就B[i]等于 A数组的乘积和 /A[i];</p>
+<p>因为 B[i]=A[1] <em> A[2] </em> … <em> A[i-1]</em>A[i-1]…A[n]</p>
+<p>所以整理两个数组，分别保存A[1] <em> A[2] </em> … * A[i-1]和A[i-1]…A[n]。</p>
+<p>来快速计算</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] multiply(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">		<span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span>[] b = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">		<span class="comment">// 前后缀数组</span></span><br><span class="line">		<span class="keyword">int</span>[] prefix = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">		<span class="keyword">int</span>[] suffix = <span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">		prefix[<span class="number">0</span>] = A[<span class="number">0</span>];</span><br><span class="line">		suffix[A.length - <span class="number">1</span>] = A[A.length - <span class="number">1</span>];</span><br><span class="line">		<span class="comment">// 前缀数组</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">			prefix[i] = prefix[i - <span class="number">1</span>] * A[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 后缀数组</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = A.length - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">			suffix[i] = suffix[i + <span class="number">1</span>] * A[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 构建结果</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; b.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">			b[i] = prefix[i - <span class="number">1</span>] * suffix[i + <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		b[A.length - <span class="number">1</span>] = prefix[A.length - <span class="number">2</span>];</span><br><span class="line">		b[<span class="number">0</span>] = suffix[<span class="number">1</span>];</span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请实现一个函数用来匹配包括&apos;.&apos;和&apos;*&apos;的正则表达式。模式中的字符&apos;.&apos;表示任意一个字符，而&apos;*&apos;表示它前面的字符可以出现任意次（包含0次）。 在本题中，匹配是指字符串的所有字符匹配整个模式。例如，字符串&quot;aaa&quot;与模式&quot;a.a&quot;和&quot;ab*ac*a&quot;匹配，但是与&quot;aa.a&quot;和&quot;ab*a&quot;均不匹配</span><br><span class="line">https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&amp;tqId=11205&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
+<p>解法 动态规划</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 动态规划</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">match</span><span class="params">(<span class="keyword">char</span>[] str, <span class="keyword">char</span>[] pattern)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (str == <span class="keyword">null</span> || pattern == <span class="keyword">null</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">int</span> sl = str.length;</span><br><span class="line">		<span class="keyword">int</span> pl = pattern.length;</span><br><span class="line">		<span class="keyword">boolean</span>[][] dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[sl + <span class="number">1</span>][pl + <span class="number">1</span>];</span><br><span class="line">		dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= sl; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= pl; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (pattern[j - <span class="number">1</span>] == <span class="string">'*'</span>) &#123;</span><br><span class="line">					<span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; dp[i - <span class="number">1</span>][j]) &#123;<span class="comment">// 单字符的情况</span></span><br><span class="line">						<span class="keyword">if</span> (pattern[j - <span class="number">2</span>] == <span class="string">'.'</span> || (pattern[j - <span class="number">2</span>] == str[i - <span class="number">1</span>])) &#123;</span><br><span class="line">							dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="comment">// 当前字符当成空的情况</span></span><br><span class="line">					<span class="keyword">if</span> (dp[i][j - <span class="number">2</span>]) &#123;</span><br><span class="line">						<span class="comment">// 直接判断本字符前的东西是否为true</span></span><br><span class="line">						dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="comment">// 字符直接匹配和'.'的判断</span></span><br><span class="line">					<span class="comment">// 先判断i-1和j-1是否已经匹配了 即之前的字符串是否匹配</span></span><br><span class="line">					<span class="keyword">if</span> (i &gt; <span class="number">0</span> &amp;&amp; dp[i - <span class="number">1</span>][j - <span class="number">1</span>]) &#123;</span><br><span class="line">						<span class="comment">// 字符直接匹配和'.'的判断</span></span><br><span class="line">						<span class="keyword">if</span> (pattern[j - <span class="number">1</span>] == <span class="string">'.'</span> || pattern[j - <span class="number">1</span>] == str[i - <span class="number">1</span>]) &#123;</span><br><span class="line">							dp[i][j] = <span class="keyword">true</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dp[sl][pl];</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="https://spring.io/guides/gs/managing-transactions/" target="_blank" rel="noopener">https://spring.io/guides/gs/managing-transactions/</a></p>
+<p>spring 的事务管理器,以及搭配jdbctempleta使用。</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="面向对象特性分析"><a href="#面向对象特性分析" class="headerlink" title="面向对象特性分析"></a>面向对象特性分析</h3><p>接口和抽象类定义。区别（是什么），存在意义（从哪来），应用（到哪去）。<br>1、定义：<br>抽象类：不允许实例化，只能被继承；可包含属性和方法，包含抽象方法；子类继承抽象类必须重写抽象方法。<br>接口：不允许实例化，只能被实现；不包含属性和普通方法，包含抽象方法、静态方法、default 方法；类实现接口时，必须实现抽象方法。<br>2、意义：<br>抽象类：解决复用问题，适用于is-a的关系。<br>接口：解决抽象问题，适用于has-a的关系。<br>3、应用：<br>例如：<br>解决复用问题：java中的子类FileInputStream和PipeInputStream等继承抽象类InputStream。重写了read(source)方法，InputStream 中还包含其他方法，FileInputStream继承抽象类复用了父类的其他方法。<br>解决抽象问题：抽象类InputStream实现了Closeable接口，该接口中包含close()抽象方法。Closeable这个接口还在很多其他类中实现了，例如Channel，Socket中都有close() 关闭这个功能，但具体实现每个类又各有不同的实现，这个就是抽象。<br>来源：极客时间 <a href="https://time.geekbang.org/column/article/165103" target="_blank" rel="noopener">https://time.geekbang.org/column/article/165103</a><br>用户：辣么大</p>
+<h3 id="面向对象的实现"><a href="#面向对象的实现" class="headerlink" title="面向对象的实现"></a>面向对象的实现</h3><p>面向对象分析、设计、实现<br>面向对象分析、设计、实现，每个环节的界限划分都比较清楚。而且，设计和实现基本上是按照功能点的描述，逐句照着翻译过来的。这样做的好处是先做什么、后做什么，非常清晰、明确，有章可循，即便是没有太多设计经验的初级工程师，都可以按部就班地参照着这个流程来做分析、设计和实现。</p>
+<p>出处：极客时间《设计模式之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/250</a></p>
+<h3 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h3><p>类中的代码行数、函数或属性过多，会影响代码的可读性和可维护性，我们就需要考虑对类进行拆分；类依赖的其他类过多，或者依赖类的其他类过多，不符合高内聚、低耦合的设计思想，我们就需要考虑对类进行拆分；私有方法过多，我们就要考虑能否将私有方法独立到新的类中，设置为 public 方法，供更多的类使用，从而提高代码的复用性；比较难给类起一个合适名字，很难用一个业务名词概括，或者只能用一些笼统的 Manager、Context 之类的词语来命名，这就说明类的职责定义得可能不够清晰；类中大量的方法都是集中操作类中的某几个属性，比如，在 UserInfo 例子中，如果一半的方法都是在操作 address 信息，那就可以考虑将这几个属性和对应的方法拆分出来。</p>
+<p>出处：极客时间《设计模式之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/250</a></p>
+<h3 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h3><p>如何理解“对扩展开放、对修改关闭”？</p>
+<p>添加一个新的功能，应该是通过在已有代码基础上扩展代码（新增模块、类、方法、属性等），而非修改已有代码（修改模块、类、方法、属性等）的方式来完成。关于定义，我们有两点要注意。第一点是，开闭原则并不是说完全杜绝修改，而是以最小的修改代码的代价来完成新功能的开发。第二点是，同样的代码改动，在粗代码粒度下，可能被认定为“修改”；在细代码粒度下，可能又被认定为“扩展”。</p>
+<p>如何做到“对扩展开放、修改关闭”？</p>
+<p>我们要时刻具备扩展意识、抽象意识、封装意识。在写代码的时候，我们要多花点时间思考一下，这段代码未来可能有哪些需求变更，如何设计代码结构，事先留好扩展点，以便在未来需求变更的时候，在不改动代码整体结构、做到最小代码改动的情况下，将新的代码灵活地插入到扩展点上。很多设计原则、设计思想、设计模式，都是以提高代码的扩展性为最终目的的。特别是 23 种经典设计模式，大部分都是为了解决代码的扩展性问题而总结出来的，都是以开闭原则为指导原则的。最常用来提高代码扩展性的方法有：多态、依赖注入、基于接口而非实现编程，以及大部分的设计模式（比如，装饰、策略、模板、职责链、状态）。</p>
+<p>出处：极客时间《设计模式之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/250</a></p>
+<h3 id="里式替换"><a href="#里式替换" class="headerlink" title="里式替换"></a>里式替换</h3><p>而里式替换是一种设计原则，是用来指导继承关系中子类该如何设计的，子类的设计要保证在替换父类的时候，不改变原有程序的逻辑以及不破坏原有程序的正确性。</p>
+<p>子类在设计的时候，要遵守父类的行为约定（或者叫协议）。父类定义了函数的行为约定，那子类可以改变函数的内部实现逻辑，但不能改变函数原有的行为约定。这里的行为约定包括：函数声明要实现的功能；对输入、输出、异常的约定；甚至包括注释中所罗列的任何特殊说明。</p>
+<p>出处：极客时间《设计模式之美》（作者：王争）</p>
+<p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/250</a></p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p><a href="https://blog.csdn.net/C_envelope/article/details/87920146" target="_blank" rel="noopener">https://blog.csdn.net/C_envelope/article/details/87920146</a> DDD四种模型<br><a href="https://www.jianshu.com/p/b0379067c978" target="_blank" rel="noopener">https://www.jianshu.com/p/b0379067c978</a> DDD介绍</p>
+<p><a href="https://time.geekbang.org/column/intro/250极客时间《设计模式之美》7~17章" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/250极客时间《设计模式之美》7~17章</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/03/ARTS-第54周/" rel="next" title="ARTS 第54周">
+                <i class="fa fa-chevron-left"></i> ARTS 第54周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第55周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第55周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#孩子们的游戏-圆圈中最后剩下的数"><span class="nav-number">1.1.1.</span> <span class="nav-text">孩子们的游戏(圆圈中最后剩下的数)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求1-2-3-…-n"><span class="nav-number">1.1.2.</span> <span class="nav-text">求1+2+3+…+n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不用加减乘除做加法"><span class="nav-number">1.1.3.</span> <span class="nav-text">不用加减乘除做加法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把字符串转换成整数"><span class="nav-number">1.1.4.</span> <span class="nav-text">把字符串转换成整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组中重复的数字"><span class="nav-number">1.1.5.</span> <span class="nav-text">数组中重复的数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建乘积数组"><span class="nav-number">1.1.6.</span> <span class="nav-text">构建乘积数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式匹配"><span class="nav-number">1.1.7.</span> <span class="nav-text">正则表达式匹配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象特性分析"><span class="nav-number">1.3.1.</span> <span class="nav-text">面向对象特性分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象的实现"><span class="nav-number">1.3.2.</span> <span class="nav-text">面向对象的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单一职责原则"><span class="nav-number">1.3.3.</span> <span class="nav-text">单一职责原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开闭原则"><span class="nav-number">1.3.4.</span> <span class="nav-text">开闭原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#里式替换"><span class="nav-number">1.3.5.</span> <span class="nav-text">里式替换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

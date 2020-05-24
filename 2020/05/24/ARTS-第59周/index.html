@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ARTS （第59周）">
+<meta name="description" content="ARTS （第59周）会的越多，不会的越多。 知道的越多，不知道的越多。">
 <meta name="keywords" content="ARTS,每周总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARTS 第59周">
 <meta property="og:url" content="http://yoursite.com/2020/05/24/ARTS-第59周/index.html">
 <meta property="og:site_name" content="拉环的微博">
-<meta property="og:description" content="ARTS （第59周）">
+<meta property="og:description" content="ARTS （第59周）会的越多，不会的越多。 知道的越多，不知道的越多。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-24T15:55:59.501Z">
+<meta property="og:updated_time" content="2020-05-24T15:57:44.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARTS 第59周">
-<meta name="twitter:description" content="ARTS （第59周）">
+<meta name="twitter:description" content="ARTS （第59周）会的越多，不会的越多。 知道的越多，不知道的越多。">
 
 
 
@@ -310,7 +310,9 @@
       
 
       
-        <h1 id="ARTS-（第59周）"><a href="#ARTS-（第59周）" class="headerlink" title="ARTS （第59周）"></a>ARTS （第59周）</h1><a id="more"></a>
+        <h1 id="ARTS-（第59周）"><a href="#ARTS-（第59周）" class="headerlink" title="ARTS （第59周）"></a>ARTS （第59周）</h1><p>会的越多，不会的越多。</p>
+<p>知道的越多，不知道的越多。</p>
+<a id="more"></a>
 <h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="二叉搜索树的第k个结点"><a href="#二叉搜索树的第k个结点" class="headerlink" title="二叉搜索树的第k个结点"></a>二叉搜索树的第k个结点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">题目描述</span><br><span class="line">给定一棵二叉搜索树，请找出其中的第k小的结点。例如， （5，3，7，2，4，6，8）    中，按结点数值大小顺序第三小结点的值为4。</span><br><span class="line">https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&amp;tqId=11215&amp;tPage=4&amp;rp=4&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking</span><br></pre></td></tr></table></figure>
 <p>解法1 中序遍历 记录已遍历过的数量</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> KthNode_num = <span class="number">0</span>;</span><br><span class="line"><span class="function">TreeNode <span class="title">KthNode_</span><span class="params">(TreeNode pRoot, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (pRoot == <span class="keyword">null</span> || k &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> KthNode_helpe(pRoot, k);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> TreeNode <span class="title">KthNode_helpe</span><span class="params">(TreeNode node, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (node == <span class="keyword">null</span> || KthNode_num &gt; k) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	TreeNode left = KthNode_helpe(node.left, k);</span><br><span class="line">	<span class="keyword">if</span> (left != <span class="keyword">null</span>)</span><br><span class="line">		<span class="keyword">return</span> left;</span><br><span class="line">	<span class="keyword">if</span> (++KthNode_num == k) &#123;</span><br><span class="line">		<span class="keyword">return</span> node;</span><br><span class="line">	&#125;</span><br><span class="line">	TreeNode right = KthNode_helpe(node.right, k);</span><br><span class="line">	<span class="keyword">if</span> (right != <span class="keyword">null</span>)</span><br><span class="line">		<span class="keyword">return</span> right;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

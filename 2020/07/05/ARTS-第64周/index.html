@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,每周总结,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ARTS （第64周）故障流程： 故障现象-&amp;gt;导致原因-&amp;gt;解决方案-&amp;gt;优化建议">
+<meta name="keywords" content="ARTS,每周总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS 第64周">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/ARTS-第64周/index.html">
+<meta property="og:site_name" content="拉环的微博">
+<meta property="og:description" content="ARTS （第64周）故障流程： 故障现象-&amp;gt;导致原因-&amp;gt;解决方案-&amp;gt;优化建议">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-07-05T14:54:44.271Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS 第64周">
+<meta name="twitter:description" content="ARTS （第64周）故障流程： 故障现象-&amp;gt;导致原因-&amp;gt;解决方案-&amp;gt;优化建议">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/05/ARTS-第64周/">
+
+
+
+
+
+  <title>ARTS 第64周 | 拉环的微博</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">拉环的微博</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/ARTS-第64周/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="拉环">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="拉环的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS 第64周</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-05T20:26:55+08:00">
+                2020-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ARTS-（第64周）"><a href="#ARTS-（第64周）" class="headerlink" title="ARTS （第64周）"></a>ARTS （第64周）</h1><p>故障流程：</p>
+<p>故障现象-&gt;导致原因-&gt;解决方案-&gt;优化建议</p>
+<a id="more"></a>
+<h2 id="Algorithm-算法"><a href="#Algorithm-算法" class="headerlink" title="Algorithm 算法"></a>Algorithm 算法</h2><h3 id="加一"><a href="#加一" class="headerlink" title="加一"></a>加一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。</span><br><span class="line"></span><br><span class="line">最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。</span><br><span class="line"></span><br><span class="line">你可以假设除了整数 0 之外，这个整数不会以零开头。</span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: [1,2,3]</span><br><span class="line">输出: [1,2,4]</span><br><span class="line">解释: 输入数组表示数字 123。</span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: [4,3,2,1]</span><br><span class="line">输出: [4,3,2,2]</span><br><span class="line">解释: 输入数组表示数字 4321。</span><br><span class="line"></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">链接：https://leetcode-cn.com/problems/plus-one</span><br><span class="line">著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<p>解法</p>
+<p>从末位开始计算进位，如果有进位就继续，没有进位了就直接返回 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] plusOne(<span class="keyword">int</span>[] digits) &#123;</span><br><span class="line">        <span class="keyword">if</span>(digits == <span class="keyword">null</span> )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> digits;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = digits.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = digits[i] + carry;</span><br><span class="line">            digits[i] = sum % <span class="number">10</span>;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(carry == <span class="number">0</span>)<span class="comment">//不用进位了 直接返回</span></span><br><span class="line">                <span class="keyword">return</span> digits;</span><br><span class="line">        &#125;</span><br><span class="line">      	<span class="comment">//要扩展位数</span></span><br><span class="line">        <span class="keyword">int</span>[] b = <span class="keyword">new</span> <span class="keyword">int</span>[digits.length + <span class="number">1</span>];</span><br><span class="line">        b[<span class="number">0</span>] = carry;</span><br><span class="line">        System.arraycopy(digits, <span class="number">0</span>, b, <span class="number">1</span>, digits.length);</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二进制求和"><a href="#二进制求和" class="headerlink" title="二进制求和"></a>二进制求和</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">给你两个二进制字符串，返回它们的和（用二进制表示）。</span><br><span class="line">输入为 非空 字符串且只包含数字 1 和 0。</span><br><span class="line">示例 1:</span><br><span class="line">输入: a = &quot;11&quot;, b = &quot;1&quot;</span><br><span class="line">输出: &quot;100&quot;</span><br><span class="line">示例 2:</span><br><span class="line">输入: a = &quot;1010&quot;, b = &quot;1011&quot;</span><br><span class="line">输出: &quot;10101&quot;</span><br><span class="line">提示：</span><br><span class="line">每个字符串仅由字符 &apos;0&apos; 或 &apos;1&apos; 组成。</span><br><span class="line">1 &lt;= a.length, b.length &lt;= 10^4</span><br><span class="line">字符串如果不是 &quot;0&quot; ，就都不含前导零。</span><br><span class="line"></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">链接：https://leetcode-cn.com/problems/add-binary</span><br><span class="line">著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<p>解法</p>
+<p>从末位开始计算进位，记录进位信息，直到计算完成.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> String <span class="title">addBinary</span><span class="params">(String a, String b)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(a.length()==<span class="number">0</span>  &amp;&amp; b.length()==<span class="number">0</span> )&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"0"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">int</span> idx1 = a.length() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> idx2 = b.length() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (idx1 &gt;= <span class="number">0</span> ||  idx2&gt;= <span class="number">0</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> v1 = (idx1 &gt;= <span class="number">0</span> ? a.charAt(idx1--) -<span class="string">'0'</span> : <span class="number">0</span>);</span><br><span class="line">            <span class="keyword">int</span> v2 = (idx2 &gt;= <span class="number">0</span> ? b.charAt(idx2--) -<span class="string">'0'</span>: <span class="number">0</span>);</span><br><span class="line">            res.append((v1 + v2 + carry) % <span class="number">2</span>);</span><br><span class="line">            carry = (v1 + v2 + carry) / <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res.reverse().toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="删除排序链表中的重复元素"><a href="#删除排序链表中的重复元素" class="headerlink" title="删除排序链表中的重复元素"></a>删除排序链表中的重复元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。</span><br><span class="line"></span><br><span class="line">示例 1:</span><br><span class="line"></span><br><span class="line">输入: 1-&gt;1-&gt;2</span><br><span class="line"></span><br><span class="line">输出: 1-&gt;2</span><br><span class="line"></span><br><span class="line">示例 2:</span><br><span class="line"></span><br><span class="line">输入: 1-&gt;1-&gt;2-&gt;3-&gt;3</span><br><span class="line"></span><br><span class="line">输出: 1-&gt;2-&gt;3</span><br><span class="line"></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line"></span><br><span class="line">链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list</span><br><span class="line"></span><br><span class="line">著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+<p>解法</p>
+<p>逐个节点遍历，遇到相同数据就断开指针。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        <span class="keyword">while</span>(cur != <span class="keyword">null</span>)&#123;</span><br><span class="line">            ListNode next = cur.next;</span><br><span class="line">            <span class="keyword">while</span>(next != <span class="keyword">null</span> &amp;&amp; next.val==cur.val )&#123;<span class="comment">//一直到不一样 或者为空</span></span><br><span class="line">                cur.next =  next = next.next;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review-英文文章"><a href="#Review-英文文章" class="headerlink" title="Review 英文文章"></a>Review 英文文章</h2><p><a href="https://spring.io/guides/gs/service-registration-and-discovery/" target="_blank" rel="noopener">https://spring.io/guides/gs/service-registration-and-discovery/</a>  spring使用注册中心和服务发现</p>
+<h2 id="Tip-技巧"><a href="#Tip-技巧" class="headerlink" title="Tip 技巧"></a>Tip 技巧</h2><h3 id="线程池-线程数量配置"><a href="#线程池-线程数量配置" class="headerlink" title="线程池 线程数量配置"></a>线程池 线程数量配置</h3><p>CPU密集型（ CPU核心数+1）个线程<br>IO密集型 方案1（ CPU核心数*2）个线程<br>IO密集型 方案2  CPU核心数/（1-阻塞系数）个线程 阻塞系数可以理解为阻塞时间的占比 一般在0.8~0.9之间</p>
+<h3 id="幂等性方案"><a href="#幂等性方案" class="headerlink" title="幂等性方案"></a>幂等性方案</h3><h4 id="1、唯一索引，防止新增脏数据。"><a href="#1、唯一索引，防止新增脏数据。" class="headerlink" title="1、唯一索引，防止新增脏数据。"></a>1、唯一索引，防止新增脏数据。</h4><h4 id="2、token机制，防止页面重复提交。"><a href="#2、token机制，防止页面重复提交。" class="headerlink" title="2、token机制，防止页面重复提交。"></a>2、token机制，防止页面重复提交。</h4><h4 id="3、锁机制"><a href="#3、锁机制" class="headerlink" title="3、锁机制"></a>3、锁机制</h4><h5 id="3-1、悲观锁"><a href="#3-1、悲观锁" class="headerlink" title="3.1、悲观锁"></a>3.1、悲观锁</h5><p>获取数据的时候加锁获取，比如行锁。</p>
+<h5 id="3-2、乐观锁"><a href="#3-2、乐观锁" class="headerlink" title="3.2、乐观锁"></a>3.2、乐观锁</h5><p>乐观锁可以通过版本号，或者只是在更新数据那一刻锁表，其他时间不锁表，相对于悲观锁，效率更高。</p>
+<h5 id="3-3、分布式锁"><a href="#3-3、分布式锁" class="headerlink" title="3.3、分布式锁"></a>3.3、分布式锁</h5><p>在业务系统插入数据或者更新数据，获取分布式锁，然后做操作。</p>
+<h4 id="4、select-insert"><a href="#4、select-insert" class="headerlink" title="4、select + insert"></a>4、select + insert</h4><p>并发不高的后台系统可以这么做。</p>
+<h4 id="5、状态机幂等（有限状态机）"><a href="#5、状态机幂等（有限状态机）" class="headerlink" title="5、状态机幂等（有限状态机）"></a>5、状态机幂等（有限状态机）</h4><p>在设计单据相关的业务，或者是任务相关的业务，肯定会涉及到状态机(状态变更图)，就是业务单据上面有个状态，状态在不同的情况下会发生变更，一般情况下存在有限状态机。</p>
+<h4 id="6、调用方保证幂等"><a href="#6、调用方保证幂等" class="headerlink" title="6、调用方保证幂等"></a>6、调用方保证幂等</h4><p>如银行等接口，对外提供接口为了支持幂等调用，接口一般有两个字段必须传，一个是来源source，一个是来源方序列号seq，这个两个字段在提供方系统里面做联合唯一索引，这样当第三方调用时，先在本方系统里面查询一下，是否已经处理过，返回相应处理结果；没有处理过，进行相应处理，返回结果。</p>
+<p>————————————————<br>版权声明：本文为CSDN博主「抽离的心」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/u011635492/java/article/details/81058153" target="_blank" rel="noopener">https://blog.csdn.net/u011635492/java/article/details/81058153</a></p>
+<h3 id="高并发方案"><a href="#高并发方案" class="headerlink" title="高并发方案"></a>高并发方案</h3><h4 id="1、垂直分层"><a href="#1、垂直分层" class="headerlink" title="1、垂直分层"></a>1、垂直分层</h4><p>DNS层、跨机房部署、LVS+Nginx负载均衡，vanish+共享存储实现动静分离，Nginx后挂载N台服务器集群，服务器集群后挂载微服务化、微服务后挂载数据库分库分表+消息队列+任务调度，最后端挂载数据集群负责数据的统一归档+流计算+异步批处理</p>
+<h4 id="2、水平分区"><a href="#2、水平分区" class="headerlink" title="2、水平分区"></a>2、水平分区</h4><p>根据业务划分业务线，每个业务线中设计分区键，根据userNo设计用户隔离，根据IP地址设计地区隔离，根据用户级别设计级别隔离，根据操作日期设计时间隔离，根据关键key进行hash散列，然后考虑一下分区的扩容、缩容、灾备、监控</p>
+<h4 id="3、数据同步"><a href="#3、数据同步" class="headerlink" title="3、数据同步"></a>3、数据同步</h4><p>跨机房跨集群的困难点在于数据同步，有三种做法：</p>
+<p>3.1）不同步，任由各子集群在自己的业务范围内运行</p>
+<p>3.2）汇总集群，建立一个统一的数据汇总集群（如Hadoop\Spark\Kylin等），将数据汇总到统一的大数据集群中，再进行统计、汇总、运算等。缺点是会有时间差，短须5分钟，长须一天以上</p>
+<p>3.3）远程数据同步，通过开源框架实现多个数据库的同步，例如阿里的otter，底层为canal，模拟mysql的从库，实现日志解析并数据库入库，时间差较短，如果网络没有太大问题，可在秒级完成数据同步。数据同步冲突算法有两种：单向回环补救、时间交集补救。一般推荐使用单向回环补救，即：如果发现数据库A与数据库B的同步时间差大于某个数值，则根据pk查询最新记录同步到数据库中。而另一种算法时间交集补救，是根据“时间交集”的定义，获得双方数据库的“时间交叉的操作”清单，然后根据此清单执行单向回环补救。此方法缺点为：a)开源版本中仅有单向回环补救;b)只支持mysql-&gt;mysql同步或者mysql-&gt;oracle同步。</p>
+<h4 id="注意细节"><a href="#注意细节" class="headerlink" title="注意细节"></a>注意细节</h4><p>集齐以上三件，基本上百万级并发就轻松搞定了。然后需要注意一些细节：</p>
+<p>1）集群与集群之间要实现从入口开始的严格隔离，即DNS层-&gt;LVS层-&gt;Nginx层完全隔离</p>
+<p>2）数据库的链接数是重要资源，一个mysql数据库可以提供1000链接，也就是说，按照50链接/每机器来计算，最多链接20个实例，硬上一下超不过30台。因此数据库层的分库分表一定要彻彻底底的分开。子集群之间不能互相链接数据库。</p>
+<p>3）一些关键业务可以在缓存中操作，建议采用redis缓存。而memcache死机后数据丢失，mongodb功能尚不完善。redis的安全机制一定要做好，千万不能丢数据。缓存到数据库的存储可以采用计数形式，每隔N次操作存一次数据库，可以线性降低数据库压力</p>
+<p>4）数据库只使用简单的存取功能，所有业务功能在代码层实现，DBA推荐的分区、分存储、存储过程等功能一般在数据仓库中是有用的，而在实时计算系统中，千万不要采用。否则你会看到你们几百人的开发团队等待一个DBA给你们排期的情况。</p>
+<p>5）前端可以做一些小的手段，例如抽奖活动，可以在页面js中直接告诉用户未中奖，而并不通知后台，此为“基础不中奖率”，可以直接过滤掉90%以上的流量。（此功能请与产品团队好好沟通，从性价比上讲，这种小手段不提倡，但是性价比极高。）</p>
+<p>6）消息队列系统建议采用一些堆积能力较强的系统，如:rocketmq,rabbit等，建议rocketmq，消息堆积能力之强，单机堆积上亿条。</p>
+<p>7）日志系统建议kafka，日志系统之后可以增加storm,hdfs,logstash等配套设施</p>
+<p>8）网卡流量问题需要严重关注，经常出现的问题是：在某个活动之间，redis网卡流量打满，导致redis无法访问，整个业务暂停。需要网络部门对公司内部的服务器路由有准确估算，出现分值之后可以妥善定位问题并修复，日常工作中也要做好规划，提前做好准备。</p>
+<p>9）老生常谈的：断路器、限流、自动降级。断路器是指在RPC的客户端中实现如下功能：如果发现该断路器访问服务端在10秒内访问超过50次且失败率高于50%，则中断该断路器的访问10秒钟，以保护下游系统。自动降级就是：如果发生问题，自动切换到备用程序上，如报错、如访问redis失败改访问DB等。限流就是在RPC的服务端中实现如下功能：对每个IP、每个token进行限制，通过令牌桶算法，每个时间段只允许指定数量的服务通过，否则就拒绝服务调用。一般断路器使用hystrix，自动降级可以自行实现，也可以用hystrix的配套设施实现，限流比较简单自行实现即可。</p>
+<p>来自知乎的一个大神的文章：<a href="https://zhuanlan.zhihu.com/p/38636111" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/38636111</a></p>
+<h2 id="Share-分享"><a href="#Share-分享" class="headerlink" title="Share 分享"></a>Share 分享</h2><p><a href="https://blog.csdn.net/mmayanshuo/article/details/85010107" target="_blank" rel="noopener">https://blog.csdn.net/mmayanshuo/article/details/85010107</a>  多任务并发：如何判断线程池中的任务都已经执行完毕？</p>
+<p><a href="https://www.jianshu.com/p/3c5d7f09dfbd" target="_blank" rel="noopener">https://www.jianshu.com/p/3c5d7f09dfbd</a> ThreadLocal</p>
+<p><a href="qq://txfile/#" target="_blank" rel="noopener">https://blog.csdn.net/u011635492/article/details/81058153</a>  高并发下接口幂等性解决方案 </p>
+<p><a href="https://blog.csdn.net/boonya/article/details/64918478?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.nonecase" target="_blank" rel="noopener">https://blog.csdn.net/boonya/article/details/64918478?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.nonecase</a>  幂等性解决方案 </p>
+<p><a href="https://blog.csdn.net/HD243608836/article/details/102735442" target="_blank" rel="noopener">https://blog.csdn.net/HD243608836/article/details/102735442</a> 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+            <a href="/tags/每周总结/" rel="tag"># 每周总结</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/28/ARTS-第63周/" rel="next" title="ARTS 第63周">
+                <i class="fa fa-chevron-left"></i> ARTS 第63周
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">拉环</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ARTS-（第64周）"><span class="nav-number">1.</span> <span class="nav-text">ARTS （第64周）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-算法"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加一"><span class="nav-number">1.1.1.</span> <span class="nav-text">加一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制求和"><span class="nav-number">1.1.2.</span> <span class="nav-text">二进制求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除排序链表中的重复元素"><span class="nav-number">1.1.3.</span> <span class="nav-text">删除排序链表中的重复元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-英文文章"><span class="nav-number">1.2.</span> <span class="nav-text">Review 英文文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip-技巧"><span class="nav-number">1.3.</span> <span class="nav-text">Tip 技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程池-线程数量配置"><span class="nav-number">1.3.1.</span> <span class="nav-text">线程池 线程数量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#幂等性方案"><span class="nav-number">1.3.2.</span> <span class="nav-text">幂等性方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、唯一索引，防止新增脏数据。"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1、唯一索引，防止新增脏数据。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、token机制，防止页面重复提交。"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">2、token机制，防止页面重复提交。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、锁机制"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">3、锁机制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1、悲观锁"><span class="nav-number">1.3.2.3.1.</span> <span class="nav-text">3.1、悲观锁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2、乐观锁"><span class="nav-number">1.3.2.3.2.</span> <span class="nav-text">3.2、乐观锁</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-3、分布式锁"><span class="nav-number">1.3.2.3.3.</span> <span class="nav-text">3.3、分布式锁</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、select-insert"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">4、select + insert</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、状态机幂等（有限状态机）"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">5、状态机幂等（有限状态机）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、调用方保证幂等"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">6、调用方保证幂等</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发方案"><span class="nav-number">1.3.3.</span> <span class="nav-text">高并发方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、垂直分层"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">1、垂直分层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、水平分区"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">2、水平分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、数据同步"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">3、数据同步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意细节"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">注意细节</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share-分享"><span class="nav-number">1.4.</span> <span class="nav-text">Share 分享</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">拉环</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
